@@ -45,7 +45,7 @@ export default class App extends Component{
       }
     else{
       return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Home_board_list></Home_board_list>}></Route>
             <Route path="/board/*" element={<Board_object></Board_object>}></Route>
