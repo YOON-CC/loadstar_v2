@@ -581,8 +581,8 @@ const Board_object = () => {
                     {user_Id != boardview_userId && <div className = "no_board_object_tool_c2_btn">DELETE</div>} 
                 </div>
                 <div className = "board_object_tool_c3">
-                    {bookmark === false && <img className="star" src={require("./image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
-                    {bookmark === true && <img className="star" src={require("./image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
+                    {bookmark === false && <img className="star" src={require("../image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
+                    {bookmark === true && <img className="star" src={require("../image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
                 </div>                
             </div>
             )}

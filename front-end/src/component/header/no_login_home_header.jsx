@@ -28,7 +28,7 @@ const NoLoginHomeHeader = () => {
                     <div className="no_login_header_body_2_c2">DRAW AND SHOW YOUR DREAM</div>
                     <div className="no_login_header_body_2_c1">
                         <div className="no_login_header_body_2_c1_img_container">
-                            <img src={require("./image/logo.png")}></img>
+                            <img src={require("../image/logo.png")}></img>
                         </div>
                     </div>
                     <div className="no_login_header_body_2_c3">당신의 길라잡이 LOADSTAR</div>
