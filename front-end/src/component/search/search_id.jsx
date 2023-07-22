@@ -19,7 +19,7 @@ const Search_id = () => {
     const handlejoinSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get("https://lodestar.shop/users/find-id", {
+            const response = await axios.get("https://lodestar.shop/v1/users/find-id", {
                 params: {
                     email: newemail
                 },

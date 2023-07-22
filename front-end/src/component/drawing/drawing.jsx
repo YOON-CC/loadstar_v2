@@ -243,7 +243,7 @@ const ChartComponent = () => {
     
 
     try {   
-        const response = await axios.get('https://lodestar.shop/careers', {
+        const response = await axios.get('https://lodestar.shop/v1/careers', {
             headers: {
                 'X-ACCESS-TOKEN': access_token,
                 'X-REFRESH-TOKEN': refresh_token
@@ -274,7 +274,7 @@ const ChartComponent = () => {
 
     if (whether_drawing === false){ // 이전에 데이터가 없고, 새로 넣을때
       try {
-        const response = await axios.post("https://lodestar.shop/careers", {
+        const response = await axios.post("https://lodestar.shop/v1/careers", {
             arr : chartData,
         }, 
         {
@@ -295,7 +295,7 @@ const ChartComponent = () => {
     }
     else{ // 이전에 데이터가 없고, 새로 추가할때
       try {
-        const response = await axios.patch("https://lodestar.shop/careers", {
+        const response = await axios.patch("https://lodestar.shop/v1/careers", {
             arr : chartData,
         }, 
         {

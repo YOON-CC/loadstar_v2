@@ -40,7 +40,7 @@ const Search_pwd = () => {
         event.preventDefault();
         if(sendemail === 1){
             try {
-                const response = await axios.post("https://lodestar.shop/emails/find-password/send-email", {
+                const response = await axios.post("https://lodestar.shop/v1/emails/find-password/send-email", {
                     email: newemail
                 }, {
                     headers: {
@@ -68,7 +68,7 @@ const Search_pwd = () => {
         }
         if(sendcode === 1){
             try {
-                const response = await axios.get("https://lodestar.shop/emails/find-password/check-key", {
+                const response = await axios.get("https://lodestar.shop/v1/emails/find-password/check-key", {
                     params: {
                         email: newemail,
                         key: newcode,

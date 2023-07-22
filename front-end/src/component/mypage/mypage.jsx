@@ -43,7 +43,7 @@ const First_question = () => {
         const refresh_token = extractedValue.slice(0, endIndex);
 
         try {   
-            const response = await axios.get("https://lodestar.shop/users/my-page", {
+            const response = await axios.get("https://lodestar.shop/v1/users/my-page", {
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token

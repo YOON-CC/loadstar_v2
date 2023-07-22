@@ -22,7 +22,7 @@ const Login = () => {
             event.preventDefault();
 
             try {
-                const response = await axios.post("https://lodestar.shop/users/login", {
+                const response = await axios.post("https://lodestar.shop/v1/users/login", {
                     username: id,
                     password: password
                 }, {

@@ -73,7 +73,7 @@ const Board_post = () => {
         event.preventDefault();
         
         try {
-            const response = await axios.post("https://lodestar.shop/boards", {
+            const response = await axios.post("https://lodestar.shop/v1/boards", {
                 title : title,
                 showGraph : "y",
                 hashtags : allTags,

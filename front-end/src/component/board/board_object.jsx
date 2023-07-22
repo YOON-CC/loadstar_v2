@@ -113,7 +113,7 @@ const Board_object = () => {
     const handleBoardView = async () => {
 
         try {   
-            const response = await axios.get(`https://lodestar.shop/boards/${board_Id}`, {
+            const response = await axios.get(`https://lodestar.shop/v1/boards/${board_Id}`, {
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token
@@ -161,7 +161,7 @@ const Board_object = () => {
     const handleBoardcommentdelete = async (boardview_comment_userId, event) => {
         event.preventDefault();
         try {
-            const response = await axios.delete(`https://lodestar.shop/comments/${boardview_comment_userId}`,{
+            const response = await axios.delete(`https://lodestar.shop/v1/comments/${boardview_comment_userId}`,{
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token
@@ -218,7 +218,7 @@ const Board_object = () => {
             
         //댓글작성
         try {
-            const response = await axios.post("https://lodestar.shop/comments", {
+            const response = await axios.post("https://lodestar.shop/v1/comments", {
                 boardId : boardview_boardId,
                 userId : user_Id,
                 content : boardview_comment_content_change,
@@ -256,7 +256,7 @@ const Board_object = () => {
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
     const handleBoardBookmark_1 = async () => {
         try {
-            const response = await axios.post("https://lodestar.shop/bookmarks", {
+            const response = await axios.post("https://lodestar.shop/v1/bookmarks", {
                 userId: user_Id,
                 boardId: board_Id,
             }, 
@@ -277,7 +277,7 @@ const Board_object = () => {
     }
     const handleBoardBookmark_2 = async () => {
         try {
-            const response = await axios.delete(`https://lodestar.shop/bookmarks/${board_Id}`,{
+            const response = await axios.delete(`https://lodestar.shop/v1/bookmarks/${board_Id}`,{
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token
@@ -297,7 +297,7 @@ const Board_object = () => {
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
     const handleBoarddelete = async () => {
         try {
-            const response = await axios.delete(`https://lodestar.shop/boards/${boardview_boardId}`,{
+            const response = await axios.delete(`https://lodestar.shop/v1/boards/${boardview_boardId}`,{
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token
@@ -349,7 +349,7 @@ const Board_object = () => {
             });
         }
         try {
-            const response = await axios.patch(`https://lodestar.shop/boards/${boardview_boardId}`, {
+            const response = await axios.patch(`https://lodestar.shop/v1/boards/${boardview_boardId}`, {
                 title : boardedit_title,
                 content : boardedit_content,
                 hashtags : send_edit_hashtag
