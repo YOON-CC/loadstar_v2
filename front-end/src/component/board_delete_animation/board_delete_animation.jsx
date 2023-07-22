@@ -11,7 +11,7 @@ const Board_delete_animation = () => {
 
     return (
         <div className="delete_container">
-            <img className="delete_img" src="image/logo.png"></img>
+            <img className="delete_img" src="./image/logo.png"></img>
             
             {/* css스타일 */}
             <style>

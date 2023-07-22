@@ -17,7 +17,7 @@ const Mypage_3 = () => {
         <div className="mypage_3_container">
             <div className="mypage_3_loadstar">"LoadStar는 개발자가 꿈인 사용자들이 <br/>로드맵을 공유, 참고하며 진로방향을 설정하는 웹사이트입니다."</div>
             <div className="mypage_3_version_container">
-                <div className="mypage_3_version_container_img"><img className="home_header_body_1_logo_img" src="image/version_img.png"></img></div>
+                <div className="mypage_3_version_container_img"><img className="home_header_body_1_logo_img" src="./image/version_img.png"></img></div>
                 <div className="mypage_3_version_container_contents">
                     <div>Version</div>
                     <div>0.0.1</div>

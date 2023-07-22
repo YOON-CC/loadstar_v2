@@ -17,7 +17,7 @@ export default class Home_header extends Component{
             <div className="home_header_body">
                 <div className="home_header_body_1">
                     <div className="home_header_body_1_logo">
-                      <Link to="/"><img className="home_header_body_1_logo_img" src="/image/logo.png"></img></Link>
+                      <Link to="/"><img className="home_header_body_1_logo_img" src="./image/logo.png"></img></Link>
                     </div>
 
                     <After_login></After_login>
@@ -35,21 +35,21 @@ export default class Home_header extends Component{
                       <div className="home_header_body_2_c1_button_container">
                         <Link to="/boardwrite" style={{ textDecoration: 'none' }}> 
                           <div className="home_header_body_2_c1_button_container_b1">
-                            <div className="b1_img"><img src="/image/post.png"></img></div>
+                            <div className="b1_img"><img src="./image/post.png"></img></div>
                             <div className="b1_text">게시글 올리기</div>
                           </div>
                         </Link>
                         
                         <Link to="/drawing" style={{ textDecoration: 'none' }}> 
                           <div className="home_header_body_2_c1_button_container_b2">
-                            <div className="b2_img"><img src="/image/drawing.png"></img></div>
+                            <div className="b2_img"><img src="./image/drawing.png"></img></div>
                             <div className="b2_text">그래프 그리기</div>
                           </div>
                         </Link>
                       </div>
                     </div>
                     <div className="home_header_body_2_c2">
-                      <img className="home_header_body_2_main_image" src="/image/main_image.png"></img>
+                      <img className="home_header_body_2_main_image" src="./image/main_image.png"></img>
                     </div>
                 </div>
 

@@ -21,7 +21,7 @@ const Welcome = () => {
             <div className="text1">THANKS FOR</div>
             <div className="text2">JOINING</div>
             <div className="text3">OUR SITE</div>
-            <img className="welcome_img" src="image/logo.png" alt="Welcome" />
+            <img className="welcome_img" src="./image/logo.png" alt="Welcome" />
         </div>
 
         {/* css스타일 */}

@@ -325,14 +325,14 @@ const ChartComponent = () => {
   return (
     <div className="chart_body">
       <div className="chart_body_not_100">
-        <img src="/image/logo.png" alt="Logo" />
+        <img src="./image/logo.png" alt="Logo" />
         <div className='chart_body_not_100_text1'>화면이 너무 작습니다!</div>
         <div className='chart_body_not_100_text2'>웹버전 전체화면, 100% 밑으로 이용해주세요!</div>
       </div>
       {/* 헤더 */}
       <div className="chart_header">
         <div className="chart_header_c1">
-          <Link to="/"><img className="chart_header_c1_logo" src="/image/logo.png" alt="Logo" /></Link>
+          <Link to="/"><img className="chart_header_c1_logo" src="./image/logo.png" alt="Logo" /></Link>
         </div>
         <div className="chart_header_c2">
           <div className="chart_header_c2_b1" onClick={handleLogout}>로그아웃</div>
@@ -382,7 +382,7 @@ const ChartComponent = () => {
                 {question === '저장' && 
                 <form onSubmit={handleDrawingInfosend}>
                   <button className='save'>
-                    <img className="save_logo" src="/image/logo.png" alt="Logo"/>
+                    <img className="save_logo" src="./image/logo.png" alt="Logo"/>
                     <div className='save_text'>save</div>
                   </button>
                 </form>}

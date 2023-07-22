@@ -263,7 +263,7 @@ const Home_board_list = () => {
         <form>
             <div className="home_hashtag_body">
                 <div className="home_hashtag_container">
-                    <div className="hashtag" onClick={hashtag_Show}>해시태그 고르기 <img src="/image/click_hastag.png"></img></div>
+                    <div className="hashtag" onClick={hashtag_Show}>해시태그 고르기 <img src="./image/click_hastag.png"></img></div>
                     
                 </div>
             </div>

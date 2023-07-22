@@ -15,7 +15,7 @@ const Mypage_0 = (props) => {
             </div>
             
             <div className="mypage_0_container_2">
-                <div><img className="home_header_body_1_logo_img" src="image/logo.png"></img></div>
+                <div><img className="home_header_body_1_logo_img" src="./image/logo.png"></img></div>
             </div>
 
         </div>

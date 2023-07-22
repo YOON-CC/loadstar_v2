@@ -475,7 +475,7 @@ const Board_object = () => {
             {/* 헤더*/}
             <div className="board_object_header">
                 <div className="board_object_header_c1">
-                    <Link to="/"><img className="board_object_header_c1_logo" src="/image/logo.png"></img></Link>
+                    <Link to="/"><img className="board_object_header_c1_logo" src="./image/logo.png"></img></Link>
                 </div>
                 <div className="board_object_header_c2">
                     <div className="board_object_header_c2_b1" onClick={handleLogout}>로그아웃</div>
@@ -564,7 +564,7 @@ const Board_object = () => {
 
             {/*푸터*/}
             <div className="board_object_footer">
-                <img className="board_object_footer_c3" src="/image/logo.png"></img>
+                <img className="board_object_footer_c3" src="./image/logo.png"></img>
                 <div className="board_object_footer_c1">LOADSTAR 2023</div>
                 <div className="board_object_footer_c2">당신의 길라잡이</div>  
             </div>
@@ -581,8 +581,8 @@ const Board_object = () => {
                     {user_Id != boardview_userId && <div className = "no_board_object_tool_c2_btn">DELETE</div>} 
                 </div>
                 <div className = "board_object_tool_c3">
-                    {bookmark === false && <img className="star" src="/image/star_1.png" onClick={handleBoardBookmark_1}></img>} 
-                    {bookmark === true && <img className="star" src="/image/star_2.png" onClick={handleBoardBookmark_2}></img>} 
+                    {bookmark === false && <img className="star" src="./image/star_1.png" onClick={handleBoardBookmark_1}></img>} 
+                    {bookmark === true && <img className="star" src="./image/star_2.png" onClick={handleBoardBookmark_2}></img>} 
                 </div>                
             </div>
             )}

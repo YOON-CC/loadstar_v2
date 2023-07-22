@@ -86,7 +86,7 @@ const First_question = () => {
                     <div className="mypage_container_1_box_2" onClick={() => setMypagenum(2)}>이용방법</div>
                     <div className="mypage_container_1_box_3" onClick={() => setMypagenum(3)}>ABOUT</div>
                     <Link to="/" style={{ textDecoration: 'none' }}><div className="mypage_container_1_box_4">나가기</div></Link>
-                    <div className="mypage_container_1_box_5"><img className="home_header_body_1_logo_img" src="image/logo.png"></img></div>
+                    <div className="mypage_container_1_box_5"><img className="home_header_body_1_logo_img" src="./image/logo.png"></img></div>
                 </div>
                 <div className="mypage_container_2">
                     {mypagenum === 0 && <Mypage_0 value1={mypage_userId} value2={mypage_email}></Mypage_0>}
