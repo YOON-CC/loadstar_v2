@@ -18,7 +18,7 @@ const NoLoginHomeHeader = () => {
         <div className="no_login_header_body">
             <div className="no_login_header_body_1">
                 <div className="no_login_header_body_1_logo">
-                    <img className="no_login_header_body_1_logo_img" src="./image/logo.png" alt="로고"/>
+                    <img className="no_login_header_body_1_logo_img" src={require("../image/logo.png")} alt="로고"/>
                 </div>
                  <BeforeLogin></BeforeLogin>
             </div>
