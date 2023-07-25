@@ -26,7 +26,7 @@ const Change_pwd = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.patch('https://lodestar.shop/v1/users/find-password', {
+            const response = await axios.patch('http://13.125.16.222:8080/v1/users/find-password', {
                 userId: userId, 
                 password: newpassword,
             });

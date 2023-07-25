@@ -127,7 +127,7 @@ const Home_board_list = () => {
         const handleBoardInfo = async () => {
             const hashtagsQuery = allTags.join(",");
             try {
-            const response = await axios.get("https://lodestar.shop/v1/boards", {
+            const response = await axios.get("http://13.125.16.222:8080/v1/boards", {
                 params: {
                     page: page,
                     hashtags:hashtagsQuery

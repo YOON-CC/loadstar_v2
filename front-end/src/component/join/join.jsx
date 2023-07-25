@@ -63,7 +63,7 @@ const Join = () => {
         //아이디 중복확인
         if(sendid === 1){
             try {
-                const response = await axios.get("https://lodestar.shop/v1/users/duplicated-username", {
+                const response = await axios.get("http://13.125.16.222:8080/v1/users/duplicated-username", {
                     params: {
                         username: newid
                     },
@@ -91,7 +91,7 @@ const Join = () => {
         }
         if(sendemail === 1){
             try {
-                const response = await axios.post("https://lodestar.shop/v1/emails/check-email", {
+                const response = await axios.post("http://13.125.16.222:8080/v1/emails/check-email", {
                     email: newemail
                 }, {
                     headers: {
@@ -116,7 +116,7 @@ const Join = () => {
         //코드 중복확인
         if(sendcode === 1){
             try {
-                const response = await axios.get("https://lodestar.shop/v1/emails/check-key", {
+                const response = await axios.get("http://13.125.16.222:8080/v1/emails/check-key", {
                   params: {
                     email: newemail,
                     key: newcode,
@@ -154,7 +154,7 @@ const Join = () => {
 
             // console.log(newid, newpassword, newemail)
             try {
-                const response = await axios.post("https://lodestar.shop/v1/users/signup", {
+                const response = await axios.post("http://13.125.16.222:8080/v1/users/signup", {
                     username: newid,
                     password: newpassword,
                     email: newemail,
