@@ -16,6 +16,7 @@ import store from "./store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //test
+//test2
 
 export default class App extends Component {
   state = {
