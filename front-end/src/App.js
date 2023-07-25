@@ -18,7 +18,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //test
 //test2
 //test3
-
+//test7
 export default class App extends Component {
   state = {
     number: store.getState().number,
