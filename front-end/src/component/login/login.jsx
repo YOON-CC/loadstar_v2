@@ -5,7 +5,6 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const Login = () => {
-    
         const [id, setId] = useState('');
         const [password, setPassword] = useState('');
 
