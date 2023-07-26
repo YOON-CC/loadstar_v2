@@ -43,7 +43,7 @@ const First_question = () => {
         const refresh_token = extractedValue.slice(0, endIndex);
 
         try {   
-            const response = await axios.get("http://13.125.16.222:8080/v1/users/my-page", {
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/my-page`, {
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token

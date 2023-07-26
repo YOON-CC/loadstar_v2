@@ -40,7 +40,7 @@ const Search_pwd = () => {
         event.preventDefault();
         if(sendemail === 1){
             try {
-                const response = await axios.post("http://13.125.16.222:8080/v1/emails/find-password/send-email", {
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/emails/find-password/send-email`, {
                     email: newemail
                 }, {
                     headers: {

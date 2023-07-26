@@ -19,7 +19,7 @@ const Search_id = () => {
     const handlejoinSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.get("http://13.125.16.222:8080/v1/users/find-id", {
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/find-id`, {
                 params: {
                     email: newemail
                 },

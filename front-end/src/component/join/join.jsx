@@ -154,7 +154,7 @@ const Join = () => {
 
             // console.log(newid, newpassword, newemail)
             try {
-                const response = await axios.post("http://13.125.16.222:8080/v1/users/signup", {
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/signup`, {
                     username: newid,
                     password: newpassword,
                     email: newemail,

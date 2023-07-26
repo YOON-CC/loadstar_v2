@@ -243,7 +243,7 @@ const ChartComponent = () => {
     
 
     try {   
-        const response = await axios.get('http://13.125.16.222:8080/v1/careers', {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/careers`, {
             headers: {
                 'X-ACCESS-TOKEN': access_token,
                 'X-REFRESH-TOKEN': refresh_token

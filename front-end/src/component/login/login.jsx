@@ -21,7 +21,7 @@ const Login = () => {
             event.preventDefault();
 
             try {
-                const response = await axios.post("http://13.125.16.222:8080/v1/users/login", {
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {
                     username: id,
                     password: password
                 }, {

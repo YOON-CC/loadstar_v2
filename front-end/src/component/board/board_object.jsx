@@ -297,7 +297,7 @@ const Board_object = () => {
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
     const handleBoarddelete = async () => {
         try {
-            const response = await axios.delete(`http://13.125.16.222:8080/v1/boards/${boardview_boardId}`,{
+            const response = await axios.delete(`${process.env.REACT_APP_API_URL}/boards/${boardview_boardId}`,{
                 headers: {
                     'X-ACCESS-TOKEN': access_token,
                     'X-REFRESH-TOKEN': refresh_token
