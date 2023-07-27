@@ -380,10 +380,62 @@
 
     /*이용방법*/
     .mypage_2_container{
-        height: 100%;
+        height: 200px;
         width: 100%;
-        background: rgb(201, 202, 213);
+        background: #ffffff;
     }
+    .mypage_2_manual_loadstar{
+        height:80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4222cd;
+    }
+    .mypage_2_manual_container_img{
+        height: 170px;
+        width: 250px;
+        margin-left: 240px;
+        margin-top:15px;
+    }
+    .manual_img{
+        /* background-color: aqua; */
+        height: 140px;
+        width: 130px;
+        justify-content: center;
+        align-items: center;
+    }
+    .mypage_2_manual_container{
+        /* background-color: #11988a; */
+        height: 50px;
+        width: 500px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 65px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    .mypage_2_manual_container div{
+        background-color: #3d26a7;
+        height: 50px;
+        width: 200px;
+        color: rgb(255,237,72);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    .mypage_2_manual_container div:hover{
+        background-color: rgb(255,237,72);
+        cursor: pointer;
+        color: #4222cf;
+    
+    }
+
+
 
     /*ABOUT*/
     .mypage_3_container{
