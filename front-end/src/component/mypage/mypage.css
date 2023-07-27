@@ -389,8 +389,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 17px;
+        font-weight: 900;
         color: #4222cd;
     }
     .mypage_2_manual_container_img{
@@ -413,14 +413,14 @@
         display: flex;
         justify-content: space-evenly;
         margin-left: 65px;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 17px;
     }
     .mypage_2_manual_container div{
-        background-color: #3d26a7;
+        background-color: rgb(255,237,72);
         height: 50px;
         width: 200px;
-        color: rgb(255,237,72);
+        color: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -429,9 +429,9 @@
         font-size: 17px;
     }
     .mypage_2_manual_container div:hover{
-        background-color: rgb(255,237,72);
+        background-color: rgb(164, 152, 47);
         cursor: pointer;
-        color: #4222cf;
+        color: #ffffff;
     
     }
 
