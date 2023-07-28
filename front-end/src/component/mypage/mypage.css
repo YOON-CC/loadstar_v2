@@ -670,6 +670,7 @@
         height: 100%;
         width: 78%;
     }
+    
 
     /*회원정보*/
     .mypage_0_container{
@@ -903,9 +904,58 @@
 
     /*이용방법*/
     .mypage_2_container{
-        height: 100%;
+        height: 200px;
         width: 100%;
-        background: rgb(201, 202, 213);
+    }
+    .mypage_2_manual_loadstar{
+        position: relative;
+        height:55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 900;
+        color: #4222cd;
+    }
+    .mypage_2_manual_container_img{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .manual_img{
+        /* background-color: aqua; */
+        height: 80px;
+        width: 70px;
+        display: flex;
+    }
+    .mypage_2_manual_container{
+        /* background-color: #11988a; */
+        height: 20px;
+        width: 100%;
+        display: flex;
+        margin-top: 7px;
+        justify-content: center;
+        align-items: center;
+    }
+    .mypage_2_manual_container div{
+        background-color: rgb(255,237,72);
+        height: 20px;
+        width: 70px;
+        color: #fff;
+        display: flex;
+        border-radius: 7px;
+        font-weight: bold;
+        font-size: 6px;
+        justify-content: center;
+        align-items: center;
+        margin-top:12px;
+    }
+    .mypage_2_manual_container div:hover{
+        background-color: rgb(164, 152, 47);
+        cursor: pointer;
+        color: #fff;
+        position: relative;
+    
     }
 
     /*ABOUT*/
