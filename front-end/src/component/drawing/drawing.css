@@ -7,7 +7,7 @@
     @media (min-width: 1501px) { /*175 이전*/
     .chart_body{
         position: relative;
-        background: #4a437e;
+        background:#5f568b;
         height: 100vh;
         width: 100%;
         overflow: hidden;
@@ -295,8 +295,9 @@
         justify-content: space-evenly;
         margin-top: 10px;
         margin-left: 135px;
-
     }
+    
+
     .chart_question_container_c2_container_period_input input{
         position: relative;
         width: 130px;
@@ -304,7 +305,6 @@
 
         background: #25252576;
         border-radius: 20px;
-        border: none;
         color: #fff;
         font-size: 70%;
         font-weight: bold;
@@ -313,9 +313,15 @@
         align-items: center;
         
         text-align: center;
-        border: none;
+        border: 2px #cccccc00 solid;
         outline: none;
     }
+    .chart_question_container_c2_container_period_input input:focus {
+            border-color:#d6ce7e;
+            outline: none;
+    }
+    
+    
     .addition_btn{
         background-color: #00000026;
         height: 27px;
@@ -396,8 +402,8 @@
         border-radius: 15px;
         border: none;
         margin-top: 145px;
-        margin-right: 10px;
-
+        margin-right: 20px;
+        font-weight:bold;
         color: #ffffff;
     }
     
@@ -416,6 +422,7 @@
 @media (max-width: 1500px) { /*175 이전*/
 
     .chart_body_not_100{
+        transform: translate(-50%, -50%);
         position: absolute;
         background: linear-gradient(135deg, #2b197d, #4c3b9b, #4c3b9b, #4c3b9b, #2b197d);
         height: 270px;
