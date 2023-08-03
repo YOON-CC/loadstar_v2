@@ -7,7 +7,7 @@
     @media (min-width: 1501px) { /*175 이전*/
     .chart_body{
         position: relative;
-        background: linear-gradient(135deg, #3d26a7, #3f28a7, #3e2e87, #43328d, rgb(57, 36, 147));
+        background: #4a437e;
         height: 100vh;
         width: 100%;
         overflow: hidden;
@@ -96,19 +96,18 @@
         height: 100%;
         cursor: pointer;
     }
-    /*차트*/
+    /*차트 -tjdus 수정 부분*/
     .chart_container{
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.018);
+        background-color: #ffffff;
         /* background-color: rgb(0, 0, 0); */
-        border-radius: 20px;
+        border-radius: 15px;
         width: 1450px;
         left: 50%;
         transform: translate(-50%);
         padding: 20px;
-        /* margin-top: 20px; */
+        margin-top: 50px;         
         box-shadow: 0px 0px 1px rgb(0, 0, 0);
-
     }
     /*초반 질문*/
     .chart_question{
@@ -117,11 +116,12 @@
         /* background-color: rgba(0, 0, 0, 0.27); */
         height: 250px;
         width: 100%;
-        margin-top: 425px;
+        margin-top: 500px;
     }
     .chart_question_container{
         position: relative;
-        background-color: rgba(0, 0, 0, 0.27);
+        background: #403f3f;
+        background-blend-mode: screen;
         height: 100%;
         width: 1490px;
         border-radius: 10px;
@@ -271,7 +271,7 @@
         justify-content: center;
         align-items: center;
 
-        color: #ffffff;
+        color: #d6ce7e;
         font-size: 12px;
         font-weight: bold;
     }
