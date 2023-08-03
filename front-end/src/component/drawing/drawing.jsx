@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 import { useDispatch } from "react-redux";
 import "./drawing.css";
 
-
 const ChartComponent = () => {
   //네비게이터, 리덕스
   const navigate = useNavigate();
@@ -52,20 +51,22 @@ const ChartComponent = () => {
           type: 'datetime',
           labels: {
             style: {
-              colors: '#FFFFFF', // x축 글 색상
-              fontSize: '10px', // x축 글자 크기
+              colors: '#493f6c', // x축 글 색상
+              fontSize: '13px', // x축 글자 크기
+              fontWeight : 'bold'
             },
           },
         },
         yaxis: {
           labels: {
             style: {
-              colors: '#FFFFFF', // y축 글 색상
-              fontSize: '10px', // x축 글자 크기
+              colors: '#493f6c', // y축 글 색상
+              fontSize: '13px', // x축 글자 크기
+              fontWeight : 'bold'
             },
           },
         },
-        colors: ['#FFFFFF'],
+        colors: ['#493f6c'],
       };
 
       const chart = new ApexCharts(

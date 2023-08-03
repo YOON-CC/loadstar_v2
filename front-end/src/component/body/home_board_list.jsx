@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Chart from 'react-apexcharts';
 
-const Home_board_list = () => {
+const Home_board_list = (props) => {
 
     //해시테그 보기
     const [show, setShow] = useState(false);
@@ -172,6 +172,7 @@ const Home_board_list = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     
     useEffect(() => {
         const updatedDivElements = [];
@@ -180,7 +181,7 @@ const Home_board_list = () => {
             const hash_tag = board_data[i][3];
             const board_Id = board_data[i][0];
             const chartData = board_data[i][4];
-
+            
             //빈 데이터의 경우 continue
             if (chartData.length === 0) {continue};
             
@@ -222,7 +223,7 @@ const Home_board_list = () => {
                   data: chartData,
                 },
               ];
-          
+              
 
             updatedDivElements.push(
                 <Link to={`/board/${board_Id}`} key={board_Id} style={{ textDecoration: 'none' }}>
@@ -235,7 +236,9 @@ const Home_board_list = () => {
 
                             <div className="board-list_c1_tag"></div>
                         </div>
-                        <div className="board-list_c2">{title}</div>
+                        <div className="board-list_c2">
+                        {title}
+                        </div>
                         {hash_tag && hash_tag.length === 1 && (
                         <div className="board-list_c3">
                             <div className="board-list_c3_tag">{hash_tag[0]}</div>
@@ -255,6 +258,7 @@ const Home_board_list = () => {
         
         setDivElements(updatedDivElements);
     },[board_data]);
+
 
     return (
         <div>
