@@ -96,17 +96,26 @@
         height: 100%;
         cursor: pointer;
     }
+    .top_level_container{
+        position: relative;
+        /* background-color: #d6ce7e; */
+        width: 100%;
+        height: 650px;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        margin-top: -50px;
+    }
     /*차트 -tjdus 수정 부분*/
     .chart_container{
         position: absolute;
         background-color: #ffffff;
         /* background-color: rgb(0, 0, 0); */
         border-radius: 15px;
-        width: 1450px;
+        width: 1300px;
         left: 50%;
         transform: translate(-50%);
         padding: 20px;
-        margin-top: 50px;         
         box-shadow: 0px 0px 1px rgb(0, 0, 0);
     }
     /*초반 질문*/
@@ -116,14 +125,14 @@
         /* background-color: rgba(0, 0, 0, 0.27); */
         height: 250px;
         width: 100%;
-        margin-top: 500px;
+        margin-top: 400px;
     }
     .chart_question_container{
         position: relative;
         background: #403f3f;
         background-blend-mode: screen;
         height: 100%;
-        width: 1490px;
+        width: 1340px;
         border-radius: 10px;
         top: 50%;
         left: 50%;
