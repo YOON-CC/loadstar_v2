@@ -6,11 +6,24 @@ import Swal from 'sweetalert2';
 import { useDispatch } from "react-redux";
 import "./drawing.css";
 
-const ChartComponent = () => {
+const ChartComponent = ({}) => {
   //네비게이터, 리덕스
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  /*const [inputValue, setInputValue] = useState({
+    // 사용할 문자열들을 저장하는 객체 형채로 관리
+    input1: "",
+  });
+
+  const handleInput=(e)=>{
+    const{name,value}=e.target;
+    setInputValue({ ...inputValue, [name]: value }); 
+      if(input1.length>=maxlen){
+        input2.focus();
+      }
+    }; 
+  */
 
   //토큰 방식
   const access_token = localStorage.getItem('access-token');
@@ -323,6 +336,7 @@ const ChartComponent = () => {
     dispatch({ type: "HOME" });
   };
 
+
   return (
     <div className="chart_body">
       <div className="chart_body_not_100">
@@ -393,7 +407,7 @@ const ChartComponent = () => {
                   <div className="chart_question_container_c2_container_period">
                     <div className="chart_question_container_c2_container_period_title_1">기간을 입력해주세요! 시작일, 종료일(현재까지)</div>
                     <div className="chart_question_container_c2_container_period_input">
-                      <input type="text" className="input1" value={input1_clear} placeholder="시작일 ex) 2023-01" onChange={e => setInput1_clear(e.target.value)} maxLength={7}/>
+                      <input type="text" autoFocus  className="input1" value={input1_clear} placeholder="시작일 ex) 2023-01" onChange={e => setInput1_clear(e.target.value)} maxLength={7} />
                       <input type="text" className="input2" value={input2_clear} placeholder="종료일 ex) 2023-12" onChange={e => setInput2_clear(e.target.value)} maxLength={7}/>
                       <div className= "addition_btn" onClick={handleAddData_addition}>적용</div>
                     </div>
