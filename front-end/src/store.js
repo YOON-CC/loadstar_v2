@@ -63,10 +63,10 @@ store.subscribe(() => {
     }
 });
 
-// 창이 닫힐 때 상태를 0으로 설정
-window.addEventListener('beforeunload', () => {
-    store.dispatch({ type: 'HOME' }); // 리듀서의 HOME 액션을 디스패치하여 상태를 0으로 설정
-});
+// // 창이 닫힐 때 상태를 0으로 설정
+// window.addEventListener('beforeunload', () => {
+//     store.dispatch({ type: 'HOME' }); // 리듀서의 HOME 액션을 디스패치하여 상태를 0으로 설정
+// });
 
 
 export const clearLocalStorage = () => {

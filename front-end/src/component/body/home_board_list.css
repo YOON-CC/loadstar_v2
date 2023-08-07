@@ -1,0 +1,483 @@
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (min-width: 901px) { /*175 이전*/
+    .home_main_container{
+        position: absolute;
+        /* background-color: aquamarine; */
+        height: 280px;
+        width: 1000px;
+    
+        left:50%;
+        transform: translate(-50%);
+    
+        display: flex;
+    }
+    .home_main_container_c1{
+        /* background-color: #8687ab; */
+        height: 70%;
+        width: 600px;
+        margin-top: 35px;
+    }
+    .home_main_container_c1_logo{
+        width: 450px;
+        height: 70px;
+    }
+    .home_main_container_c1_logo img{
+        height: 100%;
+        width: 100%;
+    }
+    .home_main_container_c1_contents_1{
+        color: #262752;
+        margin-top: 10px;
+        font-size: 23px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    .home_main_container_c1_contents_2{
+        color: #262752;
+        margin-top: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    .home_main_container_c1_btn_container{
+        /* background-color: #3d26a7; */
+        height: 40px;
+        width: 450px;
+        margin-top: 14px;
+    
+        display: flex;
+        justify-content: space-between;
+    }
+    .home_main_container_c1_btn_container div{
+        background-color: #262752;
+        height: 100%;
+        width: 220px;
+    
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    
+        border-radius: 5px;
+    
+    }
+    .home_main_container_c2{
+        /* background-color: #6a6bbb; */
+        height: 70%;
+        width: 400px;
+    }
+    .home_main_container_c2 img{
+        height: 100%;
+        width: 100%;
+        margin-top: 35px;
+    }
+    /*리스트*/
+    .home_board_list_body{
+        position: absolute;
+        /* background-color: #f9f9f9; */
+        background-color: #b51e1e;
+
+        height: 1500px;
+        width: 100%;
+        margin-top: 260px;
+        flex-wrap: wrap;    
+    }
+    /*카테고리*/
+    .home_hashtag_body{
+        position : absolute;
+        /* background-color: #86c242; */
+        height: 40px;
+        width: 100%;
+    }
+
+    .home_hashtag_container{
+        position : absolute;
+        /* background-color: #88ff00; */
+        height: 100%;
+        width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        margin-top: 3px;
+        z-index: 1;
+    }
+
+    .home_hashtag_container_c1{
+        background: linear-gradient(135deg, #13074b, #372978, #13074b);
+        height: 30px;
+        width: 70px;
+        margin-top: 5px;
+
+        border-radius: 10px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        cursor: pointer;
+        border: none;
+
+    }
+    .home_hashtag_container_c1:hover{
+        background-color: #2f2659;
+    }
+    .board-list_c1_img{
+        position: relative;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+    .chanchan{
+        position: absolute;
+        margin-left: -12px;
+    }
+
+    /*카테고리 끝*/
+
+    /*게시물 리스트 바디*/
+    .board-list-container{
+        position: relative;
+        /* background-color: #305902; */
+        width:540px;
+
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        left: 50%;
+        transform: translate(-50%);
+        
+    }
+
+    .board-list{
+        position: relative;
+        width: 242px;
+        height: 200px;
+        margin-top: 17px;
+        margin-left: 18.5px;
+        font-weight: bold;
+        font-size: 20px;
+        /* color: rgb(255, 255, 255); */
+        background: linear-gradient(135deg, #3d26a7, #3f28a7, #3e2e87, #43328d, rgb(57, 36, 147));
+
+        border-radius: 10px;
+        border: none;
+        animation: board_blinking 5s infinite;
+        cursor: pointer;
+    }
+    .board-list:hover{
+        filter: brightness(80%);
+    }
+
+    @keyframes board_blinking {
+        0% {
+            box-shadow: 0 0px 5px 0 rgb(163, 163, 163);
+        }
+        50% {
+            box-shadow: 0 0px 5px 0 rgb(0, 0, 0);
+        }
+        100% {
+            box-shadow: 0 0px 5px 0 rgb(163, 163, 163);
+        }
+    }
+
+    .board-list_c1{
+        height: 130px;
+        width: 242px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px 10px 0px 0px;
+        
+    }
+    .home_header_body_1_graph_img{
+        height: 100%;
+        width: 242px;
+        /* background-color: #4a3b8b; */
+        border-radius: 10px 10px 0px 0px;
+        border: none; 
+    }
+
+    .board-list_c2{
+        height: 30px;
+        width: 93%;
+        /* background-color: rgb(0, 30, 255);  */
+        margin-left: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .board-list_c3{
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        /* background-color: rgb(94, 227, 125); */
+        border-radius: 0px 0px 10px 10px ;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .board-list_c3_tag{
+        margin-top: 2px;
+        background-color: #0000003b;
+        height: 25px;
+        width: 80px;
+        border-radius: 5px;
+
+        font-size: 12px;
+        font-weight: bold;
+        color: #ffffff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .board-list_c3_tag_end{
+        margin-top: 2px;
+        background-color: #0000003b;
+        height: 25px;
+        width: 30px;
+        border-radius: 5px;
+
+        font-size: 13px;
+        font-weight: bold;
+        color: #ffffff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*헤시테그*/
+    .hashtag{
+        background: linear-gradient(135deg, #FFED48, #fff384, #FFED48);
+        height: 30px;
+        width: 500px;
+        margin-top: 5px;
+
+        border-radius: 10px;
+        color: #000000;
+        font-weight: bold;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .hashtag:hover{
+        background: linear-gradient(135deg, #b9ac33, #d5ca6c, #d7c73e);
+    }
+    .hashtag img{
+        height: 13px;
+        width: 13px;
+        margin-left: 5px;
+    }
+    .home_hashtag_container_view{
+        position: relative;
+        /* background-color: #FFED48; */
+        height: 460px;
+        width: 500px;
+        top: 275px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 9px;
+    }
+    .home_hashtag_container_view_container{
+        position: absolute;
+        /* background: linear-gradient(135deg, #fff06d, rgb(252, 243, 164), #fff06d); */
+        background: linear-gradient(135deg, #e2e2e2, #ffffff, #e2e2e2);
+        height: 460px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0px 10px 0 rgb(178, 178, 178);
+        margin-top: 6px;
+    }
+    .hashtag_title{
+        /* background-color: #0000000a; */
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 10px;
+        
+        color: #ffffff;
+        height: 25px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .none_click_list_tag{
+        background: #b2b2b246;
+        width: 70px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        
+        color: #fff;
+        font-weight: bold;
+        font-size: 10px;
+
+        margin-left: 8.5px;
+        box-shadow: 0 0 2px 0 rgb(148, 148, 148);
+        cursor: pointer;
+    }
+    .click_list_tag{
+        background: linear-gradient(135deg, #2f2659, #614eb7, #2f2659);
+        width: 70px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        
+        color: #fff;
+        font-weight: bold;
+        font-size: 10px;
+
+        margin-left: 8.5px;
+        box-shadow: 0 0 2px 0 rgb(148, 148, 148);
+        cursor: pointer;
+    }
+    /*1번줄*/
+    .list_0_container{
+        background: #0000001f;
+        height: 50px;
+        width: 480px;
+        border-radius: 5px;
+        margin-left: 10px;
+        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+    .list_0{
+        height: 35px;
+        width: 480px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: flex;
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+    .list_1_container{
+        background: #0000001f;
+        height: 50px;
+        width: 480px;
+        border-radius: 5px;
+        margin-left: 10px;
+        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+    .list_1{
+        height: 35px;
+        width: 480px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: flex;
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+
+    .list_2_container{
+        background: #0000001f;
+        height: 85px;
+        width: 480px;
+        border-radius: 5px;
+        margin-left: 10px;
+        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+    .list_2{
+        height: 35px;
+        width: 480px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: flex;
+        /* overflow: auto; */
+    }
+
+
+    .list_3_container{
+        background: #1e1d1d1f;
+        height: 85px;
+        width: 480px;
+        border-radius: 5px;
+        margin-left: 10px;
+        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+    .list_3{
+        height: 35px;
+        width: 480px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: flex;
+        /* overflow: auto; */
+    }
+    .list_4_container{
+        background: #0000001f;
+        height: 50px;
+        width: 480px;
+        border-radius: 5px;
+        margin-left: 10px;
+        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
+        /* overflow: auto; */
+        padding-bottom: 8px;
+    }
+    .list_4{
+        height: 35px;
+        width: 480px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        display: flex;
+        /* overflow: auto; */
+    }
+    .hashtag_btn_container{
+        /* background-color: #13074b; */
+        height: 50px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .hashtag_btn_container div{
+        background: #78787899;
+        height: 30px;
+        width: 100px;
+        margin-top: 12px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 2px 0 rgb(193, 185, 134);
+    }
+    .hashtag_btn_container div:hover{
+        background: rgba(71, 71, 71, 0.6);
+        cursor: pointer;
+    }
+}

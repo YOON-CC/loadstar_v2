@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
+.home_header_container{
+    /* background-color: aqua; */
+    width: 100%;
+    height : 40px;
+}
+.home_header_container_1{
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    height : 40px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+.home_header_container_1_logo{
+    position: relative;
+    background-color: rgb(42, 69, 44);
+    width: 130px;
+    height : 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.home_header_container_1_logo img{
+    width: 100%;
+    height: 100%;
+}
+.home_header_body_1_form_after{
+    /* background-color: rgb(133, 67, 67); */
+    height:100%;
+    width: 145px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px; 
+}
+.home_header_body_1_c1{
+    color : #262752;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin-top: 9px;
+    cursor: pointer;
+}
+.home_header_body_1_c2{
+    background-color: #262752;
+    height : 25px;
+    width: 85px;
+    border-radius: 5px;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    
+    color : #fefefe;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin-top: 7px;
+    padding-top: 1px;
+}
