@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
+
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -48,7 +50,7 @@
     .home_main_container_c1_btn_container{
         /* background-color: #3d26a7; */
         height: 40px;
-        width: 450px;
+        width: 300px;
         margin-top: 14px;
     
         display: flex;
@@ -57,7 +59,7 @@
     .home_main_container_c1_btn_container div{
         background-color: #262752;
         height: 100%;
-        width: 220px;
+        width: 147px;
     
         color: #ffffff;
         display: flex;
@@ -85,7 +87,7 @@
     .home_board_list_body{
         position: absolute;
         /* background-color: #f9f9f9; */
-        background-color: #b51e1e;
+        background-color: #f9f9f9;
 
         height: 1500px;
         width: 100%;
@@ -149,8 +151,8 @@
     /*게시물 리스트 바디*/
     .board-list-container{
         position: relative;
-        /* background-color: #305902; */
-        width:540px;
+        /* background-color: #f9f9f9; */
+        width:1070px;
 
         display: flex;
         flex-wrap: wrap;
@@ -162,83 +164,110 @@
 
     .board-list{
         position: relative;
-        width: 242px;
-        height: 200px;
+        background-color: #ffffff;
+        width: 312px;
+        height: 290px;
         margin-top: 17px;
-        margin-left: 18.5px;
+        margin-left: 33.5px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
         font-weight: bold;
         font-size: 20px;
         /* color: rgb(255, 255, 255); */
-        background: linear-gradient(135deg, #3d26a7, #3f28a7, #3e2e87, #43328d, rgb(57, 36, 147));
 
-        border-radius: 10px;
+        border-radius: 5px;
         border: none;
-        animation: board_blinking 5s infinite;
         cursor: pointer;
+
+        box-shadow: 5px 5px 10px 0 rgb(196, 196, 196);
     }
     .board-list:hover{
         filter: brightness(80%);
     }
-
-    @keyframes board_blinking {
-        0% {
-            box-shadow: 0 0px 5px 0 rgb(163, 163, 163);
-        }
-        50% {
-            box-shadow: 0 0px 5px 0 rgb(0, 0, 0);
-        }
-        100% {
-            box-shadow: 0 0px 5px 0 rgb(163, 163, 163);
-        }
-    }
-
     .board-list_c1{
+        /* background-color: #ffffff; */
         height: 130px;
-        width: 242px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        border-radius: 10px 10px 0px 0px;
-        
-    }
-    .home_header_body_1_graph_img{
-        height: 100%;
-        width: 242px;
-        /* background-color: #4a3b8b; */
-        border-radius: 10px 10px 0px 0px;
-        border: none; 
+        border-radius: 5px 5px 0px 0px;
     }
 
     .board-list_c2{
-        height: 30px;
-        width: 93%;
+        width: 282px;
         /* background-color: rgb(0, 30, 255);  */
-        margin-left: 8px;
-        font-size: 14px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
+        margin-left: 15px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bolder;
+        color: #262752;
+
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
     .board-list_c3{
-        position: absolute;
-        height: 40px;
-        width: 100%;
-        /* background-color: rgb(94, 227, 125); */
-        border-radius: 0px 0px 10px 10px ;
+        width: 285px;
+        /* background-color: rgb(139, 33, 137);  */
+        margin-left: 15px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #454545;
+
         display: flex;
-        justify-content: space-evenly;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
 
     }
+    .board-list_c4{
+        position: absolute;
+        height: 25px;
+        width: 210px;
+        /* background-color: rgb(94, 227, 125); */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    .board-list_c4_2{
+        position: absolute;
+        height: 25px;
+        width: 170px;
+        /* background-color: rgb(43, 130, 64); */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    .board-list_c4_3{
+        position: absolute;
+        height: 25px;
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 15px;       
+    }
+    .board-list_c4_4{
+        position: absolute;
+        height: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
 
-    .board-list_c3_tag{
-        margin-top: 2px;
-        background-color: #0000003b;
+    .board-list_c4_tag{
+        background-color: #262752;
         height: 25px;
         width: 80px;
         border-radius: 5px;
 
+        font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 12px;
         font-weight: bold;
         color: #ffffff;
@@ -248,20 +277,37 @@
         justify-content: center;
     }
 
-    .board-list_c3_tag_end{
-        margin-top: 2px;
-        background-color: #0000003b;
-        height: 25px;
-        width: 30px;
-        border-radius: 5px;
-
-        font-size: 13px;
+    .board-list_c4_tag_end{
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
         font-weight: bold;
-        color: #ffffff;
+        color: #454545;
 
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .board-list_c5{
+        position: absolute;
+        background-color: #454545;
+        width: 100%;
+        height: 30px;
+        margin-top: 50px;
+
+        display : flex;
+    }
+    .board-list_c5_c1{
+        height: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: #ffffff;
     }
 
     /*헤시테그*/

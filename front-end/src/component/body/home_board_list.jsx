@@ -188,7 +188,6 @@ const Home_board_list = (props) => {
             
             const options = {
                 chart: {
-                  height: 350,
                   type: 'rangeBar',
                   zoom: {
                     enabled: false,
@@ -200,7 +199,7 @@ const Home_board_list = (props) => {
                 plotOptions: {
                   bar: {
                     horizontal: true,
-                    barHeight: 10,
+                    barHeight: 15,
                     borderRadius: 2,
                   },
                 },
@@ -216,7 +215,7 @@ const Home_board_list = (props) => {
                 yaxis: {
                   show: false, // y축 숨기기
                 },
-                colors: ['#ffffff'],
+                colors: ['#262752'],
               };
               
               const series = [
@@ -232,26 +231,48 @@ const Home_board_list = (props) => {
                         <div className="board-list_c1">
 
                             <div className="board-list_c1_img">
-                                <Chart className="chanchan" options={options} series={series} type="rangeBar" height = "140" width="250"/>
+                                <Chart className="chanchan" options={options} series={series} type="rangeBar" height = "120" width="317"/>
                             </div>
 
                             <div className="board-list_c1_tag"></div>
                         </div>
                         <div className="board-list_c2">
-                        {title}
+                            {title}
+                        </div>
+                        <div className="board-list_c3">
+                            안녕하세요! 저는 프론트엔드 최강자~~ 입니다. 오늘은 저의 지금까지의 과정을 보여드리기 위해서 글을 적습니다.
                         </div>
                         {hash_tag && hash_tag.length === 1 && (
-                        <div className="board-list_c3">
-                            <div className="board-list_c3_tag">{hash_tag[0]}</div>
+                        <div className="board-list_c4">
+                            <div className="board-list_c4_tag">{hash_tag[0]}</div>
                         </div>
                         )}
-                        {hash_tag && hash_tag.length > 1 && (
-                        <div className="board-list_c3">
-                            <div className="board-list_c3_tag">{hash_tag[0]}</div>
-                            <div className="board-list_c3_tag">{hash_tag[1]}</div>
-                            <div className="board-list_c3_tag_end">...</div>
+                        {hash_tag && hash_tag.length === 2 && (
+                        <div className="board-list_c4_2">
+                            <div className="board-list_c4_tag">{hash_tag[0]}</div>
+                            <div className="board-list_c4_tag">{hash_tag[1]}</div>
                         </div>
                         )}
+                        {hash_tag && hash_tag.length == 3 && (
+                        <div className="board-list_c4_3">
+                            <div className="board-list_c4_tag">{hash_tag[0]}</div>
+                            <div className="board-list_c4_tag">{hash_tag[1]}</div>
+                            <div className="board-list_c4_tag">{hash_tag[2]}</div>
+                        </div>
+                        )}
+                        {hash_tag && hash_tag.length > 3 && (
+                        <div className="board-list_c4_4">
+                            <div className="board-list_c4_tag">{hash_tag[0]}</div>
+                            <div className="board-list_c4_tag">{hash_tag[1]}</div>
+                            <div className="board-list_c4_tag">{hash_tag[2]}</div>
+                            <div className="board-list_c4_tag_end">+</div>
+                        </div>
+                        )}
+                        <div className='board-list_c5'>
+                            <div className='board-list_c5_c1'>ㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</div>
+                            <div className='board-list_c5_c2'>99</div>
+                            <div className='board-list_c5_c3'>99</div>
+                        </div>
                     </div>
                 </Link>
             );
@@ -270,8 +291,8 @@ const Home_board_list = (props) => {
                 <div className="home_main_container_c1_contents_1">당신의 길라잡이</div>
                 <div className="home_main_container_c1_contents_2">앞으로의 방향을 찾기 위해 선배 동료들의 커리어를 참고하고 소통하며, 새로운 지도를 그려보세요.</div>
                 <div className="home_main_container_c1_btn_container">
-                    <div>게시글 올리기</div>
-                    <div>그래프 그리기</div>
+                    <Link to="/boardwrite" style={{ textDecoration: 'none' }}><div>게시글 올리기</div></Link>
+                    <Link to="/drawing" style={{ textDecoration: 'none' }}><div>그래프 그리기</div></Link>
                 </div>
                 </div>
             <div className="home_main_container_c2"><img src= {require ("../image/main_image.png")}></img></div>
