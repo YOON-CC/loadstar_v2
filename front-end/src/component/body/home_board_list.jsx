@@ -269,9 +269,19 @@ const Home_board_list = (props) => {
                         </div>
                         )}
                         <div className='board-list_c5'>
-                            <div className='board-list_c5_c1'>ㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹ</div>
-                            <div className='board-list_c5_c2'>99</div>
-                            <div className='board-list_c5_c3'>99</div>
+                            
+                            <div className='board-list_c5_c1'>
+                                <img src= {require ("../image/user.png")}></img>
+                                <div>아이디아이디아이디</div>
+                            </div>
+                            <div className='board-list_c5_c2'>
+                                <img src= {require ("../image/star.png")}></img>
+                                <div>99+</div>    
+                            </div>
+                            <div className='board-list_c5_c3'>
+                                <img src= {require ("../image/check.png")}></img>
+                                <div>99+</div>    
+                            </div>
                         </div>
                     </div>
                 </Link>
@@ -302,7 +312,6 @@ const Home_board_list = (props) => {
             <div className="home_hashtag_body">
                 <div className="home_hashtag_container">
                     <div className="hashtag" onClick={hashtag_Show}>해시태그 고르기 <img src= {require ("../image/click_hastag.png")}></img></div>
-                    
                 </div>
             </div>
         </form>
