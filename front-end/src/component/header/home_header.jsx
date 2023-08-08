@@ -20,7 +20,9 @@ function Home_header() {
     return (
         <div className="home_header_container">
           <div className="home_header_container_1">
-            <div className="home_header_container_1_logo"><img src= {require ("../image/logo.png")}></img></div>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <div className="home_header_container_1_logo"><img src= {require ("../image/logo.png")}></img></div>
+            </Link>
             <div className="home_header_container_1_btn_container">
               <After_login></After_login>
             </div>

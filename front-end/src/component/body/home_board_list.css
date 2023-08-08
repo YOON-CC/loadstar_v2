@@ -86,7 +86,6 @@
     /*리스트*/
     .home_board_list_body{
         position: absolute;
-        /* background-color: #f9f9f9; */
         background-color: #f9f9f9;
 
         height: 1500px;
@@ -94,61 +93,197 @@
         margin-top: 260px;
         flex-wrap: wrap;    
     }
-    /*카테고리*/
-    .home_hashtag_body{
-        position : absolute;
-        /* background-color: #86c242; */
+    .home_board_search{
+        position: relative;
+        /* background-color: #262752; */
         height: 40px;
-        width: 100%;
-    }
+        width: 1000px;
+        
+        left: 50%;
+        transform: translate(-50%);
 
-    .home_hashtag_container{
-        position : absolute;
-        /* background-color: #88ff00; */
+        display : flex;
+        margin-top: 10px;
+    }
+    .home_board_search_c1{
         height: 100%;
         width: 500px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
         display: flex;
-        margin-top: 3px;
-        z-index: 1;
     }
+    .home_board_search_c1_btn_on{
+        /* background-color: #b9ac33; */
+        height: 38px;
+        width: 500px;
 
-    .home_hashtag_container_c1{
-        background: linear-gradient(135deg, #13074b, #372978, #13074b);
-        height: 30px;
-        width: 70px;
-        margin-top: 5px;
-
-        border-radius: 10px;
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 13px;
         display: flex;
+        justify-content: center;
+        align-items: center ;
+
+        color: #454545;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+
+        border: none;
+        border-bottom: 2px solid #989898;
+        cursor: pointer;
+    }
+    .home_board_search_c1_btn_off{
+        /* background-color: #b9ac33; */
+        height: 38px;
+        width: 500px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+
+        color: #bfbfbf;
+        font-size: 12px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+
+        border: none;
+        border-bottom: 2px solid #f9f9f9;  
+        cursor: pointer;
+    }
+    .home_board_search_c2{
+        /* background-color: #52d263; */
+        height: 38px;
+        width: 399px;
+        display : flex;
+        margin-left: 100px;
+
+        border: 1px solid #989898;
+        border-radius: 7px;
+    }
+    .home_board_search_c2 input{
+        border-radius: 7px 0px 0px 7px;
+        width: 320px;
+        outline: none;
+        border: none;
+    }
+    .home_board_search_c2 button{
+        width: 80px;
+        border-radius: 0px 7px 7px 0px;
+        border: none;
+        border-left: 1px solid #989898;
+        color: #454545;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer;   
+    }
+    /*헤시테그*/
+    .home_board_hashtag{
+        position: relative;
+        /* background-color: #262752; */
+        height: 30px;
+        width: 1000px;
+        
+        left: 50%;
+        transform: translate(-50%);
+
+        display : flex;
+        margin-top: 20px;
+    }
+    .list_1{
+        /* background-color: #614eb7; */
+        height: 100%;
+        width: 950px;
+        border-radius: 5px;
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    .none_click_list_tag{
+        background-color: rgb(255, 255, 255);
+        height: 28.5px;
+        width: 90px;
+
+        display:flex;
         align-items: center;
         justify-content: center;
-        margin-right: 8px;
+
+        color: #9c9c9c;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer; 
+        
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+    }
+    .click_list_tag{
+        background-color: #262752;
+        height: 28.5px;
+        width: 90px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer; 
+        
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+    }
+    .select_more_hastag{
+        background-color: #ffffff;
+        height: 28.5px;
+        width: 30px;
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #4d4d4d;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
         cursor: pointer;
-        border: none;
-
+        
+        margin-left: 30px;
     }
-    .home_hashtag_container_c1:hover{
-        background-color: #2f2659;
-    }
-    .board-list_c1_img{
+    .list_2{
         position: relative;
-        width: 100%;
-        /* background-color: aqua; */
-    }
-    .chanchan{
-        position: absolute;
-        margin-left: -12px;
-    }
+        /* background-color: #262752; */
+        height: 30px;
+        width: 1000px;
+        
+        left: 50%;
+        transform: translate(-50%);
 
-    /*카테고리 끝*/
+        display : flex;
+        justify-content: space-between;
 
-    /*게시물 리스트 바디*/
+        margin-top: 10px;
+    }
+    .list_3{
+        position: relative;
+        /* background-color: #262752; */
+        height: 30px;
+        width: 596px;
+        
+        margin-left: -202px;
+        left: 50%;
+        transform: translate(-50%);
+
+        display : flex;
+        justify-content: space-between;
+
+        margin-top: 10px;
+    }
+    /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@2222*/
+
+    /*게시물 리스트*/
     .board-list-container{
         position: relative;
         /* background-color: #f9f9f9; */
@@ -156,7 +291,7 @@
 
         display: flex;
         flex-wrap: wrap;
-        margin-top: 30px;
+        margin-top: 5px;
         left: 50%;
         transform: translate(-50%);
         
@@ -365,222 +500,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    /*헤시테그*/
-    .hashtag{
-        background: linear-gradient(135deg, #FFED48, #fff384, #FFED48);
-        height: 30px;
-        width: 500px;
-        margin-top: 5px;
-
-        border-radius: 10px;
-        color: #000000;
-        font-weight: bold;
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-    .hashtag:hover{
-        background: linear-gradient(135deg, #b9ac33, #d5ca6c, #d7c73e);
-    }
-    .hashtag img{
-        height: 13px;
-        width: 13px;
-        margin-left: 5px;
-    }
-    .home_hashtag_container_view{
-        position: relative;
-        /* background-color: #FFED48; */
-        height: 460px;
-        width: 500px;
-        top: 275px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding-bottom: 9px;
-    }
-    .home_hashtag_container_view_container{
-        position: absolute;
-        /* background: linear-gradient(135deg, #fff06d, rgb(252, 243, 164), #fff06d); */
-        background: linear-gradient(135deg, #e2e2e2, #ffffff, #e2e2e2);
-        height: 460px;
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 0px 10px 0 rgb(178, 178, 178);
-        margin-top: 6px;
-    }
-    .hashtag_title{
-        /* background-color: #0000000a; */
-        font-size: 10px;
-        font-weight: bold;
-        margin-top: 10px;
-        
-        color: #ffffff;
-        height: 25px;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-    }
-    .none_click_list_tag{
-        background: #b2b2b246;
-        width: 70px;
-        height: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        
-        color: #fff;
-        font-weight: bold;
-        font-size: 10px;
-
-        margin-left: 8.5px;
-        box-shadow: 0 0 2px 0 rgb(148, 148, 148);
-        cursor: pointer;
-    }
-    .click_list_tag{
-        background: linear-gradient(135deg, #2f2659, #614eb7, #2f2659);
-        width: 70px;
-        height: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        
-        color: #fff;
-        font-weight: bold;
-        font-size: 10px;
-
-        margin-left: 8.5px;
-        box-shadow: 0 0 2px 0 rgb(148, 148, 148);
-        cursor: pointer;
-    }
-    /*1번줄*/
-    .list_0_container{
-        background: #0000001f;
-        height: 50px;
-        width: 480px;
-        border-radius: 5px;
-        margin-left: 10px;
-        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-    .list_0{
-        height: 35px;
-        width: 480px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: flex;
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-    .list_1_container{
-        background: #0000001f;
-        height: 50px;
-        width: 480px;
-        border-radius: 5px;
-        margin-left: 10px;
-        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-    .list_1{
-        height: 35px;
-        width: 480px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: flex;
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-
-    .list_2_container{
-        background: #0000001f;
-        height: 85px;
-        width: 480px;
-        border-radius: 5px;
-        margin-left: 10px;
-        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-    .list_2{
-        height: 35px;
-        width: 480px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: flex;
-        /* overflow: auto; */
-    }
-
-
-    .list_3_container{
-        background: #1e1d1d1f;
-        height: 85px;
-        width: 480px;
-        border-radius: 5px;
-        margin-left: 10px;
-        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-    .list_3{
-        height: 35px;
-        width: 480px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: flex;
-        /* overflow: auto; */
-    }
-    .list_4_container{
-        background: #0000001f;
-        height: 50px;
-        width: 480px;
-        border-radius: 5px;
-        margin-left: 10px;
-        box-shadow: 0 0 4px 0 rgb(141, 141, 141);
-        /* overflow: auto; */
-        padding-bottom: 8px;
-    }
-    .list_4{
-        height: 35px;
-        width: 480px;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        display: flex;
-        /* overflow: auto; */
-    }
-    .hashtag_btn_container{
-        /* background-color: #13074b; */
-        height: 50px;
-        width: 100%;
-
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .hashtag_btn_container div{
-        background: #78787899;
-        height: 30px;
-        width: 100px;
-        margin-top: 12px;
-        font-size: 13px;
-        font-weight: bold;
-        color: #fff;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        box-shadow: 0 0 2px 0 rgb(193, 185, 134);
-    }
-    .hashtag_btn_container div:hover{
-        background: rgba(71, 71, 71, 0.6);
-        cursor: pointer;
     }
 }

@@ -7,6 +7,38 @@ import "./home_board_list.css";
 
 const Home_board_list = (props) => {
 
+    //메인페이지 글 종류 상태
+    const [show_1, setShow_1] = useState(true);
+    const [show_2, setShow_2] = useState(false);
+    const [show_3, setShow_3] = useState(false);
+    const [show_4, setShow_4] = useState(false);
+
+    const handleShow_1 = () => { 
+        setShow_1(true)
+        setShow_2(false)
+        setShow_3(false)
+        setShow_4(false)
+    };
+    const handleShow_2 = () => { 
+        setShow_1(false)
+        setShow_2(true)
+        setShow_3(false)
+        setShow_4(false)
+    };
+    const handleShow_3 = () => { 
+        setShow_1(false)
+        setShow_2(false)
+        setShow_3(true)
+        setShow_4(false)
+    };
+    const handleShow_4 = () => { 
+        setShow_1(false)
+        setShow_2(false)
+        setShow_3(false)
+        setShow_4(true)
+    };
+
+
     //해시테그 보기
     const [show, setShow] = useState(false);
 
@@ -308,7 +340,112 @@ const Home_board_list = (props) => {
             <div className="home_main_container_c2"><img src= {require ("../image/main_image.png")}></img></div>
         </div>
         <div className="home_board_list_body">
-        <form>
+            <div className="home_board_search">
+                <div className='home_board_search_c1'>
+                    {show_1 === true && <div className = "home_board_search_c1_btn_on" onClick={handleShow_1}>전체글</div>}
+                    {show_1 === false && <div className = "home_board_search_c1_btn_off" onClick={handleShow_1}>전체글</div>}
+
+                    {show_2 === true && <div className = "home_board_search_c1_btn_on" onClick={handleShow_2}>질문글</div>}
+                    {show_2 === false && <div className = "home_board_search_c1_btn_off" onClick={handleShow_2}>질문글</div>}
+
+                    {show_3 === true && <div className = "home_board_search_c1_btn_on" onClick={handleShow_3}>조회순</div>}
+                    {show_3 === false && <div className = "home_board_search_c1_btn_off" onClick={handleShow_3}>조회순</div>}
+
+                    {show_4 === true && <div className = "home_board_search_c1_btn_on" onClick={handleShow_4}>관심순</div>}
+                    {show_4 === false && <div className = "home_board_search_c1_btn_off" onClick={handleShow_4}>관심순</div>}
+                </div>
+                <div className='home_board_search_c2'>
+                    <input></input>
+                    <button>검색</button>
+                </div>
+            </div>
+            <div className="home_board_hashtag">
+                <div className="list_1">
+                    {tag_user_1 === 0 && (<div className="none_click_list_tag" onClick={() => {setTag_user_1("전공자"); setTag_user_2(0);}}>전공자</div>)}
+                    {tag_user_1 !== 0 && (<div className="click_list_tag" onClick={() => {if (tag_user_1 === "전공자") {setTag_user_1(0);} else {setTag_user_1("전공자"); setTag_user_2(0);}}}>#전공자</div>)}
+
+                    {tag_user_2 === 0 && (<div className="none_click_list_tag" onClick={() => {setTag_user_2("비전공자");setTag_user_1(0);}}>비전공자</div>)}
+                    {tag_user_2 !== 0 && (<div className="click_list_tag" onClick={() => {if (tag_user_2 === "비전공자") {setTag_user_2(0);} else {setTag_user_2("비전공자");setTag_user_1(0);}}}>#비전공자</div>)}
+
+                    {tag_user_3 === 0 && (<div className="none_click_list_tag" onClick={() => { setTag_user_3("현직자");setTag_user_4(0);}}>현직자</div>)}
+                    {tag_user_3 !== 0 && (<div className="click_list_tag" onClick={() => {if (tag_user_3 === "현직자") {setTag_user_3(0);} else {setTag_user_3("현직자");setTag_user_4(0);}}}>#현직자</div>)}
+
+                    {tag_user_4 === 0 && (<div className="none_click_list_tag" onClick={() => { setTag_user_4("비현직자");setTag_user_3(0);}}>비현직자</div>)}
+                    {tag_user_4 !== 0 && (<div className="click_list_tag" onClick={() => {if (tag_user_4 === "비현직자") {setTag_user_4(0);} else {setTag_user_4("비현직자");setTag_user_3(0);}}}>#비현직자</div>)}
+
+                    {tag_user_5 === 0 && (<div className="none_click_list_tag" onClick={() => { setTag_user_5("프론트엔드");setTag_user_6(0);}}>프론트엔드</div>)}
+                    {tag_user_5 !== 0 && (<div className="click_list_tag" onClick={() => {if (tag_user_5 === "프론트엔드") {setTag_user_5(0);} else {setTag_user_5("프론트엔드");setTag_user_6(0);}}}>#프론트엔드</div>)}
+
+                    {tag_user_6 === 0 && (<div className="none_click_list_tag" onClick={() => { setTag_user_6("백엔드");setTag_user_5(0);}}>백엔드</div>)}
+                    {tag_user_6 !== 0 && (<div className="click_list_tag" onClick={() => {if (tag_user_6 === "백엔드") {setTag_user_6(0);} else {setTag_user_6("백엔드");setTag_user_5(0);}}}>#백엔드</div>)}
+                    
+                    {tag_p_1 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_1("html")}>html</div>}
+                    {tag_p_1 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_1(0)}>#html</div>}
+
+                    {tag_p_2 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_2("css")}>css</div>}
+                    {tag_p_2 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_2(0)}>#css</div>}
+
+                    {tag_p_3 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_3("javascript")}>javascript</div>}
+                    {tag_p_3 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_3(0)}>#javascript</div>}
+                </div>
+                {!show && <div className='select_more_hastag' onClick={hashtag_Show}>▼</div>}
+                {show && <div className='select_more_hastag' onClick={hashtag_Show}>▲</div>}
+            </div>
+            {show && 
+                <div>
+                    <div className="list_2">
+                        {tag_p_4 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_4("typescript")}>typescript</div>}
+                        {tag_p_4 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_4(0)}>#typescript</div>}
+
+                        {tag_p_5 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_5("react")}>react</div>}
+                        {tag_p_5 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_5(0)}>#react</div>}
+
+                        {tag_p_6 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_6("java")}>java</div>}
+                        {tag_p_6 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_6(0)}>#java</div>}
+
+                        {tag_p_7 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_7("python")}>python</div>}
+                        {tag_p_7 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_7(0)}>#python</div>}
+                        
+                        {tag_p_8 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_8("spring")}>spring</div>}
+                        {tag_p_8 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_8(0)}>#spring</div>}
+
+                        {tag_p_9 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_9("springboot")}>springboot</div>}
+                        {tag_p_9 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_9(0)}>#springboot</div>}
+
+                        {tag_p_10 === 0 && <div className="none_click_list_tag" onClick={() => setTag_p_10("node.js")}>node.js</div>}
+                        {tag_p_10 !== 0 && <div className="click_list_tag" onClick={() => setTag_p_10(0)}>#node.js</div>}
+
+                        {tag_cs_1 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_1("운영체제")}>운영체제</div>}
+                        {tag_cs_1 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_1(0)}>#운영체제</div>}
+
+                        {tag_cs_2 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_2("네트워크")}>네트워크</div>}
+                        {tag_cs_2 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_2(0)}>#네트워크</div>}
+
+                        {tag_cs_3 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_3("자료구조")}>자료구조</div>}
+                        {tag_cs_3 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_3(0)}>#자료구조</div>}
+                    </div>
+                    <div className="list_3">
+                        {tag_cs_4 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_4("컴퓨터구조")}>컴퓨터구조</div>}
+                        {tag_cs_4 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_4(0)}>#컴퓨터구조</div>}
+
+                        {tag_cs_5 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_5("컴파일러")}>컴파일러</div>}
+                        {tag_cs_5 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_5(0)}>#컴파일러</div>}
+
+                        {tag_cs_6 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_6("알고리즘")}>알고리즘</div>}
+                        {tag_cs_6 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_6(0)}>#알고리즘</div>}
+                        
+                        {tag_cs_7 === 0 && <div className="none_click_list_tag" onClick={() => setTag_cs_7("데이터베이스")}>데이터베이스</div>}
+                        {tag_cs_7 !== 0 && <div className="click_list_tag" onClick={() => setTag_cs_7(0)}>#데이터베이스</div>}
+
+                        {tag_etc_1 === 0 && <div className="none_click_list_tag" onClick={() => setTag_etc_1("부트캠프")}>부트캠프</div>}
+                        {tag_etc_1 !== 0 && <div className="click_list_tag" onClick={() => setTag_etc_1(0)}>#부트캠프</div>}
+
+                        {tag_etc_2 === 0 && <div className="none_click_list_tag" onClick={() => setTag_etc_2("개발외주")}>개발외주</div>}
+                        {tag_etc_2 !== 0 && <div className="click_list_tag" onClick={() => setTag_etc_2(0)}>#개발외주</div>}
+                    </div>
+                </div>
+            }
+        {/* <form>
             <div className="home_hashtag_body">
                 <div className="home_hashtag_container">
                     <div className="hashtag" onClick={hashtag_Show}>해시태그 고르기 <img src= {require ("../image/click_hastag.png")}></img></div>
@@ -426,7 +563,7 @@ const Home_board_list = (props) => {
                     </div>
                 </div>
             </div>
-        )}
+        )} */}
 
         <div className="board-list-container">
             {divElements}
