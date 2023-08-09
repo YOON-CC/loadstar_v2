@@ -5,6 +5,7 @@ import axios from 'axios';
 import ApexCharts from 'apexcharts';
 import { Link, useNavigate} from 'react-router-dom';
 import "./board_object.css";
+import Home_header from "../header/home_header";
 
 const Board_object = () => {
     /*네비게이트*/
@@ -50,21 +51,21 @@ const Board_object = () => {
                 type: 'datetime',
                 labels: {
                     style: {
-                        colors: '#251666', // x축 글 색상
+                        colors: '#262752', // x축 글 색상
                     },
                 },
-                axisBorder: {
-                    color: '#251666', // X축 선 색상
-                },
+                // axisBorder: {
+                //     color: '#262752', // X축 선 색상
+                // },
             },
             yaxis: {
                 labels: {
                     style: {
-                        colors: '#251666', // y축 글 색상
+                        colors: '#262752', // y축 글 색상
                     },
                 },
             },
-            colors: ['#251666'],
+            colors: ['#262752'],
           };
     
           const chart = new ApexCharts(
@@ -473,17 +474,21 @@ const Board_object = () => {
     return (
         <div className="board_object_body">
             {/* 헤더*/}
-            <div className="board_object_header">
-                <div className="board_object_header_c1">
-                    <Link to="/"><img className="board_object_header_c1_logo" src={require("../image/logo.png")}></img></Link>
-                </div>
-                <div className="board_object_header_c2">
-                    <div className="board_object_header_c2_b1" onClick={handleLogout}>로그아웃</div>
-                    <Link to="/mypage" style={{ textDecoration: 'none' }}><div className="board_object_header_c2_b2">마이페이지</div></Link>
-                </div>
-            </div>
+            <Home_header></Home_header>
 
             <div className="board_info_title_hashtag_container">
+
+                {/* 편집 및 수정 */}
+                <div className="edit_and_delete_container">
+                    <div className="board_object_tool_c1">
+                        {user_Id == boardview_userId && <button className = "board_object_tool_c1_btn" onClick={handleEditmode}>수정</button>} 
+                        {user_Id != boardview_userId && <div className = "no_board_object_tool_c1_btn">수정</div>} 
+                    </div>
+                    <div className="board_object_tool_c2">
+                        {user_Id == boardview_userId && <button className = "board_object_tool_c2_btn" onClick={handleBoarddelete}>삭제</button>}
+                        {user_Id != boardview_userId && <div className = "no_board_object_tool_c2_btn">삭제</div>} 
+                    </div>
+                </div>
 
                 {/* 제목*/}
                 {boardedit_mode === false && (
@@ -496,15 +501,6 @@ const Board_object = () => {
                         <input className="board_object_title_edit" placeholder={boardview_title} onChange={handleboardedit_titleChange}></input>
                     </div>
                 )}
-
-                {/* 글쓴이 아이디, 게시일 */}
-                <div className="board_object_info">
-                    <div className="board_object_info_owner">{boardview_username}</div>
-                    <div className="board_object_info_edit_container">
-                        {/* <div>작성일 : {boardview_createAt}</div> */}
-                        <div>{boardview_modifiedAt}</div>
-                    </div>
-                </div>
 
                 {/* 해시테그*/}
                 {boardedit_mode === false && (
@@ -521,8 +517,15 @@ const Board_object = () => {
                         ))}
                     </div>
                 )}
-                
 
+                {/* 글쓴이 아이디, 게시일 */}
+                <div className="board_object_info">
+                    <div className="board_object_info_owner">{boardview_username}</div>
+                    <div className="board_object_info_edit_container">
+                        {/* <div>작성일 : {boardview_createAt}</div> */}
+                        <div>{boardview_modifiedAt} 작성 | {boardview_modifiedAt} 수정 | 조회수 99+</div>
+                    </div>
+                </div>
             </div>
 
             {/* 그래프*/}
@@ -565,25 +568,18 @@ const Board_object = () => {
             {/*푸터*/}
             <div className="board_object_footer">
                 <img className="board_object_footer_c3" src={require("../image/logo.png")}></img>
-                <div className="board_object_footer_c1">LOADSTAR 2023</div>
+                <div className="board_object_footer_c1">2023</div>
                 <div className="board_object_footer_c2">당신의 길라잡이</div>  
             </div>
 
             {/*즐겨찾기, 게시글 삭제 및 수정*/}
             {boardedit_mode === false && (
             <div className="board_object_tool">
-                <div className="board_object_tool_c1">
-                    {user_Id == boardview_userId && <button className = "board_object_tool_c1_btn" onClick={handleEditmode}>EDIT</button>} 
-                    {user_Id != boardview_userId && <div className = "no_board_object_tool_c1_btn">EDIT</div>} 
-                </div>
-                <div className="board_object_tool_c2">
-                    {user_Id == boardview_userId && <button className = "board_object_tool_c2_btn" onClick={handleBoarddelete}>DELETE</button>}
-                    {user_Id != boardview_userId && <div className = "no_board_object_tool_c2_btn">DELETE</div>} 
-                </div>
                 <div className = "board_object_tool_c3">
-                    {bookmark === false && <img className="star" src={require("../image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
-                    {bookmark === true && <img className="star" src={require("../image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
-                </div>                
+                    {bookmark === false && <img className="star1" src={require("../image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
+                    {bookmark === true && <img className="star2" src={require("../image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
+                </div>
+                <div className="board_object_tool_watch">99+</div>              
             </div>
             )}
             {boardedit_mode === true && (

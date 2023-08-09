@@ -116,7 +116,7 @@
         width: 677px;
 
         /* background-color: rgb(58, 48, 114); */
-        border-radius: 10px;
+        border-radius: 5px;
         border : 2px solid #989898;
         
         color: #000000;
@@ -135,7 +135,7 @@
         /* background-color: beige ; */
         height: 30px;
         width: 130px;
-        margin-top: 10px;
+        margin-top: 7px;
         display: flex;
         justify-content: space-between;
 

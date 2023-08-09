@@ -263,7 +263,7 @@ const Home_board_list = (props) => {
                         <div className="board-list_c1">
 
                             <div className="board-list_c1_img">
-                                <Chart className="chanchan" options={options} series={series} type="rangeBar" height = "120" width="317"/>
+                                <Chart className="chanchan" options={options} series={series} type="rangeBar" height = "120" width="295"/>
                             </div>
 
                             <div className="board-list_c1_tag"></div>

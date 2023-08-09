@@ -161,6 +161,7 @@
         width: 320px;
         outline: none;
         border: none;
+        padding-left: 10px;
     }
     .home_board_search_c2 button{
         width: 80px;
@@ -189,7 +190,7 @@
     .list_1{
         /* background-color: #614eb7; */
         height: 100%;
-        width: 950px;
+        width: 899px;
         border-radius: 5px;
         
         display: flex;
@@ -248,7 +249,7 @@
         font-family: 'IBM Plex Sans KR', sans-serif; 
         cursor: pointer;
         
-        margin-left: 30px;
+        margin-left: 68px;
     }
     .list_2{
         position: relative;
@@ -320,7 +321,7 @@
         filter: brightness(80%);
     }
     .board-list_c1{
-        /* background-color: #ffffff; */
+        /* background-color: aquamarine; */
         height: 130px;
         width: 100%;
         display: flex;
