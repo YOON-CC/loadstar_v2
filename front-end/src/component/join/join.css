@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (min-width: 901px) { /*175 이전*/
+    .join_cointainer {
+        /* background-color: #4630a8; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+    }
+    .join_cointainer_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .join_cointainer_id_container{
+        /* background-color: aquamarine; */
+        display: flex;
+        height: 55px;
+        width: 497px;
+        border: 2px solid #cdcdcd;
+        border-radius: 6px;
+
+        margin-top: 20px;
+    }
+    .join_cointainer_id_container input{
+        position: relative;
+        height: 53px;
+        width: 410px;
+
+
+        outline: none;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
+        padding-left: 10px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .join_cointainer_id_container button{
+        position: relative;
+        height: 50x;
+        width: 75px;
+
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .id_availability_1{
+        margin-top: 5px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .id_availability_2{
+        margin-top: 5px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: #262752;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .id_availability_3{
+        margin-top: 5px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .join_cointainer_pwd_container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .join_cointainer_pwd_container input{
+        position: relative;
+        height: 53px;
+        width: 230px;
+
+        outline: none;
+        border: 2px solid #cdcdcd;
+        border-radius: 5px;
+
+        margin-top: 5px;
+        padding-left: 10px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .join_cointainer_email_container{
+        background-color: aquamarine;
+        display: flex;
+        height: 55px;
+        width: 497px;
+        border: 2px solid #cdcdcd;
+        border-radius: 6px;
+
+        margin-top: 10px;
+    }
+    .join_cointainer_email_container input{
+        position: relative;
+        height: 50x;
+        width: 410px;
+
+
+        outline: none;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
+        padding-left: 10px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .join_cointainer_email_container button{
+        position: relative;
+        height: 50x;
+        width: 75px;
+
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .join_cointainer_code_container{
+        position: relative;
+        /* background-color: aqua; */
+        height: 35px;
+        width: 200px;
+
+        width:fit-content;
+        margin-top: 10px;
+        border-bottom: 2px solid #cdcdcd;
+
+        display: flex;
+
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .join_cointainer_code_container input{
+        /* background-color: red; */
+        outline: none;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: #262752;
+
+        text-align: center;
+
+    }
+    .join_cointainer_code_container button{
+        height:100%;
+        width: 40px;
+        
+        background: none;
+        outline: none;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: #262752;
+        cursor: pointer;
+    }
+    .join_button_container{
+        position: relative;
+        /* background-color: aqua; */
+
+        width: 500px;
+        height:60px;
+
+        margin-top: 10px;
+    }
+    .join_button_container_1{
+        height:100%;
+        width: 100%;
+
+        border:none;
+        border-radius: 5px;
+
+        background-color: #262752;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+    }
+    .join_button_container_2{
+        height:100%;
+        width: 100%;
+
+        border:none;
+        border-radius: 5px;
+
+        background-color: #e5e5e5;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

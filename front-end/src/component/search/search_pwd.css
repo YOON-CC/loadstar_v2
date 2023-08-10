@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -6,15 +7,16 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media (min-width: 901px) { /*175 이전*/
-    .change_container {
-        /* background-color: red; */
+    .search_pwd_container {
+        /* background-color: #4630a8; */
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 500px;
     }
-    .change_pwd_container_title{
+
+    .search_pwd_container_title{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,19 +26,25 @@
         font-weight: bold;
         color: #262752;
     }
-    .change_pwd_container_1 input{
-        position: relative;
+    .search_pwd_container_email_container{
+        /* background-color: aquamarine; */
+        display: flex;
         height: 55px;
-        width: 480px;
+        width: 497px;
+        border: 2px solid #cdcdcd;
+        border-radius: 6px;
 
-        left: 50%;
-        transform: translate(-50%);
+        margin-top: 20px;
+    }
+    .search_pwd_container_email_container input{
+        position: relative;
+        height: 50x;
+        width: 425px;
+
 
         outline: none;
-        border: 2px solid #cdcdcd;
-        border-radius: 5px;
-
-        margin-top: 15px;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
         padding-left: 10px;
 
         font-family: 'IBM Plex Sans KR', sans-serif;
@@ -44,42 +52,83 @@
         font-weight: bold;
         color: #262752;
     }
-    .change_pwd_container_2 input{
+    .search_pwd_container_email_container button{
         position: relative;
-        height: 55px;
-        width: 480px;
+        height: 50x;
+        width: 60px;
 
-        left: 50%;
-        transform: translate(-50%);
-
-        outline: none;
-        border: 2px solid #cdcdcd;
-        border-radius: 5px;
-
-        margin-top: 10px;
-        padding-left: 10px;
+        border: none;
+        border-radius: 0px 5px 5px 0px;
 
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 15px;
         font-weight: bold;
         color: #262752;
     }
-    .change_button_container{
+    .mail_receive_code_container{
+        position: relative;
         /* background-color: aqua; */
+        height: 35px;
+        width: 200px;
+
+        width:fit-content;
+        margin-top: 10px;
+        border-bottom: 2px solid #cdcdcd;
+
+        display: flex;
+
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .mail_receive_code_container input{
+        /* background-color: red; */
+        outline: none;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: #262752;
+
+        text-align: center;
+
+    }
+    .mail_receive_code_container button{
+        height:100%;
+        width: 40px;
+        
+        background: none;
+        outline: none;
+        border: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: #262752;
+        cursor: pointer;
+    }
+    .stop_search_pwd_container{
+        /* background-color: aqua; */
+
+        height: 55px;
         display: flex;
         justify-content: space-between;
-        
+
         margin-top: 20px;
-        height: 55px;
-        width: 495px;
-
-        margin-left: 2.5px;
-        
     }
-    .change_button_container_cancel{
+    .stop_search_pwd_container_button_1{
         background-color: #262752;
         height: 100%;
-        width: 242px;
+        width: 245px;
         
         display: flex;
         justify-content: center;
@@ -93,27 +142,11 @@
 
         border-radius: 5px;
     }
-    .change_button_container_login_1{
-        background-color: #262752;
-        height: 100%;
-        width: 242px;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        color: #ffffff;
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        font-size: 17px;
-        font-weight: bold;
-        cursor: pointer;
-
-        border-radius: 5px;
-    }
-    .change_button_container_login_2{
+    .stop_search_pwd_container_button_2{
         background-color: #e5e5e5;
         height: 100%;
-        width: 242px;
+        width: 245px;
         
         display: flex;
         justify-content: center;
@@ -127,6 +160,5 @@
 
         border-radius: 5px;
     }
-
 
 }

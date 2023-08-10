@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import No_login_home_header from "./component/header/no_login_home_header";
 import Home_board_list from "./component/body/home_board_list";
-import Login from "./component/login/login";
+import Sign from "./component/login/sign";
 import Search_id from "./component/search/search_id";
 import Search_pwd from "./component/search/search_pwd";
 import Change_pwd from "./component/change/change_pwd";
@@ -15,11 +15,6 @@ import Drawing from "./component/drawing/drawing";
 import store from "./store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-//test
-//test2
-//test3
-//test7
-//test8
 
 export default class App extends Component {
   state = {
@@ -65,8 +60,8 @@ export default class App extends Component {
               path="/"
               element={<Home_board_list></Home_board_list>}></Route>
             <Route
-              path="/login"
-              element={<Login></Login>}></Route>
+              path="/sign"
+              element={<Sign></Sign>}></Route>
             <Route
               path="/board/*"
               element={<Board_object></Board_object>}></Route>

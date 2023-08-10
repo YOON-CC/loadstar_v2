@@ -48,27 +48,25 @@ const Change_pwd = () => {
     };
 
     return (
-        <div className="login-box">
-            <h2>비밀번호 변경</h2>
+        <div className="change_container">
+            <div className="change_pwd_container_title">비밀번호 변경</div>
             <form onSubmit={handleChangeSubmit}>
-                <div className="user-box">
-                    <input type="password" value={newpassword} onChange={handlenewpasswordChange} maxLength={10}></input>
-                    <label>Password</label>
+                <div className="change_pwd_container_1">
+                    <input type="password" value={newpassword} onChange={handlenewpasswordChange} maxLength={10} placeholder="비밀번호"></input>
                 </div>
 
-                <div className="user-box">
-                    <input type="password" value={newpassword_again} onChange={handlenewpassword_againgChange} maxLength={10}></input>
-                    <label>Password_again</label>
+                <div className="change_pwd_container_2">
+                    <input type="password" value={newpassword_again} onChange={handlenewpassword_againgChange} maxLength={10} placeholder="비밀번호 확인"></input>
                 </div>
 
-                <div className="user-button_container">
-                    {newpassword === newpassword_again && newpassword !== '' && newpassword_again !== ''? 
-                    (<button type="submit" className="user-button_container_login">변경</button>) : 
-                    (<div type="submit" className="user-button_container_login_2">변경</div>)}
-
-                    <div className="user-button_container_cancel" onClick={function(){
+                <div className="change_button_container">
+                    <div className="change_button_container_cancel" onClick={function(){
                         store.dispatch({type:'HOME'});
-                    }.bind(this)}>CANCEL</div>
+                    }.bind(this)}>취소</div>
+
+                    {newpassword === newpassword_again && newpassword !== '' && newpassword_again !== ''? 
+                    (<button type="submit" className="change_button_container_login_1">변경</button>) : 
+                    (<div type="submit" className="change_button_container_login_2">변경</div>)}
                 </div>
 
             </form>

@@ -9,7 +9,6 @@ import { Link, useNavigate} from 'react-router-dom';
 
 
 const Login = () => {
-
     const navigate = useNavigate();
 
     const [id, setId] = useState('');
@@ -60,19 +59,17 @@ const Login = () => {
         }
     };
 
-    
     return (
         <div>
-            <Home_header></Home_header>
             <div className="login_container">
                 <div className='login_img'><img src= {require ("../image/logo.png")}></img></div>
                 <form onSubmit={handleSubmit}>
                     <div className="login_id_container">
-                        <input type="text" value={id} onChange={handleidChange} maxLength={10} placeholder="아이디를 입력하세요"></input>
+                        <input type="text" value={id} onChange={handleidChange} maxLength={10} placeholder="아이디를 입력하세요."></input>
                     </div>
 
                     <div className="login_pwd_container">
-                        <input type="password" value={password} onChange={handlePasswordChange} maxLength={10} placeholder="비밀번호를 입력하세요"></input> 
+                        <input type="password" value={password} onChange={handlePasswordChange} maxLength={10} placeholder="비밀번호를 입력하세요."></input> 
                     </div>
 
                     <div className="login_send_container">
@@ -92,7 +89,8 @@ const Login = () => {
                 </form>
             </div>
         </div>
-    )
+    
+  );
+};
 
-}
 export default Login;

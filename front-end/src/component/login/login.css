@@ -111,7 +111,9 @@
         justify-content: center;
         align-items: center;
 
-        margin-left: 5px;
+        margin-left: 6px;
+
+        cursor: pointer;
     }
     .login_search_line{
         background-color: #434343;
@@ -135,6 +137,8 @@
         justify-content: center;
         align-items: center;
 
-        margin-left: 10px;
+        margin-left: 12px;
+        cursor: pointer;
+
     }
 }

@@ -24,13 +24,13 @@ function Home_header() {
             <Link to="/" style={{ textDecoration: 'none' }}>
               <div className="home_header_container_1_logo"><img src= {require ("../image/logo.png")}></img></div>
             </Link>
-            {number === 0 ?
+            {number === 7 ?
               <div className="home_header_container_1_btn_container">
-                <Before_login></Before_login>
+                <After_login></After_login>
               </div>
               :
               <div className="home_header_container_1_btn_container">
-                <After_login></After_login>
+                <Before_login></Before_login>
               </div>
             }
 
