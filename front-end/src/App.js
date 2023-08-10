@@ -36,34 +36,37 @@ export default class App extends Component {
   }
 
   render() {
-    if (
-      this.state.number === 0 ||
-      this.state.number === 1 ||
-      this.state.number === 2 ||
-      this.state.number === 3 ||
-      this.state.number === 4 ||
-      this.state.number === 5 ||
-      this.state.number === 6 ||
-      this.state.number === 10
-    ) {
-      return (
-        <div className="App">
-          <No_login_home_header></No_login_home_header>
-          {this.state.number === 1 && <Login></Login>}
-          {this.state.number === 2 && <Join></Join>}
-          {this.state.number === 3 && <Search_id></Search_id>}
-          {this.state.number === 4 && <Search_pwd></Search_pwd>}
-          {this.state.number === 5 && <Change_pwd></Change_pwd>}
-          {this.state.number === 6 && <Welcome></Welcome>}
-        </div>
-      );
-    } else {
+    // if (
+    //   this.state.number === 0 ||
+    //   this.state.number === 1 ||
+    //   this.state.number === 2 ||
+    //   this.state.number === 3 ||
+    //   this.state.number === 4 ||
+    //   this.state.number === 5 ||
+    //   this.state.number === 6 ||
+    //   this.state.number === 10
+    // ) {
+    //   return (
+    //     <div className="App">
+    //       <No_login_home_header></No_login_home_header>
+    //       {this.state.number === 1 && <Login></Login>}
+    //       {this.state.number === 2 && <Join></Join>}
+    //       {this.state.number === 3 && <Search_id></Search_id>}
+    //       {this.state.number === 4 && <Search_pwd></Search_pwd>}
+    //       {this.state.number === 5 && <Change_pwd></Change_pwd>}
+    //       {this.state.number === 6 && <Welcome></Welcome>}
+    //     </div>
+    //   );
+    // } else {
       return (
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route
               path="/"
               element={<Home_board_list></Home_board_list>}></Route>
+            <Route
+              path="/login"
+              element={<Login></Login>}></Route>
             <Route
               path="/board/*"
               element={<Board_object></Board_object>}></Route>
@@ -80,6 +83,6 @@ export default class App extends Component {
           </Routes>
         </BrowserRouter>
       );
-    }
+    
   }
 }

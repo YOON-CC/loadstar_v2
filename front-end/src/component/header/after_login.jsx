@@ -12,7 +12,7 @@ const AfterLogin = () => {
     };
 
     return (
-        <div className="home_header_body_1_form_after">
+        <div className="home_header_body_1_login_form">
             <div className="home_header_body_1_c1" onClick={handleLogout}>
                 로그아웃
             </div>

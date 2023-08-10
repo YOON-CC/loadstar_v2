@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Chart from 'react-apexcharts';
 import "./home_board_list.css";
 
-const Home_board_list = (props) => {
+const Home_board_list = () => {
 
     //메인페이지 글 종류 상태
     const [show_1, setShow_1] = useState(true);

@@ -25,7 +25,7 @@
     width: 100%;
     height: 100%;
 }
-.home_header_body_1_form_after{
+.home_header_body_1_login_form{
     /* background-color: rgb(133, 67, 67); */
     height:100%;
     width: 145px;
@@ -34,12 +34,26 @@
     margin-right: 10px; 
 }
 .home_header_body_1_c1{
+    width: 60px;
     color : #262752;
     font-size: 15px;
     font-weight: bold;
     font-family: 'IBM Plex Sans KR', sans-serif;
     margin-top: 9px;
     cursor: pointer;
+}
+.home_header_body_1_c1_login{
+    /* background-color: aqua; */
+    width: 60px;
+    color : #262752;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    margin-top: 9px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
 }
 .home_header_body_1_c2{
     background-color: #262752;
