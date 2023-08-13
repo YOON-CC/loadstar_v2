@@ -1,18 +1,28 @@
+/*내가 쓴 게시글*/
 import React from "react";
+import "./mypage.css";
+import { Link } from "react-router-dom";
 
 const Mypage_2 = () => {
-    const handleClick1 = () => {
-        window.open('https://www.notion.so/Loadstar-010b97456e40412489fcd9d46c926521?pvs=4');
-    };
-    return (
-        <div className="mypage_2_container">
-            <div className="mypage_2_manual_loadstar">"이용방법을 확인하고 LoadStar의 다양한 기능을 사용해보세요!"</div>
-            <div className="mypage_2_manual_container_img"><img className="manual_img" src={require("../image/manual.png")}></img></div>
-            <div className="mypage_2_manual_container">
-            <div onClick={handleClick1}>이용방법 보기</div>
-            </div>
+  return (
+    <div className="mypage_container">
+      <div className="mypage_top">내가 쓴 게시글만 모았어요 !</div>
+      <div className="board-list_c5">
+        <div className="board-list_c5_c1">
+          <img src={require("../image/user.png")}></img>
+          <div>아이디아이디아이디</div>
         </div>
-    );
+        <div className="board-list_c5_c2">
+          <img src={require("../image/star.png")}></img>
+          <div>99+</div>
+        </div>
+        <div className="board-list_c5_c3">
+          <img src={require("../image/check.png")}></img>
+          <div>99+</div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Mypage_2;
