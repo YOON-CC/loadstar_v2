@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
     /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -7,7 +8,7 @@
     @media (min-width: 1501px) { /*175 이전*/
     .chart_body{
         position: relative;
-        background:#9f9ea3;
+        background:#ffffff;
         height: 100vh;
         width: 100%;
         overflow: hidden;
@@ -24,19 +25,101 @@
     .chart_body_not_100_text2{
         display: none;
     }
-    
+    /*차트 헤더*/
+    .chart_header{
+        /* background: linear-gradient(135deg, #2b197d, #4c3b9b, #4c3b9b, #4c3b9b, #2b197d); */
+        height: 50px;
+        width: 100%;
+
+        display : flex;
+        justify-content: space-between;
+    }
+    .chart_header_c1{
+        /* background-color: aqua; */
+        height: 100%;
+        width: 65px;
+        margin-left: 10px;
+    }
+    .chart_header_c1_logo{
+        height: 100%;
+        width: 100%;
+    }
+    .chart_header_c2{
+        /* background-color: aqua; */
+        width: 195px;
+
+        display: flex;
+        justify-content: space-evenly;
+
+        margin-right: 10px;
+    }
+    .chart_header_c2_b1{
+        height: 20px;
+        width: 80px;
+        border: 3px solid;
+        border-radius: 10px;
+        border-color: #000000;
+
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 80%;
+
+        display: flex;
+        justify-content: center;
+        margin-top: 11px;
+        padding-top: 3px;
+        cursor: pointer;
+    }
+    .chart_header_c2_b2{
+        height: 20px;
+        width: 80px;
+        border: 3px solid;
+        border-radius: 10px;
+        border-color: #ffffff;
+
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 80%;
+
+        display: flex;
+        justify-content: center;
+        margin-top: 11px;
+        padding-top: 3px;
+        cursor: pointer;
+    }
+    .chart_header_c2_b3{
+        height: 25px;
+        width: 25px;
+        margin-top: 12px;
+    }
+    .chart_header_c2_b3 img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .top_level_container{
+        position: relative;
+        /* background-color: #d6ce7e; */
+        width: 100%;
+        height: 650px;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        margin-top: -50px;
+    }
     /*차트 -tjdus 수정 부분*/
     .chart_container{
-        
+        font-family: 'IBM Plex Sans KR', sans-serif;
         position: absolute;
         background-color: #ffffff;
         /* background-color: rgb(0, 0, 0); */
-        border-radius: 15px;
         width: 1300px;
         left: 50%;
         transform: translate(-50%);
-        padding: px;
-        box-shadow: 0px 0px 1px rgb(0, 0, 0);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 5px 18px -7px rgba(205, 205, 205, 0.714);
+    
     }
     /*초반 질문*/
     .chart_question{
@@ -45,11 +128,12 @@
         /* background-color: rgba(0, 0, 0, 0.27); */
         height: 250px;
         width: 100%;
-        margin-top: 400px;
+        margin-top: 23%;
     }
     .chart_question_container{
         position: relative;
         background: #ffffff;
+
         background-blend-mode: screen;
         height: 100%;
         width: 1340px;
@@ -59,6 +143,7 @@
         transform: translate(-50%, -50%);
     }
     .chart_question_container_c1{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         /* background-color: aqua; */
         width: 100%;
         height: 50px;
@@ -67,9 +152,9 @@
         justify-content: center;
         align-items: center;
 
-        font-size: 15px;
-        font-weight: bold;
-        color: #ffffff;
+        font-size: 18px;
+        font-weight: 800;
+        color: #272727;
     }
     .chart_question_container_c2{
         /* background-color: rgb(96, 101, 101); */
@@ -92,7 +177,8 @@
         border: none;
         margin-top: 145px;
         margin-left: 10px;
-        color: #ffffff;
+
+        color: #6f5555;
     }
     .chart_question_container_c2_b1 button:hover{
         background-color: rgba(255, 255, 255, 0.053);
@@ -136,6 +222,7 @@
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
+        margin-top: 30px; 
         color: #363636;
     }
     .chart_question_container_c2_container_b1{
@@ -191,6 +278,7 @@
         margin-top: 25px;
     }
     .chart_question_container_c2_container_period_title_1{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         /* background-color: #ffffff; */
         width: 100%;
 
@@ -198,12 +286,13 @@
         justify-content: center;
         align-items: center;
 
-        color: #d6ce7e;
+        color: #262752;
         font-size: 12px;
         font-weight: bold;
     }
     .chart_question_container_c2_container_period_title_2{
         /* background-color: #ffffff; */
+        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
 
         display: flex;
@@ -216,6 +305,7 @@
         margin-top: 50px;
     }
     .chart_question_container_c2_container_period_input{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         /* background-color: #241f3a; */
         width: 380px;
         display: flex;
@@ -226,6 +316,7 @@
     
 
     .chart_question_container_c2_container_period_input input{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         position: relative;
         width: 130px;
         height: 30px;  
@@ -250,6 +341,7 @@
     
     
     .addition_btn{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         background-color: #00000026;
         height: 27px;
         width: 50px;
