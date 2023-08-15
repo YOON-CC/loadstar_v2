@@ -29,9 +29,9 @@
 }
 
 .name_container{
-    height:60px;
+    height:40px;
     position: relative;
-    padding:25px 10px 10px;
+    padding:25px 10px 0px;
 }
 
 .user_name{
@@ -50,7 +50,7 @@
     padding:5px 5px 5px;
     text-align: center;
     cursor:pointer;
-    margin:20px 10px 20px 20%;
+    margin:20px 10px 10px 20%;
 }
 .left_container_1{
     border-bottom: 1px solid #b5b5b5;
@@ -89,84 +89,84 @@
 	transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.list_1{
+.mypage_list_1{
     margin-top: 15%;
     width:100%;
     height: 12%;
     flex-direction: column;
 }
-.list_1_title{
+.mypage_list_1_title{
     padding-left: 5%;
     font-weight: bold;
 }
-.list_1_content{
+.mypage_list_1_content{
     cursor:pointer;
     text-align: right;
 }
-.list_1_0{
+.mypage_list_1_0{
     width:60%;
     display:inline-block;
     text-align: left;
 }
-.list_2{
+.mypage_list_2{
     width:100%;
     height: 30%;
     flex-direction: column;
     margin-top: 20%;
 
 }
-.list_2_title{
+.mypage_list_2_title{
     padding-left: 5%;
     font-weight:bold;
 }
-.list_2_content_0{
+.mypage_list_2_content_0{
     cursor:pointer;
     text-align: right;
 }
-.list_2_content_1{
+.mypage_list_2_content_1{
     cursor:pointer;
     text-align: right;
 }
-.list_2_content_2{
+.mypage_list_2_content_2{
     cursor:pointer;
     text-align: right;
 }
-.list_2_0{
+.mypage_list_2_0{
     width:60%;
     display:inline-block;
     text-align: left;
 }
-.list_2_1{
+.mypage_list_2_1{
     width:60%;
     display:inline-block;
     text-align: left;
 }
-.list_2_2{
+.mypage_list_2_2{
    width:60%;
     display:inline-block;
     text-align: left;
 }
-.list_3{
+.mypage_list_3{
     width:100%;
     height: 20%;
     flex-direction: column;
     margin-top: 30%;
     margin-left:0%;
 }
-.list_3_content_0{
+.mypage_list_3_content_0{
     cursor:pointer;
     text-align: right;
 }
-.list_3_content_1{
+.mypage_list_3_content_1{
     cursor:pointer;
     text-align: right;
 }
-.list_3_0{
+.mypage_list_3_0{
     width:60%;
     display:inline-block;
     text-align: left;
 }
-.list_3_1{
+.mypage_list_3_1{
     width:60%;
     display:inline-block;
     text-align: left;

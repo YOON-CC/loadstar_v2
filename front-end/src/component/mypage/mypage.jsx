@@ -30,45 +30,47 @@ const Mypage = () => {
               </div>
             </div>
             <div className="left_container_2">
-              <div className="list_1">
-                <div className="list_1_title">나의 그래프</div>
-                <div className="list_1_content" onClick={() => setMypagenum(1)}>
-                  <div className="list_1_0">나의 그래프</div>
+              <div className="mypage_list_1">
+                <div className="mypage_list_1_title">나의 그래프</div>
+                <div
+                  className="mypage_list_1_content"
+                  onClick={() => setMypagenum(1)}>
+                  <div className="mypage_list_1_0">나의 그래프</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
               </div>
-              <div className="list_2">
-                <div className="list_2_title">나의 활동</div>
+              <div className="mypage_list_2">
+                <div className="mypage_list_2_title">나의 활동</div>
                 <div
-                  className="list_2_content_0"
+                  className="mypage_list_2_content_0"
                   onClick={() => setMypagenum(2)}>
-                  <div className="list_2_0">내가 쓴 게시글</div>
+                  <div className="mypage_list_2_0">내가 쓴 게시글</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
                 <div
-                  className="list_2_content_1"
+                  className="mypage_list_2_content_1"
                   onClick={() => setMypagenum(3)}>
-                  <div className="list_2_1">내가 쓴 댓글</div>
+                  <div className="mypage_list_2_1">내가 쓴 댓글</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
                 <div
-                  className="list_2_content_2"
+                  className="mypage_list_2_content_2"
                   onClick={() => setMypagenum(4)}>
-                  <div className="list_2_2">북마크 한 글</div>
+                  <div className="mypage_list_2_2">북마크 한 글</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
               </div>
-              <div className="list_3">
+              <div className="mypage_list_3">
                 <div
-                  className="list_3_content_0"
+                  className="mypage_list_3_content_0"
                   onClick={() => setMypagenum(5)}>
-                  <div className="list_3_0">이용방법</div>
+                  <div className="mypage_list_3_0">이용방법</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
                 <div
-                  className="list_3_content_1"
+                  className="mypage_list_3_content_1"
                   onClick={() => setMypagenum(6)}>
-                  <div className="list_3_1">ABOUT</div>
+                  <div className="mypage_list_3_1">ABOUT</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
               </div>
