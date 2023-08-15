@@ -68,22 +68,24 @@ const ChartComponent = ({}) => {
           type: "datetime",
           labels: {
             style: {
-              colors: "#493f6c", // x축 글 색상
-              fontSize: "13px", // x축 글자 크기
+              colors: "#272727", // x축 글 색상
+              fontSize: "15px", // x축 글자 크기
               fontWeight: "bold",
+              fontFamily: "IBM Plex Sans KR",
             },
           },
         },
         yaxis: {
           labels: {
             style: {
-              colors: "#493f6c", // y축 글 색상
-              fontSize: "13px", // x축 글자 크기
+              colors: "#272727", // y축 글 색상
+              fontSize: "15px", // x축 글자 크기
               fontWeight: "bold",
+              fontFamily: "IBM Plex Sans KR",
             },
           },
         },
-        colors: ["#493f6c"],
+        colors: ["#262752"],
       };
 
       const chart = new ApexCharts(document.querySelector("#chart"), options);
