@@ -29,14 +29,28 @@ const Mypage_6 = () => {
             src={require("../image/version_img.png")}></img>
         </div>
         <div className="mypage_6_version_container_contents">
-          <div>Version</div>
-          <div>0.0.1</div>
+          <div className="mypage_6_version_container_contents_num">
+            <div>Version</div>
+            <div>0.0.1</div>
+          </div>
         </div>
       </div>
       <div className="mypage_6_version_developer">
-        <div onClick={handlegithubClick1}>조윤찬</div>
-        <div onClick={handlegithubClick2}>이선호</div>
-        <div onClick={handlegithubClick3}>강서연</div>
+        <div
+          className="mypage_6_version_developer1"
+          onClick={handlegithubClick1}>
+          조윤찬
+        </div>
+        <div
+          className="mypage_6_version_developer2"
+          onClick={handlegithubClick2}>
+          이선호
+        </div>
+        <div
+          className="mypage_6_version_developer3"
+          onClick={handlegithubClick3}>
+          강서연
+        </div>
       </div>
     </div>
   );
