@@ -10,7 +10,6 @@
     left: 50%;
     height: 700px;
     width: 1000px;
-    padding: 5px;
     transform: translate(-50%);
     background: rgb(255, 255, 255);
     margin-top: 50px;
@@ -26,39 +25,48 @@
     border-right: 1px solid #b5b5b5;
     width:20%;
     font-family: 'IBM Plex Sans KR', sans-serif;
-    padding:0px 1px 0px;
+    
 }
 
 .name_container{
-    height:40px;
-    position: relative;
-    padding:30px 10px 0px 5px;
+    height:30px;
+    width: 100%;
+   
 }
 
 .user_name{
     text-align:center;
-    font-size: large;
     font-weight: bold;
     font-size: x-large;
+    padding: 15% 0% 10% 5%;
+
    
 }
+.left_container_1_1{
+    width:100%;
+
+
+}
 .change_data{   
+  
     width: 120px;
-    height:33px;
     color: #a0a0a0;
     border-radius: 20px;
     border:2px solid#b5b5b5;
-    padding:2px 2px 2px;
     text-align: center;
     cursor:pointer;
-    margin:50px 10px 20px 35px;
+
+   margin-left: 22%;
 }
+
 .left_container_1{
     border-bottom: 1px solid #b5b5b5;
+    height:20%;
+    flex-direction: column;
 }
 .left_container_2{
     margin:5%;
-    height:70%;
+    height:80%;
     font-size: large;
     position: relative;
 }
@@ -260,13 +268,13 @@
 }
 
 .mypage_container{
-    width:100%;
+    width:800px;
     height:100%;
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 .mypage_top{
     padding:7%;
-    width:100%;
+    width:80%;
    
     font-weight: bold;
     font-size: 25px;

@@ -5,7 +5,6 @@ import Mypage_1 from "./mypage_1";
 import Mypage_2 from "./mypage_2";
 import Mypage_3 from "./mypage_3";
 import Mypage_4 from "./mypage_4";
-import Mypage_5 from "./mypage_5";
 import Mypage_6 from "./mypage_6";
 import axios from "axios";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -28,11 +27,11 @@ const Mypage = () => {
         <div className="mypage_container_1">
           <div className="left_container">
             <div className="left_container_1">
-              <div className="name_container">
-                <div className="user_name">강서연 님</div>
-              </div>
-              <div className="change_data" onClick={() => setMypagenum(0)}>
-                회원정보 변경
+              <div className="user_name">강서연 님</div>
+              <div className="left_container_1_1">
+                <div className="change_data" onClick={() => setMypagenum(0)}>
+                  회원정보 변경
+                </div>
               </div>
             </div>
             <div className="left_container_2">

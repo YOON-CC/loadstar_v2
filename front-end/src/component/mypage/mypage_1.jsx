@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Mypage_1 = () => {
   return (
-    <div className="mypage_1_container">
+    <div className="mypage_container">
       <div className="mypage_1_top">나의 그래프</div>
       <div className="mypage_1_modi">
         <Link to="/drawing">
