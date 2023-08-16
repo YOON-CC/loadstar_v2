@@ -8,6 +8,7 @@ import Mypage_4 from "./mypage_4";
 import Mypage_5 from "./mypage_5";
 import Mypage_6 from "./mypage_6";
 import axios from "axios";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import "./mypage.css";
 
@@ -70,7 +71,7 @@ const Mypage = () => {
                   className="mypage_list_3_content_0"
                   onClick={handleManualClick}>
                   <div className="mypage_list_3_0">이용방법</div>
-                  <div className="slick-next slick-arrow"></div>
+                  <ExternalLinkIcon />
                 </div>
                 <div
                   className="mypage_list_3_content_1"

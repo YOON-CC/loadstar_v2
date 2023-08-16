@@ -8,7 +8,7 @@
 .mypage_container_1{
     position: absolute;
     left: 50%;
-    height: 800px;
+    height: 700px;
     width: 1000px;
     padding: 5px;
     transform: translate(-50%);
@@ -16,6 +16,7 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    background-color: #ffffff;
 
 }
 
@@ -43,21 +44,21 @@
 }
 .change_data{   
     width: 120px;
-    height:25px;
+    height:33px;
     color: #a0a0a0;
     border-radius: 20px;
     border:2px solid#b5b5b5;
     padding:2px 2px 2px;
     text-align: center;
     cursor:pointer;
-    margin:25px 10px 20px 35px;
+    margin:50px 10px 20px 35px;
 }
 .left_container_1{
     border-bottom: 1px solid #b5b5b5;
 }
 .left_container_2{
     margin:5%;
-    height:80%;
+    height:70%;
     font-size: large;
     position: relative;
 }
@@ -108,6 +109,7 @@
     width:60%;
     display:inline-block;
     text-align: left;
+    font-size: 17px;
 }
 .mypage_list_2{
     width:100%;
@@ -123,33 +125,36 @@
 .mypage_list_2_content_0{
     cursor:pointer;
     text-align: right;
-    padding:5% 0% 5% 0%;
+    padding:5% 0% 3% 0%;
 }
 .mypage_list_2_content_1{
     cursor:pointer;
     text-align: right;
-    padding:5% 0% 5% 0%;
+    padding:3% 0% 3% 0%;
 }
 .mypage_list_2_content_2{
     cursor:pointer;
     text-align: right;
-    padding:5% 0% 5% 0%;
+    padding:3% 0% 3% 0%;
 }
 .mypage_list_2_0{
     width:60%;
     display:inline-block;
     text-align: left;
     padding-top:5%;
+    font-size: 17px;
 }
 .mypage_list_2_1{
     width:60%;
     display:inline-block;
     text-align: left;
+    font-size: 17px;
 }
 .mypage_list_2_2{
    width:60%;
     display:inline-block;
     text-align: left;
+    font-size: 17px;
 }
 .mypage_list_3{
     width:100%;
@@ -161,32 +166,35 @@
 .mypage_list_3_content_0{
     cursor:pointer;
     text-align: right;
-    padding:5% 0% 5% 0%;
+    padding:3% 0% 3% 0%;
 }
 .mypage_list_3_content_1{
     cursor:pointer;
     text-align: right;
-    padding:5% 0% 5% 0%;
+    padding:3% 0% 3% 0%;
 }
 .mypage_list_3_content_2{
     cursor:pointer;
     text-align: right;
-    padding:5% 0% 5% 0%;
+    padding:3% 0% 3% 0%;
 }
 .mypage_list_3_0{
     width:60%;
     display:inline-block;
     text-align: left;
+    font-size: 17px;
 }
 .mypage_list_3_1{
     width:60%;
     display:inline-block;
     text-align: left;
+    font-size: 17px;
 }
 .mypage_list_3_2{
     width:60%;
     display:inline-block;
     text-align: left;
+    font-size: 17px;
 }
 
 .right_container{
@@ -209,67 +217,26 @@
 
 .mypage_0_content{
     width:80%;
-    height:22%;
+    height:11%;
     margin-left: 6%;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px rgb(44, 44, 44);
     padding:10px 17px 0px;
     background-color: #f9f9f9;
 }
-.mypage_0_1{
-    width:100%;
-    border-bottom: 1px solid #b5b5b5;
-}
-.mypage_0_user_name{
-    padding:12px 0px 12px 30px;
-    width:80%;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    
-    font-size: 20px;
-    position: relative;
-    display: inline-block;
-}
-.change_user_name{
-    position:absolute;
-    display: inline-block;
-    padding:2px 9px 3px;
-    margin-top:2%;
 
-}
-.mypage_0_2{
-    width:100%;
-    border-bottom: 1px solid #b5b5b5;
-}
-
-.mypage_0_user_email{
-    padding:12px 0px 12px 30px;
-    width:80%;
-    font-family: 'IBM Plex Sans KR', sans-serif;
- 
-    font-size: 20px;
-    position: relative;
-    display: inline-block; 
-}
-.change_user_email{
-    position:absolute;
-    display: inline-block;
-    padding:2px 9px 3px;
-    margin-top:1%;
-
-}
-.mypage_0_2{
-    width:100%;
-    border-bottom: 1px solid #b5b5b5;
-}
 .mypage_0_user_password{
-    padding:12px 0px 12px 30px;
-    width:80%;
+    padding:12px 0px 12px 15px;
+    width:90%;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 20px;
     position: relative;
     display: inline-block; 
 }
-
+.mypage_password_icon{
+    display: inline-block;  
+    padding:0px 5px 0px 0px;
+}
 .mypage_1_container{
     width:100%;
     height:100%;
