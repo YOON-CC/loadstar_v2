@@ -161,6 +161,8 @@
         width: 100%;
         height: 200px;
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     /*이전버튼*/
     .chart_question_container_c2_b1{
@@ -170,25 +172,27 @@
     }
 
     .chart_question_container_c2_b1 button{
-        background-color: rgba(255, 255, 255, 0.159);
-        width: 100px;
+        background-color: #ffffff;
+        width: 80px;
         height: 35px; 
-        border-radius: 15px;
+        border-radius: 5px;
         border: none;
-        margin-top: 145px;
-        margin-left: 10px;
-
-        color: #6f5555;
+        margin-top: 60px;
+        margin-left: 0px;
+        font-weight:bold;
+        color: #000000;
+        text-align: right;
     }
     .chart_question_container_c2_b1 button:hover{
-        background-color: rgba(255, 255, 255, 0.053);
+
         cursor: pointer;
-        color: #868686;
+    
     }
     .chart_question_container_c2_select{
         /* background-color: rgb(9, 135, 135); */
-        width: 1300px;
+        width: 600px;
         height: 100%;   
+        
     }
     .chart_question_container_c2_container{
         position: relative;
@@ -200,7 +204,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 10px;
-        box-shadow: 0px 0px 2px 0px rgb(44, 44, 44);
+        /* border:none;
+        box-shadow: 0px 0px 2px 0px rgb(44, 44, 44); */
     }
     .chart_question_container_c2_container_yes_no{
         /* background-color: #4c3b9b; */
@@ -286,7 +291,7 @@
         justify-content: center;
         align-items: center;
 
-        color: #262752;
+        color: #000000;
         font-size: 12px;
         font-weight: bold;
     }
@@ -299,7 +304,7 @@
         justify-content: center;
         align-items: center;
 
-        color: #ffffff;
+        color: #262752;
         font-size: 12px;
         font-weight: bold;
         margin-top: 50px;
@@ -321,9 +326,9 @@
         width: 130px;
         height: 30px;  
 
-        background: #25252576;
+        background: #fffefe;
         border-radius: 20px;
-        color: #fff;
+        color: #000000;
         font-size: 70%;
         font-weight: bold;
         display: flex;
@@ -331,11 +336,11 @@
         align-items: center;
         
         text-align: center;
-        border: 2px #cccccc00 solid;
+        border: 2px #00000000 solid;
         outline: none;
     }
     .chart_question_container_c2_container_period_input input:focus {
-            border-color:#262752;
+            border-color:#000000;
             outline: none;
     }
     
@@ -375,6 +380,7 @@
     }
     /*저장*/
     .save{
+    
         position: relative;
         background-color: rgba(0, 0, 0, 0.1);
         border: none;
@@ -386,15 +392,12 @@
         transform: translate(-50%, -50%);
         cursor: pointer;
         margin-top: 90px;
+
     }
     .save:hover{
         background-color: rgba(0, 0, 0, 0.308);
     }
-    .save_logo{
-        width: 110px;
-        height: 100px;
-        margin-left: 45px;
-    }
+
     .save_text{
         /* background-color: #2b197d; */
         /* background: none; */
@@ -406,7 +409,6 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        margin-top: 30px;
     }
     /*다음버튼*/
     .chart_question_container_c2_b2{
@@ -415,21 +417,23 @@
         height: 100%;
     }
     .chart_question_container_c2_b2 button{
-        background-color: rgba(255, 255, 255, 0.159);
-        width: 100px;
+        background-color: #ffffff;
+        width: 80px;
         height: 35px; 
-        border-radius: 15px;
+        border-radius: 5px;
         border: none;
-        margin-top: 145px;
-        margin-right: 20px;
+        margin-top: 60px;
+        margin-right: 0px;
+        font-size: medium;
         font-weight:bold;
-        color: #ffffff;
+        color: #000000;
+
     }
     
     .chart_question_container_c2_b2 button:hover{
-        background-color: rgba(255, 255, 255, 0.053);
+       
         cursor: pointer;
-        color: #868686;
+
     }
 }
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

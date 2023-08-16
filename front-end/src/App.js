@@ -15,7 +15,6 @@ import Drawing from "./component/drawing/drawing";
 import store from "./store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 export default class App extends Component {
   state = {
     number: store.getState().number,
@@ -53,31 +52,22 @@ export default class App extends Component {
     //     </div>
     //   );
     // } else {
-      return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <Routes>
-            <Route
-              path="/"
-              element={<Home_board_list></Home_board_list>}></Route>
-            <Route
-              path="/sign"
-              element={<Sign></Sign>}></Route>
-            <Route
-              path="/board/*"
-              element={<Board_object></Board_object>}></Route>
-            <Route path="/mypage" element={<Mypage></Mypage>}></Route>
-            <Route
-              path="/boardwrite"
-              element={<Board_post></Board_post>}></Route>
-            <Route
-              path="/delete"
-              element={
-                <Board_delete_animation></Board_delete_animation>
-              }></Route>
-            <Route path="/drawing" element={<Drawing></Drawing>}></Route>
-          </Routes>
-        </BrowserRouter>
-      );
-    
+    return (
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<Home_board_list></Home_board_list>}></Route>
+          <Route path="/sign" element={<Sign></Sign>}></Route>
+          <Route
+            path="/board/*"
+            element={<Board_object></Board_object>}></Route>
+          <Route path="/mypage" element={<Mypage></Mypage>}></Route>
+          <Route path="/boardwrite" element={<Board_post></Board_post>}></Route>
+          <Route
+            path="/delete"
+            element={<Board_delete_animation></Board_delete_animation>}></Route>
+          <Route path="/drawing" element={<Drawing></Drawing>}></Route>
+        </Routes>
+      </BrowserRouter>
+    );
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./mypage.css";
 import { Link } from "react-router-dom";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
 const Mypage_5 = () => {
   const handleManualClick = () => {
