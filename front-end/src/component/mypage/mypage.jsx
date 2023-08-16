@@ -14,6 +14,11 @@ import "./mypage.css";
 const Mypage = () => {
   //마이페이지 페이지 상태관리
   const [mypagenum, setMypagenum] = useState(0);
+  const handleManualClick = () => {
+    window.open(
+      "https://www.notion.so/6fe66bc44fa2491cbd8c94675bd17cef?v=c1de34f3715c462e926079e0b9fb7b97&pvs=4"
+    );
+  };
 
   return (
     <div>
@@ -63,7 +68,7 @@ const Mypage = () => {
               <div className="mypage_list_3">
                 <div
                   className="mypage_list_3_content_0"
-                  onClick={() => setMypagenum(5)}>
+                  onClick={handleManualClick}>
                   <div className="mypage_list_3_0">이용방법</div>
                   <div className="slick-next slick-arrow"></div>
                 </div>
@@ -72,6 +77,12 @@ const Mypage = () => {
                   onClick={() => setMypagenum(6)}>
                   <div className="mypage_list_3_1">ABOUT</div>
                   <div className="slick-next slick-arrow"></div>
+                </div>
+                <div className="mypage_list_3_content_2">
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <div className="mypage_list_3_2">나가기</div>
+                    <div className="slick-next slick-arrow"></div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -82,7 +93,6 @@ const Mypage = () => {
             {mypagenum === 2 && <Mypage_2></Mypage_2>}
             {mypagenum === 3 && <Mypage_3></Mypage_3>}
             {mypagenum === 4 && <Mypage_4></Mypage_4>}
-            {mypagenum === 5 && <Mypage_5></Mypage_5>}
             {mypagenum === 6 && <Mypage_6></Mypage_6>}
           </div>
         </div>
