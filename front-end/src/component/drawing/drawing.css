@@ -129,6 +129,7 @@
         height: 250px;
         width: 100%;
         margin-top: 23%;
+        
     }
     .chart_question_container{
         position: relative;
@@ -147,7 +148,7 @@
         /* background-color: aqua; */
         width: 100%;
         height: 50px;
-
+       
         display: flex;
         justify-content: center;
         align-items: center;
@@ -163,6 +164,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     /*이전버튼*/
     .chart_question_container_c2_b1{
@@ -340,7 +342,7 @@
         outline: none;
     }
     .chart_question_container_c2_container_period_input input:focus {
-            border-color:#000000;
+            border-color:#4c4b4b5d;
             outline: none;
             
     }

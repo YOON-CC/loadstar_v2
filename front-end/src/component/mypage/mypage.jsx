@@ -13,7 +13,7 @@ import "./mypage.css";
 
 const Mypage = () => {
   //마이페이지 페이지 상태관리
-  const [mypagenum, setMypagenum] = useState(0);
+  const [mypagenum, setMypagenum] = useState(1);
   const handleManualClick = () => {
     window.open(
       "https://www.notion.so/6fe66bc44fa2491cbd8c94675bd17cef?v=c1de34f3715c462e926079e0b9fb7b97&pvs=4"
