@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ApexCharts from "apexcharts";
 import { Link, useNavigate } from "react-router-dom";
 import Home_header from "../header/home_header";
@@ -11,17 +11,17 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 const ChartComponent = ({}) => {
   //네비게이터, 리덕스
 
-  const onKeyDownEvent = (event) => {
-    const inputEl = document.getElementByName(event.target.name)[0];
-    inputEl.value = event.target.value;
+  // const onKeyDownEvent = (event) => {
+  //   const inputEl = document.getElementByName(event.target.name)[0];
+  //   inputEl.value = event.target.value;
 
-    if (
-      event.target.value.length === event.target.maxLength &&
-      event.target.nextElenemtSibling
-    ) {
-      event.target.nextElenemtSibling.focus();
-    }
-  };
+  //   if (
+  //     event.target.value.length === event.target.maxLength &&
+  //     event.target.nextElenemtSibling
+  //   ) {
+  //     event.target.nextElenemtSibling.focus();
+  //   }
+  // };
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -129,6 +129,9 @@ const ChartComponent = ({}) => {
   // 버튼, 기간
   const [yesNoBtn1, setYesNoBtn1] = useState("");
 
+  const input1Ref = useRef(null);
+  const input2Ref = useRef(null);
+
   //클리어
   const [input1_clear, setInput1_clear] = useState("");
   const [input2_clear, setInput2_clear] = useState("");
@@ -184,6 +187,7 @@ const ChartComponent = ({}) => {
 
     setInput1_clear("");
     setInput2_clear("");
+    input1Ref.current.focus();
   };
 
   //이전 돌아가기
@@ -427,17 +431,34 @@ const ChartComponent = ({}) => {
                               className="input1"
                               value={input1_clear}
                               placeholder="시작일 ex) 2023-01"
-                              onChange={(e) => setInput1_clear(e.target.value)}
+                              onChange={(e) => {
+                                setInput1_clear(e.target.value);
+
+                                // input1의 길이가 maxLength와 같다면 input2로 포커스를 이동
+                                if (
+                                  e.target.value.length === e.target.maxLength
+                                ) {
+                                  input2Ref.current.focus();
+                                }
+                              }}
                               maxLength={7}
-                              onkeydown={onKeyDownEvent}
+                              ref={input1Ref}
                             />
+
                             <input
                               type="text"
                               className="input2"
                               value={input2_clear}
                               placeholder="종료일 ex) 2023-12"
                               onChange={(e) => setInput2_clear(e.target.value)}
+                              onKeyDown={(e) => {
+                                // Enter 키가 눌렸을 때
+                                if (e.key === "Enter") {
+                                  handleAddData_addition(); // "적용" 버튼 클릭 처리
+                                }
+                              }}
                               maxLength={7}
+                              ref={input2Ref}
                             />
                             <div
                               className="addition_btn"

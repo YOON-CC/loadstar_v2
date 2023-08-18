@@ -129,6 +129,7 @@
         height: 250px;
         width: 100%;
         margin-top: 23%;
+        
     }
     .chart_question_container{
         position: relative;
@@ -147,7 +148,7 @@
         /* background-color: aqua; */
         width: 100%;
         height: 50px;
-
+       
         display: flex;
         justify-content: center;
         align-items: center;
@@ -163,6 +164,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        
     }
     /*이전버튼*/
     .chart_question_container_c2_b1{
@@ -177,7 +179,7 @@
         height: 35px; 
         border-radius: 5px;
         border: none;
-        margin-top: 60px;
+        margin-top: 50px;
         margin-left: 0px;
         font-weight:bold;
         color: #000000;
@@ -196,7 +198,7 @@
     }
     .chart_question_container_c2_container{
         position: relative;
-        background-color: #0000000f;
+        background-color: #ffffff0f;
         /* background-color: #ff0000; */
         width: 600px;
         height: 180px;
@@ -204,8 +206,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 10px;
-        /* border:none;
-        box-shadow: 0px 0px 2px 0px rgb(44, 44, 44); */
+        border:none;
+        box-shadow: 0 5px 20px -7px rgba(205, 205, 205, 0.714);
     }
     .chart_question_container_c2_container_yes_no{
         /* background-color: #4c3b9b; */
@@ -215,7 +217,7 @@
 
     /*질문 버튼*/
     .chart_question_container_c2_container_b1_default{
-        background-color: #ffffff4b;
+        background-color: #f5f5f5;
         width: 120px;
         height: 40px;
 
@@ -223,7 +225,7 @@
         justify-content: center;
         align-items: center;
 
-        border-radius: 20px;
+        border-radius: 10px;
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
@@ -231,7 +233,7 @@
         color: #363636;
     }
     .chart_question_container_c2_container_b1{
-        background-color: #ffffff;
+        background-color: #4c4b4b31;
         width: 120px;
         height: 40px;
 
@@ -239,14 +241,14 @@
         justify-content: center;
         align-items: center;
 
-        border-radius: 20px;
+        border-radius: 10px;
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
         margin-top: 30px; 
     }
     .chart_question_container_c2_container_b2_default{
-        background-color: #ffffff4b;
+        background-color: #f5f5f5;
         width: 120px;
         height: 40px;
 
@@ -254,7 +256,7 @@
         justify-content: center;
         align-items: center;
 
-        border-radius: 20px;
+        border-radius: 10px;
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
@@ -262,7 +264,7 @@
         color: #363636;
     }
     .chart_question_container_c2_container_b2{
-        background-color: #ffffff;
+        background-color:  #4c4b4b31;
         width: 120px;
         height: 40px;
 
@@ -270,7 +272,7 @@
         justify-content: center;
         align-items: center;
 
-        border-radius: 20px;
+        border-radius: 10px;
         font-size: 15px;
         font-weight: bold;
         cursor: pointer;
@@ -291,7 +293,7 @@
         justify-content: center;
         align-items: center;
 
-        color: #000000;
+        color: #ca6868;
         font-size: 12px;
         font-weight: bold;
     }
@@ -304,10 +306,10 @@
         justify-content: center;
         align-items: center;
 
-        color: #262752;
-        font-size: 12px;
+        color:  #000000;
+        font-size: 14px;
         font-weight: bold;
-        margin-top: 50px;
+        margin-top: 35px;
     }
     .chart_question_container_c2_container_period_input{
         font-family: 'IBM Plex Sans KR', sans-serif;
@@ -327,37 +329,39 @@
         height: 30px;  
 
         background: #fffefe;
-        border-radius: 20px;
+        border-radius: 5px;
         color: #000000;
-        font-size: 70%;
+        font-size: 80%;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
         
         text-align: center;
-        border: 2px #00000000 solid;
+        border: 2px #f5f5f5 solid;
         outline: none;
     }
     .chart_question_container_c2_container_period_input input:focus {
-            border-color:#000000;
+            border-color:#4c4b4b5d;
             outline: none;
+            
     }
+    
     
     
     .addition_btn{
         font-family: 'IBM Plex Sans KR', sans-serif;
-        background-color: #00000026;
+        background-color: #f5f5f5;
         height: 27px;
         width: 50px;
-        border-radius: 100px;
+        border-radius: 20px;
         margin-top: 2px;
         
         display: flex;
         justify-content: center;
         align-items: center;
 
-        color: #fff;
+        color: #000000;
         font-size: 12px;
         font-weight: bold;
         cursor: pointer;
@@ -377,6 +381,7 @@
     }
     .addition_btn:hover{
         background-color: #00000058;
+        color: #ffffff;
     }
     /*저장*/
     .save{
@@ -422,7 +427,7 @@
         height: 35px; 
         border-radius: 5px;
         border: none;
-        margin-top: 60px;
+        margin-top: 50px;
         margin-right: 0px;
         font-size: medium;
         font-weight:bold;

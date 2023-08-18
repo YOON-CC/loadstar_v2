@@ -51,7 +51,6 @@ const Mypage_0 = () => {
               <Input ref={initialRef} placeholder="새 비멀번호 확인" />
             </FormControl>
           </ModalBody>
-
           <ModalFooter>
             <Button colorScheme="blue" mr={3}>
               변경
@@ -60,8 +59,9 @@ const Mypage_0 = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      <div className="mypage_0_container">
-        <div className="mypage_0_top">회원정보 수정</div>
+
+      <div className="mypage_container">
+        <div className="mypage_top">회원정보 수정</div>
         <div className="mypage_0_content">
           <div className="mypage_0_3">
             <div className="mypage_0_user_password">
