@@ -10,7 +10,7 @@ const Mypage_1 = () => {
       <div className="mypage_1_modi">
         <Link to="/drawing">
           <div className="mypage_1_modi_content">수정하기</div>
-          <div className="slick-next slick-arrow"></div>
+          <div className="slick-next slick-arrow1"></div>
         </Link>
       </div>
     </div>

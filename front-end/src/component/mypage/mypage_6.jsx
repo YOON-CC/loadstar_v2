@@ -19,8 +19,8 @@ const Mypage_6 = () => {
   return (
     <div className="mypage_6_container">
       <div className="mypage_6_loadstar">
-        "LoadStar는 개발자가 꿈인 사용자들이 <br />
-        로드맵을 공유, 참고하며 진로방향을 설정하는 웹사이트입니다."
+        LoadStar는 개발자가 꿈인 사용자들이 <br />
+        로드맵을 공유, 참고하며 진로방향을 설정하는 웹사이트입니다.
       </div>
       <div className="mypage_6_version_container">
         <div className="mypage_6_version_container_img">
@@ -36,6 +36,7 @@ const Mypage_6 = () => {
         </div>
       </div>
       <div className="mypage_6_version_developer">
+        <div className="mypage_6_version_developer_title">Developers &#62;</div>
         <div
           className="mypage_6_version_developer1"
           onClick={handlegithubClick1}>

@@ -7,7 +7,6 @@ import Mypage_3 from "./mypage_3";
 import Mypage_4 from "./mypage_4";
 import Mypage_6 from "./mypage_6";
 import axios from "axios";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import "./mypage.css";
 
@@ -28,10 +27,9 @@ const Mypage = () => {
           <div className="left_container">
             <div className="left_container_1">
               <div className="user_name">강서연 님</div>
-              <div className="left_container_1_1">
-                <div className="change_data" onClick={() => setMypagenum(0)}>
-                  회원정보 변경
-                </div>
+
+              <div className="change_data" onClick={() => setMypagenum(0)}>
+                회원정보 변경
               </div>
             </div>
             <div className="left_container_2">
@@ -41,7 +39,7 @@ const Mypage = () => {
                   className="mypage_list_1_content"
                   onClick={() => setMypagenum(1)}>
                   <div className="mypage_list_1_0">나의 그래프</div>
-                  <div className="slick-next slick-arrow"></div>
+                  <div className="slick-next slick-arrow1"></div>
                 </div>
               </div>
               <div className="mypage_list_2">
@@ -50,19 +48,19 @@ const Mypage = () => {
                   className="mypage_list_2_content_0"
                   onClick={() => setMypagenum(2)}>
                   <div className="mypage_list_2_0">내가 쓴 게시글</div>
-                  <div className="slick-next slick-arrow"></div>
+                  <div className="slick-next slick-arrow1"></div>
                 </div>
                 <div
                   className="mypage_list_2_content_1"
                   onClick={() => setMypagenum(3)}>
                   <div className="mypage_list_2_1">내가 쓴 댓글</div>
-                  <div className="slick-next slick-arrow"></div>
+                  <div className="slick-next slick-arrow1"></div>
                 </div>
                 <div
                   className="mypage_list_2_content_2"
                   onClick={() => setMypagenum(4)}>
                   <div className="mypage_list_2_2">북마크 한 글</div>
-                  <div className="slick-next slick-arrow"></div>
+                  <div className="slick-next slick-arrow1"></div>
                 </div>
               </div>
               <div className="mypage_list_3">
@@ -70,18 +68,18 @@ const Mypage = () => {
                   className="mypage_list_3_content_0"
                   onClick={handleManualClick}>
                   <div className="mypage_list_3_0">이용방법</div>
-                  <ExternalLinkIcon />
+                  <div className="slick-next slick-arrow1"></div>
                 </div>
                 <div
                   className="mypage_list_3_content_1"
                   onClick={() => setMypagenum(6)}>
                   <div className="mypage_list_3_1">ABOUT</div>
-                  <div className="slick-next slick-arrow"></div>
+                  <div className="slick-next slick-arrow1"></div>
                 </div>
                 <div className="mypage_list_3_content_2">
                   <Link to="/" style={{ textDecoration: "none" }}>
                     <div className="mypage_list_3_2">나가기</div>
-                    <div className="slick-next slick-arrow"></div>
+                    <div className="slick-next slick-arrow1"></div>
                   </Link>
                 </div>
               </div>

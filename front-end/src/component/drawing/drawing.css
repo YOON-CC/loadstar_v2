@@ -171,24 +171,37 @@
         /* background-color: rgb(68, 241, 241); */
         width: 120px;
         height: 100%;
-    }
-
-    .chart_question_container_c2_b1 button{
-        background-color: #ffffff;
-        width: 80px;
-        height: 35px; 
-        border-radius: 5px;
-        border: none;
-        margin-top: 50px;
-        margin-left: 0px;
-        font-weight:bold;
-        color: #000000;
         text-align: right;
+        background-color: #fff;
     }
-    .chart_question_container_c2_b1 button:hover{
 
-        cursor: pointer;
+    .slick-arrow {
+        display:inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        border: 1px solid #ffffff;
+        font-size: 0px;
+        margin-right: 30px;
+        cursor:pointer;
+        
+    }
     
+    .slick-arrow::after {
+        content: '';
+        display: none;
+        position: absolute;
+        z-index: 1;
+        border: 1px solid #b8b8b8;
+        border-width: 0 2px 2px 0;
+        margin-left: -2px;
+        padding: 8px;
+        margin-top: 6%;
+    }
+    
+    .slick-prev::after {
+        -webkit-transform: translate(-50%, -50%) rotate(135deg);
+        transform: translate(-50%, -50%) rotate(135deg);
     }
     .chart_question_container_c2_select{
         /* background-color: rgb(9, 135, 135); */
@@ -421,19 +434,36 @@
         width: 120px;
         height: 100%;
     }
-    .chart_question_container_c2_b2 button{
-        background-color: #ffffff;
-        width: 80px;
-        height: 35px; 
-        border-radius: 5px;
-        border: none;
-        margin-top: 50px;
-        margin-right: 0px;
-        font-size: medium;
-        font-weight:bold;
-        color: #000000;
-
+    
+    .slick-arrow {
+        display:inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        border: 1px solid #ffffff;
+        font-size: 0px;
+        margin-left: 30px;
+        cursor:pointer;
+        
     }
+        
+    .slick-arrow::after {
+         content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        border: 1px solid #b8b8b8;
+        border-width: 0 2px 2px 0;
+        margin-left: -2px;
+        padding: 8px;
+    }
+        
+    .slick-next::after {
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    
     
     .chart_question_container_c2_b2 button:hover{
        
