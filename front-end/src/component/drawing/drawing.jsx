@@ -6,39 +6,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useDispatch } from "react-redux";
 import "./drawing.css";
-import { ChakraProvider } from "@chakra-ui/react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 const ChartComponent = ({}) => {
   //네비게이터, 리덕스
 
-  // const onKeyDownEvent = (event) => {
-  //   const inputEl = document.getElementByName(event.target.name)[0];
-  //   inputEl.value = event.target.value;
-
-  //   if (
-  //     event.target.value.length === event.target.maxLength &&
-  //     event.target.nextElenemtSibling
-  //   ) {
-  //     event.target.nextElenemtSibling.focus();
-  //   }
-  // };
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  /*const [inputValue, setInputValue] = useState({
-    // 사용할 문자열들을 저장하는 객체 형채로 관리
-    input1: "",
-  });
-
-  const handleInput=(e)=>{
-    const{name,value}=e.target;
-    setInputValue({ ...inputValue, [name]: value }); 
-      if(input1.length>=maxlen){
-        input2.focus();
-      }
-    }; 
-  */
 
   //토큰 방식
   const access_token = localStorage.getItem("access-token");
@@ -343,162 +315,158 @@ const ChartComponent = ({}) => {
   };
 
   return (
-    <ChakraProvider>
-      <div>
-        <Home_header></Home_header>
-        <div className="chart_body">
-          <div className="chart_body_not_100">
-            <img src={require("../image/logo.png")} alt="Logo" />
-            <div className="chart_body_not_100_text1">
-              화면이 너무 작습니다!
-            </div>
-            <div className="chart_body_not_100_text2">
-              웹버전 전체화면, 100% 밑으로 이용해주세요!
-            </div>
+    <div>
+      <Home_header></Home_header>
+      <div className="chart_body">
+        <div className="chart_body_not_100">
+          <img src={require("../image/logo.png")} alt="Logo" />
+          <div className="chart_body_not_100_text1">화면이 너무 작습니다!</div>
+          <div className="chart_body_not_100_text2">
+            웹버전 전체화면, 100% 밑으로 이용해주세요!
+          </div>
+        </div>
+
+        {/*차트관련 상위 컨테이너*/}
+        <div className="top_level_container">
+          {/* 차트 컨테이너 */}
+          <div className="chart_container">
+            <div id="chart" />
           </div>
 
-          {/*차트관련 상위 컨테이너*/}
-          <div className="top_level_container">
-            {/* 차트 컨테이너 */}
-            <div className="chart_container">
-              <div id="chart" />
-            </div>
+          {/* 질문 */}
+          <div className="chart_question">
+            <div className="chart_question_container">
+              <div className="chart_question_container_c1">{question}</div>
+              <div className="chart_question_container_c2">
+                <div className="chart_question_container_c2_b1">
+                  {question_tag !== "알고리즘" && (
+                    <div
+                      onClick={handlebackQeution}
+                      className="slick-prev slick-arrow"></div>
+                  )}
+                </div>
 
-            {/* 질문 */}
-            <div className="chart_question">
-              <div className="chart_question_container">
-                <div className="chart_question_container_c1">{question}</div>
-                <div className="chart_question_container_c2">
-                  <div className="chart_question_container_c2_b1">
-                    {question_tag !== "알고리즘" && (
-                      <button onClick={handlebackQeution}>
-                        <ArrowLeftIcon w={5} h={5} />
-                      </button>
+                {/* 질문 */}
+                <div className="chart_question_container_c2_select">
+                  <div className="chart_question_container_c2_container">
+                    {/* yes, no 버튼 */}
+                    <div className="chart_question_container_c2_container_yes_no">
+                      <div onClick={() => setYesNoBtn1("y")}>
+                        {(yesNoBtn1 === "n" ||
+                          (yesNoBtn1 === "" && question !== "저장")) && (
+                          <div className="chart_question_container_c2_container_b1_default">
+                            YES
+                          </div>
+                        )}
+                        {yesNoBtn1 === "y" && question !== "저장" && (
+                          <div className="chart_question_container_c2_container_b1">
+                            YES
+                          </div>
+                        )}
+                      </div>
+                      <div onClick={() => setYesNoBtn1("n")}>
+                        {(yesNoBtn1 === "y" ||
+                          (yesNoBtn1 === "" && question !== "저장")) && (
+                          <div className="chart_question_container_c2_container_b2_default">
+                            NO
+                          </div>
+                        )}
+                        {yesNoBtn1 === "n" && question !== "저장" && (
+                          <div className="chart_question_container_c2_container_b2">
+                            NO
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {question === "저장" && (
+                      <form onSubmit={handleDrawingInfosend}>
+                        <button className="save">
+                          <div className="save_text">save</div>
+                        </button>
+                      </form>
                     )}
-                  </div>
 
-                  {/* 질문 */}
-                  <div className="chart_question_container_c2_select">
-                    <div className="chart_question_container_c2_container">
-                      {/* yes, no 버튼 */}
-                      <div className="chart_question_container_c2_container_yes_no">
-                        <div onClick={() => setYesNoBtn1("y")}>
-                          {(yesNoBtn1 === "n" ||
-                            (yesNoBtn1 === "" && question !== "저장")) && (
-                            <div className="chart_question_container_c2_container_b1_default">
-                              YES
-                            </div>
-                          )}
-                          {yesNoBtn1 === "y" && question !== "저장" && (
-                            <div className="chart_question_container_c2_container_b1">
-                              YES
-                            </div>
-                          )}
+                    {/* 기간 */}
+                    {yesNoBtn1 === "y" && (
+                      <div className="chart_question_container_c2_container_period">
+                        <div className="chart_question_container_c2_container_period_title_1">
+                          형식에 맞게 시작일과 종료일을 입력해주세요!
                         </div>
-                        <div onClick={() => setYesNoBtn1("n")}>
-                          {(yesNoBtn1 === "y" ||
-                            (yesNoBtn1 === "" && question !== "저장")) && (
-                            <div className="chart_question_container_c2_container_b2_default">
-                              NO
-                            </div>
-                          )}
-                          {yesNoBtn1 === "n" && question !== "저장" && (
-                            <div className="chart_question_container_c2_container_b2">
-                              NO
-                            </div>
-                          )}
+                        <div className="chart_question_container_c2_container_period_input">
+                          <input
+                            type="text"
+                            autoFocus
+                            className="input1"
+                            value={input1_clear}
+                            placeholder="시작일 ex) 2023-01"
+                            onChange={(e) => {
+                              setInput1_clear(e.target.value);
+
+                              // input1의 길이가 maxLength와 같다면 input2로 포커스를 이동
+                              if (
+                                e.target.value.length === e.target.maxLength
+                              ) {
+                                input2Ref.current.focus();
+                              }
+                            }}
+                            maxLength={7}
+                            ref={input1Ref}
+                          />
+
+                          <input
+                            type="text"
+                            className="input2"
+                            value={input2_clear}
+                            placeholder="종료일 ex) 2023-12"
+                            onChange={(e) => setInput2_clear(e.target.value)}
+                            onKeyDown={(e) => {
+                              // Enter 키가 눌렸을 때
+                              if (e.key === "Enter") {
+                                handleAddData_addition(); // "적용" 버튼 클릭 처리
+                              }
+                            }}
+                            maxLength={7}
+                            ref={input2Ref}
+                          />
+                          <div
+                            className="addition_btn"
+                            onClick={handleAddData_addition}>
+                            적용
+                          </div>
                         </div>
                       </div>
-
-                      {question === "저장" && (
-                        <form onSubmit={handleDrawingInfosend}>
-                          <button className="save">
-                            <div className="save_text">save</div>
-                          </button>
-                        </form>
-                      )}
-
-                      {/* 기간 */}
-                      {yesNoBtn1 === "y" && (
-                        <div className="chart_question_container_c2_container_period">
-                          <div className="chart_question_container_c2_container_period_title_1">
-                            형식에 맞게 시작일과 종료일을 입력해주세요!
-                          </div>
-                          <div className="chart_question_container_c2_container_period_input">
-                            <input
-                              type="text"
-                              autoFocus
-                              className="input1"
-                              value={input1_clear}
-                              placeholder="시작일 ex) 2023-01"
-                              onChange={(e) => {
-                                setInput1_clear(e.target.value);
-
-                                // input1의 길이가 maxLength와 같다면 input2로 포커스를 이동
-                                if (
-                                  e.target.value.length === e.target.maxLength
-                                ) {
-                                  input2Ref.current.focus();
-                                }
-                              }}
-                              maxLength={7}
-                              ref={input1Ref}
-                            />
-
-                            <input
-                              type="text"
-                              className="input2"
-                              value={input2_clear}
-                              placeholder="종료일 ex) 2023-12"
-                              onChange={(e) => setInput2_clear(e.target.value)}
-                              onKeyDown={(e) => {
-                                // Enter 키가 눌렸을 때
-                                if (e.key === "Enter") {
-                                  handleAddData_addition(); // "적용" 버튼 클릭 처리
-                                }
-                              }}
-                              maxLength={7}
-                              ref={input2Ref}
-                            />
-                            <div
-                              className="addition_btn"
-                              onClick={handleAddData_addition}>
-                              적용
-                            </div>
-                          </div>
+                    )}
+                    {yesNoBtn1 === "n" && (
+                      <div className="chart_question_container_c2_container_period">
+                        <div className="chart_question_container_c2_container_period_title_2">
+                          다음으로 넘어가주세요!
                         </div>
-                      )}
-                      {yesNoBtn1 === "n" && (
-                        <div className="chart_question_container_c2_container_period">
-                          <div className="chart_question_container_c2_container_period_title_2">
-                            다음으로 넘어가주세요!
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="chart_question_container_c2_b2">
-                    {question !== "저장" && yesNoBtn1 !== "" && (
-                      <button onClick={handleNextQeution}>
-                        <ArrowRightIcon w={5} h={5} />
-                      </button>
+                      </div>
                     )}
                   </div>
+                </div>
+
+                <div className="chart_question_container_c2_b2">
+                  {question !== "저장" && yesNoBtn1 !== "" && (
+                    <div
+                      onClick={handleNextQeution}
+                      className="slick-next slick-arrow"></div>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* css스타일 */}
-        {/* <style>
+      {/* css스타일 */}
+      {/* <style>
           {`
 
           `}
       </style> */}
-      </div>
-    </ChakraProvider>
+    </div>
   );
 };
 
