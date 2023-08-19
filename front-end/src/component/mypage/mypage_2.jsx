@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import "./mypage.css";
 import { Link } from "react-router-dom";
 import Chart from "react-apexcharts";
+import axios from "axios";
 
 const Mypage_2 = () => {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [divElements, setDivElements] = useState([]);
 
   //서버에서 받은 데이터
