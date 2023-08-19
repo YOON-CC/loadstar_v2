@@ -41,7 +41,6 @@
 .name_container{
     height:30px;
     width: 100%;
-    
 }
 
 .user_name{
@@ -49,7 +48,6 @@
     font-weight: bold;
     font-size: x-large;
     margin-top: 8%;
-    
    
 }
 
@@ -63,8 +61,6 @@
     margin: auto;
     text-align:center;
     margin-top: 4%;
-    
-
     
 }
 
@@ -243,40 +239,108 @@
 }
 
 .mypage_0_top{
-    padding:7%;
+    padding:5% 0% 5% 5%;
      font-weight: bold;
     font-size: x-large;
 }
 
 .mypage_0_content{
+    position: relative;
     width:80%;
-    height:11%;
-    margin-left: 6%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 2px 0px rgb(44, 44, 44);
-    padding:5px 17px 0px;
-    background-color: #f9f9f9;
+    height:80%;
+    margin-left:6%;
+ 
 }
 
 .mypage_0_user_password{
-    padding:9px 0px 12px 15px;
-    width:87%;
+    position: absolute;
+    width:100%;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 20px;
-    position: relative;
     display: inline-block; 
+    font-weight: bold;
 }
-.mypage_0_user_password_btn{
-    width: 50px;
-    display: inline-block;  
-    padding:1px;
+
+.mypage_0_user_password_origin input{
+    position: absolute;
+    height: 30px;
+    width: 200px;
+
+    left: 17%;
+    transform: translate(-50%);
+
+    outline: none;
+    border: 2px solid #cdcdcd;
     border-radius: 5px;
-    border:2px solid #d2d2d2;
-    text-align: center;
-    cursor: pointer;
-    background-color: #d2d2d2;
-    
+
+    margin-top: 8%;
+    padding-left: 10px;
+
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #262752;
 }
+.mypage_0_user_password_new input{
+    position: absolute;
+    height: 30px;
+    width: 200px;
+
+    left: 17%;
+    transform: translate(-50%);
+
+    outline: none;
+    border: 2px solid #cdcdcd;
+    border-radius: 5px;
+
+    margin-top: 15%;
+    padding-left: 10px;
+
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #262752;
+}
+.mypage_0_user_password_new_re input{
+    position: absolute;
+    height: 30px;
+    width: 200px;
+
+    left: 17%;
+    transform: translate(-50%);
+
+    outline: none;
+    border: 2px solid #cdcdcd;
+    border-radius: 5px;
+
+    margin-top: 21%;
+    padding-left: 10px;
+
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #262752;
+}
+
+
+.send_container_change button{
+    position: absolute;
+    height:30px;
+    width:80px;
+    margin-top:28%;
+    border:none;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background-color: #262752;
+    
+
+}
+
+
 .mypage_1_container{
     width:100%;
     height:100%;
@@ -284,7 +348,7 @@
 }
 
 .mypage_1_top{
-    padding:7%;
+    padding:5%;
     width:15%;
     font-weight: bold;
     font-size: 23px;
@@ -307,9 +371,8 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 .mypage_top{
-    padding:7%;
+    padding:5%;
     width:80%;
-   
     font-weight: bold;
     font-size: 23px;
     display:inline-block;
