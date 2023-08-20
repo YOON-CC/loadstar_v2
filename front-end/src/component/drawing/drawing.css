@@ -1,654 +1,227 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
-    /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-    @media (min-width: 1501px) { /*175 이전*/
-    .chart_body{
-        position: relative;
-        background:#ffffff;
-        height: 100vh;
-        width: 100%;
-        overflow: hidden;
-    }
-    .chart_body_not_100{
-        display: none;
-    }
-    .chart_body_not_100 img{
-        display: none;
-    }
-    .chart_body_not_100_text1{
-        display: none;
-    }
-    .chart_body_not_100_text2{
-        display: none;
-    }
-    /*차트 헤더*/
-    .chart_header{
-        /* background: linear-gradient(135deg, #2b197d, #4c3b9b, #4c3b9b, #4c3b9b, #2b197d); */
-        height: 50px;
-        width: 100%;
+.top_level_container{
+    position: absolute;
+    /* background-color: brown; */
 
-        display : flex;
-        justify-content: space-between;
-    }
-    .chart_header_c1{
-        /* background-color: aqua; */
-        height: 100%;
-        width: 65px;
-        margin-left: 10px;
-    }
-    .chart_header_c1_logo{
-        height: 100%;
-        width: 100%;
-    }
-    .chart_header_c2{
-        /* background-color: aqua; */
-        width: 195px;
+    width: 1200px;
+    height: fit-content;
+    top : 50%;
+    left : 50%;
 
-        display: flex;
-        justify-content: space-evenly;
-
-        margin-right: 10px;
-    }
-    .chart_header_c2_b1{
-        height: 20px;
-        width: 80px;
-        border: 3px solid;
-        border-radius: 10px;
-        border-color: #000000;
-
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 80%;
-
-        display: flex;
-        justify-content: center;
-        margin-top: 11px;
-        padding-top: 3px;
-        cursor: pointer;
-    }
-    .chart_header_c2_b2{
-        height: 20px;
-        width: 80px;
-        border: 3px solid;
-        border-radius: 10px;
-        border-color: #ffffff;
-
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 80%;
-
-        display: flex;
-        justify-content: center;
-        margin-top: 11px;
-        padding-top: 3px;
-        cursor: pointer;
-    }
-    .chart_header_c2_b3{
-        height: 25px;
-        width: 25px;
-        margin-top: 12px;
-    }
-    .chart_header_c2_b3 img{
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-    }
-    .top_level_container{
-        position: relative;
-        /* background-color: #d6ce7e; */
-        width: 100%;
-        height: 650px;
-        left: 50%;
-        top:50%;
-        transform: translate(-50%, -50%);
-        margin-top: -50px;
-    }
-    /*차트 -tjdus 수정 부분*/
-    .chart_container{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        position: absolute;
-        background-color: #ffffff;
-        /* background-color: rgb(0, 0, 0); */
-        width: 1300px;
-        left: 50%;
-        transform: translate(-50%);
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 5px 18px -7px rgba(205, 205, 205, 0.714);
-    
-    }
-    /*초반 질문*/
-    .chart_question{
-        position: absolute;
-        /* background: linear-gradient(135deg, #2b197d, #4c3b9b, #4c3b9b, #4c3b9b, #2b197d); */
-        /* background-color: rgba(0, 0, 0, 0.27); */
-        height: 250px;
-        width: 100%;
-        margin-top: 23%;
-        
-    }
-    .chart_question_container{
-        position: relative;
-        background: #ffffff;
-
-        background-blend-mode: screen;
-        height: 100%;
-        width: 1340px;
-        border-radius: 10px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .chart_question_container_c1{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        /* background-color: aqua; */
-        width: 100%;
-        height: 50px;
-       
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 18px;
-        font-weight: 800;
-        color: #272727;
-    }
-    .chart_question_container_c2{
-        /* background-color: rgb(96, 101, 101); */
-        width: 100%;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    /*이전버튼*/
-    .chart_question_container_c2_b1{
-        /* background-color: rgb(68, 241, 241); */
-        width: 120px;
-        height: 100%;
-        text-align: right;
-        background-color: #fff;
-    }
-
-    .slick-arrow {
-        display:inline-block;
-        width: 5px;
-        height: 5px;
-        background-color: #fff;
-        border: 1px solid #ffffff;
-        font-size: 0px;
-        margin-right: 30px;
-        cursor:pointer;
-        
-    }
-    
-    .slick-arrow::after {
-        content: '';
-        display: none;
-        position: absolute;
-        z-index: 1;
-        border: 1px solid #b8b8b8;
-        border-width: 0 2px 2px 0;
-        margin-left: -2px;
-        padding: 8px;
-        margin-top: 6%;
-    }
-    
-    .slick-prev::after {
-        -webkit-transform: translate(-50%, -50%) rotate(135deg);
-        transform: translate(-50%, -50%) rotate(135deg);
-    }
-    .chart_question_container_c2_select{
-        /* background-color: rgb(9, 135, 135); */
-        width: 600px;
-        height: 100%;   
-        
-    }
-    .chart_question_container_c2_container{
-        position: relative;
-        background-color: #ffffff0f;
-        /* background-color: #ff0000; */
-        width: 600px;
-        height: 180px;
-        top: 47%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 10px;
-        border:none;
-        box-shadow: 0 5px 20px -7px rgba(205, 205, 205, 0.714);
-    }
-    .chart_question_container_c2_container_yes_no{
-        /* background-color: #4c3b9b; */
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    /*질문 버튼*/
-    .chart_question_container_c2_container_b1_default{
-        background-color: #f5f5f5;
-        width: 120px;
-        height: 40px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 30px; 
-        color: #363636;
-    }
-    .chart_question_container_c2_container_b1{
-        background-color: #4c4b4b31;
-        width: 120px;
-        height: 40px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 30px; 
-    }
-    .chart_question_container_c2_container_b2_default{
-        background-color: #f5f5f5;
-        width: 120px;
-        height: 40px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 30px; 
-        color: #363636;
-    }
-    .chart_question_container_c2_container_b2{
-        background-color:  #4c4b4b31;
-        width: 120px;
-        height: 40px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 30px; 
-    }
-    /*기간*/
-    .chart_question_container_c2_container_period{
-        /* background-color: #4c3b9b; */
-        width: 100%;
-        margin-top: 25px;
-    }
-    .chart_question_container_c2_container_period_title_1{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        /* background-color: #ffffff; */
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        color: #ca6868;
-        font-size: 12px;
-        font-weight: bold;
-    }
-    .chart_question_container_c2_container_period_title_2{
-        /* background-color: #ffffff; */
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        color:  #000000;
-        font-size: 14px;
-        font-weight: bold;
-        margin-top: 35px;
-    }
-    .chart_question_container_c2_container_period_input{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        /* background-color: #241f3a; */
-        width: 380px;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 10px;
-        margin-left: 135px;
-    }
-    
-
-    .chart_question_container_c2_container_period_input input{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        position: relative;
-        width: 130px;
-        height: 30px;  
-
-        background: #fffefe;
-        border-radius: 5px;
-        color: #000000;
-        font-size: 80%;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        text-align: center;
-        border: 2px #f5f5f5 solid;
-        outline: none;
-    }
-    .chart_question_container_c2_container_period_input input:focus {
-            border-color:#4c4b4b5d;
-            outline: none;
-            
-    }
-    
-    
-    
-    .addition_btn{
-        font-family: 'IBM Plex Sans KR', sans-serif;
-        background-color: #f5f5f5;
-        height: 27px;
-        width: 50px;
-        border-radius: 20px;
-        margin-top: 2px;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        color: #000000;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        animation: drawing_shadowMove 3s infinite;
-
-    }
-    @keyframes drawing_shadowMove {
-        0% {
-            box-shadow:  0px 0px 10px  rgb(253, 253, 253);
-        }
-        50% {
-            box-shadow: none;
-        }
-        100% {
-            box-shadow:  0px 0px 10px  rgb(253, 253, 253);
-        }
-    }
-    .addition_btn:hover{
-        background-color: #00000058;
-        color: #ffffff;
-    }
-    /*저장*/
-    .save{
-    
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.1);
-        border: none;
-        display: flex;
-        width: 300px;
-        height: 100px;
-        border-radius: 20px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        margin-top: 90px;
-
-    }
-    .save:hover{
-        background-color: rgba(0, 0, 0, 0.308);
-    }
-
-    .save_text{
-        /* background-color: #2b197d; */
-        /* background: none; */
-        border: none;
-        width: 100px;
-        font-size: 30px;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-    /*다음버튼*/
-    .chart_question_container_c2_b2{
-        /* background-color: rgb(68, 241, 241); */
-        width: 120px;
-        height: 100%;
-    }
-    
-    .slick-arrow {
-        display:inline-block;
-        width: 5px;
-        height: 5px;
-        background-color: #fff;
-        border: 1px solid #ffffff;
-        font-size: 0px;
-        margin-left: 30px;
-        cursor:pointer;
-        
-    }
-        
-    .slick-arrow::after {
-         content: '';
-        display: block;
-        position: absolute;
-        z-index: 1;
-        border: 1px solid #b8b8b8;
-        border-width: 0 2px 2px 0;
-        margin-left: -2px;
-        padding: 8px;
-    }
-        
-    .slick-next::after {
-        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-
-    
-    
-    .chart_question_container_c2_b2 button:hover{
-       
-        cursor: pointer;
-
-    }
+    transform: translate(-50%, -50%);
 }
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-@media (max-width: 1500px) { /*175 이전*/
+.chart_question{
+    /* background-color: rgb(110, 110, 172); */
+    width: 100%;
+    height: 153px;
+    border-top: 2px solid #eaeaea; /* 상단에 5px 두께의 흰색 경계선 추가 */
+}
+.chart_question_container{
+    margin-top: 5px;
+    /* background-color: blue; */
+}
+.chart_question_container_c1{
+    /* background-color: aqua; */
 
-    .chart_body_not_100{
-        transform: translate(-50%, -50%);
-        position: absolute;
-        background: linear-gradient(135deg, #2b197d, #4c3b9b, #4c3b9b, #4c3b9b, #2b197d);
-        height: 270px;
-        width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color : #262752;
+}
+.chart_question_container_c2{
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    height: 115px;
 
-        border-radius: 10px;
-    }
-    .chart_body_not_100 img{
-        position: absolute;
-        height: 100px;
-        width: 120px;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .chart_body_not_100_text1{
-        position: relative;
-        width: 100%;
-        margin-top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.chart_question_container_c2_container_yes_no{
+    position: relative;
+    /* background-color: bisque; */
+    width: 270px;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translate(-50%);
 
-        font-size: 10px;
-        font-weight: bold;
-        color: #ffffff;
-    }
-    .chart_body_not_100_text2{
-        position: relative;
-        width: 100%;
-        margin-top: 10px;
+    margin-top: 10px;
+}
+.chart_question_container_c2_container_b1_default{
+    background-color: #262752;
+    border-radius: 5px;
+    width: 115px;
+    height: 35px;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        font-size: 10px;
-        font-weight: bold;
-        color: #ffffff;
-    }
-    .chart_body_container{
-        display: none;
-    }
-    /*차트 헤더*/
-    .chart_header{
-        display: none;
-    }
-    .chart_header_c1{
-        display: none;
-    }
-    .chart_header_c1_logo{
-        display: none;
-    }
-    .chart_header_c2{
-        display: none;
-    }
-    .chart_header_c2_b1{
-        display: none;
-    }
-    .chart_header_c2_b2{
-        display: none;
-    }
-    .chart_header_c2_b3{
-        display: none;
-    }
-    .chart_header_c2_b3 img{
-        display: none;
-    }
-    /*차트*/
-    .chart_container{
-        display: none;
+    font-size: 17px;
+    font-weight: bold;
+    color : #ffffff;
 
-    }
-    /*초반 질문*/
-    .chart_question{
-        display: none;
-    }
-    .chart_question_container{
-        display: none;
-    }
-    .chart_question_container_c1{
-        display: none;
-    }
-    .chart_question_container_c2{
-        display: none;
-    }
-    /*이전버튼*/
-    .chart_question_container_c2_b1{
-        display: none;
-    }
+    cursor: pointer;
+}
+.chart_question_container_c2_container_b1{
+    background-color: #262752;
+    border-radius: 5px;
+    width: 115px;
+    height: 35px;
 
-    .chart_question_container_c2_b1 button{
-        display: none;
-    }
-    .chart_question_container_c2_b1 button:hover{
-        display: none;
-    }
-    .chart_question_container_c2_select{
-        display: none;
-    }
-    .chart_question_container_c2_container{
-        display: none;
-    }
-    .chart_question_container_c2_container_yes_no{
-        display: none;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    /*질문 버튼*/
-    .chart_question_container_c2_container_b1_default{
-        display: none;
-    }
-    .chart_question_container_c2_container_b1{
-        display: none;
-    }
-    .chart_question_container_c2_container_b2_default{
-        display: none;
-    }
-    .chart_question_container_c2_container_b2{
-        display: none;
-    }
-    /*기간*/
-    .chart_question_container_c2_container_period{
-        display: none;
-    }
-    .chart_question_container_c2_container_period_title_1{
-        display: none;
-    }
-    .chart_question_container_c2_container_period_title_2{
-        display: none;
-    }
-    .chart_question_container_c2_container_period_input{
-        display: none;
-    }
-    .chart_question_container_c2_container_period_input input{
-        display: none;
-    }
-    .addition_btn{
-        display: none;
-    }
-    .addition_btn:hover{
-        display: none;
-    }
-    /*저장*/
-    .save{
-        display: none;
-    }
-    .save:hover{
-        display: none;
-    }
-    .save_logo{
-        display: none;
-    }
-    .save_text{
-        display: none;
-    }
-    /*다음버튼*/
-    .chart_question_container_c2_b2{
-        display: none;
-    }
-    .chart_question_container_c2_b2 button{
-        display: none;
-    }
-    .chart_question_container_c2_b2 button:hover{
-        display: none;
-    }
+    font-size: 17px;
+    font-weight: bold;
+    color : #ffffff;
+
+    cursor: pointer;   
+}
+.chart_question_container_c2_container_b2_default{
+    background-color: #262752;
+    border-radius: 5px;
+    width: 115px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+    font-weight: bold;
+    color : #ffffff;
+
+    cursor: pointer;   
+}
+.chart_question_container_c2_container_b2{
+    background-color: #262752;
+    border-radius: 5px;
+    width: 115px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+    font-weight: bold;
+    color : #ffffff;
+
+    cursor: pointer;  
+}
+.chart_question_container_c2_b1{
+    /* background-color: aquamarine; */
+    font-size: 50px;
+    cursor: pointer;
+    color: #262752;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chart_question_container_c2_select{
+    position: absolute;
+    /* background-color: aqua; */
+    width: 450px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.chart_question_container_c2_b2{
+    /* background-color: aquamarine; */
+    font-size: 50px;
+    cursor: pointer;
+    color: #262752;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chart_question_container_c2_container_period_title_1{
+    /* background-color: azure; */
+
+    font-size: 15px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+}
+.chart_question_container_c2_container_period_input{
+    /* background-color: rgb(20, 89, 178); */
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.chart_question_container_c2_container_period_input input{
+    border-radius: 5px;
+    outline: none;
+    width: 150px;
+    height: 30px;
+
+    text-align: center;
+
+    font-weight: bold;
+    color: #262752;
+}
+.chart_question_container_c2_container_period_input div{
+    background-color: rgb(201, 201, 201);
+    border-radius: 5px;
+    outline: none;
+    width: 60px;
+    height: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #262752;
+
+    margin-top: 4px;
+
+    cursor: pointer;
+}
+.chart_question_container_c2_container_period_title_2{
+    /* background-color: beige; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+    font-weight: bold;
+    color: #a0a0a0;
+
+    margin-top: 20px;
+}
+
+.save{
+    position: relative;
+    background-color: #262752;
+    width: 400px;
+    height: 100px;
+    outline: none;
+    
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+
+    left: 50%;
+    transform: translate(-50%);
+
+    cursor: pointer;
 }

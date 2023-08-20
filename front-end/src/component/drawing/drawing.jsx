@@ -318,13 +318,6 @@ const ChartComponent = ({}) => {
     <div>
       <Home_header></Home_header>
       <div className="chart_body">
-        <div className="chart_body_not_100">
-          <img src={require("../image/logo.png")} alt="Logo" />
-          <div className="chart_body_not_100_text1">화면이 너무 작습니다!</div>
-          <div className="chart_body_not_100_text2">
-            웹버전 전체화면, 100% 밑으로 이용해주세요!
-          </div>
-        </div>
 
         {/*차트관련 상위 컨테이너*/}
         <div className="top_level_container">
@@ -340,9 +333,7 @@ const ChartComponent = ({}) => {
               <div className="chart_question_container_c2">
                 <div className="chart_question_container_c2_b1">
                   {question_tag !== "알고리즘" && (
-                    <div
-                      onClick={handlebackQeution}
-                      className="slick-prev slick-arrow"></div>
+                    <div onClick={handlebackQeution}>〈</div>
                   )}
                 </div>
 
@@ -423,6 +414,8 @@ const ChartComponent = ({}) => {
                             onKeyDown={(e) => {
                               // Enter 키가 눌렸을 때
                               if (e.key === "Enter") {
+                                e.preventDefault(); // 기본 동작 막기
+
                                 handleAddData_addition(); // "적용" 버튼 클릭 처리
                               }
                             }}
@@ -449,9 +442,7 @@ const ChartComponent = ({}) => {
 
                 <div className="chart_question_container_c2_b2">
                   {question !== "저장" && yesNoBtn1 !== "" && (
-                    <div
-                      onClick={handleNextQeution}
-                      className="slick-next slick-arrow"></div>
+                    <div onClick={handleNextQeution}>〉</div>
                   )}
                 </div>
               </div>
