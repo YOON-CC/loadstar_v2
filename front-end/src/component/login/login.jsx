@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import store from "../../store";
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import "./login.css";
 import Home_header from '../header/home_header';
 import { Link, useNavigate} from 'react-router-dom';
+import {Cookies} from 'react-cookie';
+
 
 
 const Login = () => {
@@ -34,15 +36,16 @@ const Login = () => {
                 headers: {
                 "Content-Type": "application/json"
                 },
+                crossDomain: true,
+                withCredentials: true
             });
+            console.log()
             if (response.status === 200) {
-                const access_token = response.headers['x-access-token']
-                const refresh_token = response.headers['cookie']
+
+                console.log(response.headers['Set-Cookie'])
+                console.log(response.headers['set-cookie'])
+
                 const user_Id = response.data.userId
-
-
-                Cookies.set('X-REFRESH-TOKEN', refresh_token);
-                localStorage.setItem('access-token', access_token)
                 localStorage.setItem('user_Id', user_Id)
 
                 store.dispatch({type:'AFTER_LOGIN'});

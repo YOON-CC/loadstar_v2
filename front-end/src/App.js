@@ -4,7 +4,6 @@ import Home_board_list from "./component/body/home_board_list";
 import Sign from "./component/login/sign";
 import Search_id from "./component/search/search_id";
 import Search_pwd from "./component/search/search_pwd";
-import Change_pwd from "./component/change/change_pwd";
 import Join from "./component/join/join";
 import Mypage from "./component/mypage/mypage";
 import Board_post from "./component/board/board_post";
