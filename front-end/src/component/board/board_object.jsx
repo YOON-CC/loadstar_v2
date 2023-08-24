@@ -16,11 +16,11 @@ const Board_object = () => {
     const board_Id = localStorage.getItem('board_Id');
     
     //쿠키에서 세션 추출 
-    const cookieString  = document.cookie.match('(^|;)\\s*' + 'X-REFRESH-TOKEN' + '\\s*=\\s*([^;]+)').pop();
-    const prefix = 'X-REFRESH-TOKEN=';
-    const extractedValue = cookieString.substring(cookieString.indexOf(prefix) + prefix.length);
-    const endIndex = extractedValue.indexOf("%");
-    const refresh_token = extractedValue.slice(0, endIndex);
+    // const cookieString  = document.cookie.match('(^|;)\\s*' + 'X-REFRESH-TOKEN' + '\\s*=\\s*([^;]+)').pop();
+    // const prefix = 'X-REFRESH-TOKEN=';
+    // const extractedValue = cookieString.substring(cookieString.indexOf(prefix) + prefix.length);
+    // const endIndex = extractedValue.indexOf("%");
+    // const refresh_token = extractedValue.slice(0, endIndex);
 
     //그래프
     const [chartData, setChartData] = useState([]);
@@ -103,6 +103,9 @@ const Board_object = () => {
     //댓글 삭제
     const [boardview_commentdelete, setBoardview_commentdelete] = useState(0);
 
+    //댓글 수정
+    const [editedCommentId, setEditedCommentId] = useState(null);
+
     //북마크 상태
     const [bookmark, setBookmark] = useState('');
     const [bookmark_state, setBookmark_state] = useState(null); // 북마크 상태변화를 강제로 수행
@@ -114,14 +117,13 @@ const Board_object = () => {
     const handleBoardView = async () => {
 
         try {   
-            const response = await axios.get(`http://13.125.16.222:8080/v1/boards/${board_Id}`, {
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/boards/${board_Id}`, {
+                crossDomain: true,
+                withCredentials: true
             });
           
             if (response.status === 200) {
+                console.log("d")
                 setBoardview_boardId(response.data.boardId);
                 setBoardview_userId(response.data.userId); // 게시글을 쓴 사용자 유저 인덱스
                 setBoardview_username(response.data.username)
@@ -135,6 +137,7 @@ const Board_object = () => {
                 setChartData(response.data.arr);
 
                 setBoardview_commentwrite(0);
+                setEditedCommentId(null);
                 setBoardview_commentdelete(0);
                 setEdit_state(0);
                 
@@ -157,16 +160,49 @@ const Board_object = () => {
     ));
 
     /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@댓글 삭제 api@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@댓글 수정 및 삭제 api@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+    
+    const [editComment, setEditComment] = useState('');
+
+    const handleEditCommentChange = (event) => {
+        setEditComment(event.target.value)
+    };
+
+    const handleBoardcommentEdit = async (boardview_comment_userId, event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.patch(`${process.env.REACT_APP_API_URL}/comments/${boardview_comment_userId}`,{
+                content : editComment
+            },{
+                crossDomain: true,
+                withCredentials: true
+            });
+            
+            if (response.status === 200) {
+                Swal.fire({
+                    title: '댓글수정',
+                    text: '댓글을 수정했습니다!',
+                    icon: 'success',
+                    confirmButtonText: '확인',
+                });
+                setBoardview_commentdelete(1)
+                setEditComment(null)
+            }
+        }
+        catch (error) {
+
+        }
+    } 
+
+
     const handleBoardcommentdelete = async (boardview_comment_userId, event) => {
         event.preventDefault();
         try {
-            const response = await axios.delete(`http://13.125.16.222:8080/v1/comments/${boardview_comment_userId}`,{
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+            const response = await axios.delete(`${process.env.REACT_APP_API_URL}/comments/${boardview_comment_userId}`,{
+                crossDomain: true,
+                withCredentials: true
             });
             
             if (response.status === 200) {
@@ -177,12 +213,13 @@ const Board_object = () => {
                     confirmButtonText: '확인',
                 });
                 setBoardview_commentdelete(1)
+                
             }
         }
         catch (error) {
 
         }
-    } 
+    }
 
 
     const CommentList = boardview_comment.map(comment => (
@@ -192,6 +229,7 @@ const Board_object = () => {
                     <div className="board_view_review_container_list_1">{comment.username} </div>
                     {comment.userId == user_Id && (
                     <div className="board_view_review_container_list_3_btn_container">
+                        <button className="board_view_review_container_list_container_btn" onClick={() => setEditedCommentId(comment.commentId)}>✏️</button>
                         <form onSubmit={(event) => handleBoardcommentdelete(comment.commentId, event)}>
                             <button className="board_view_review_container_list_container_btn">X</button>
                         </form>
@@ -202,10 +240,24 @@ const Board_object = () => {
                             <div className="board_view_review_container_list_3_btn_container_no_owner">X</div>
                         </div>
                     )}
+
                 </div>
                 <div className="board_view_review_container_list_3">{comment.modifiedAt.split("T")[0]}</div>
+
             </div>
-            <div className="board_view_review_container_list_4">{comment.commentContent}</div>
+            {editedCommentId !== comment.commentId && <div className="board_view_review_container_list_4">{comment.commentContent}</div>}
+            {editedCommentId === comment.commentId && 
+                <div className="board_view_review_container_list_4_edit_container">
+                    <textarea className="board_view_review_container_list_4_edit" placeholder={comment.commentContent} onChange={handleEditCommentChange}></textarea>
+                    <div className="board_view_review_container_list_4_edit_btn_container">
+                        <div onClick={() => setEditedCommentId(null)}>취소</div>
+                        <form onSubmit={(event) => handleBoardcommentEdit(comment.commentId, event)}>
+                            <button>수정</button>
+                        </form>
+                    </div>
+                </div>
+            }
+
         </div>
     ));
 
@@ -219,16 +271,13 @@ const Board_object = () => {
             
         //댓글작성
         try {
-            const response = await axios.post("http://13.125.16.222:8080/v1/comments", {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/comments`, {
                 boardId : boardview_boardId,
-                userId : user_Id,
                 content : boardview_comment_content_change,
             }, 
             {
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+                crossDomain: true,
+                withCredentials: true
             });
             if (response.status === 200) {
                 Swal.fire({
@@ -257,15 +306,12 @@ const Board_object = () => {
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
     const handleBoardBookmark_1 = async () => {
         try {
-            const response = await axios.post("http://13.125.16.222:8080/v1/bookmarks", {
-                userId: user_Id,
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/bookmarks`, {
                 boardId: board_Id,
             }, 
             {
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+                crossDomain: true,
+                withCredentials: true
             });
 
             if (response.status === 200) {
@@ -278,11 +324,9 @@ const Board_object = () => {
     }
     const handleBoardBookmark_2 = async () => {
         try {
-            const response = await axios.delete(`http://13.125.16.222:8080/v1/bookmarks/${board_Id}`,{
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+            const response = await axios.delete(`${process.env.REACT_APP_API_URL}/bookmarks/${board_Id}`,{
+                crossDomain: true,
+                withCredentials: true
             });
             
             if (response.status === 200) {
@@ -299,10 +343,8 @@ const Board_object = () => {
     const handleBoarddelete = async () => {
         try {
             const response = await axios.delete(`${process.env.REACT_APP_API_URL}/boards/${boardview_boardId}`,{
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+                crossDomain: true,
+                withCredentials: true
             });
             
             if (response.status === 200) {
@@ -340,7 +382,7 @@ const Board_object = () => {
 
     const handleBoardEditSubmit = async (event) => {
         event.preventDefault();
-        
+        console.log(boardedit_title, boardedit_content, send_edit_hashtag)
         if (boardedit_title === '' || boardedit_content === ''){
             Swal.fire({
                 title: 'Edit',
@@ -350,16 +392,14 @@ const Board_object = () => {
             });
         }
         try {
-            const response = await axios.patch(`http://13.125.16.222:8080/v1/boards/${boardview_boardId}`, {
+            const response = await axios.patch(`${process.env.REACT_APP_API_URL}/boards/${boardview_boardId}`, {
                 title : boardedit_title,
                 content : boardedit_content,
                 hashtags : send_edit_hashtag
             }, 
             {
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+                crossDomain: true,
+                withCredentials: true   
             });
             if (response.status === 200) {
                 Swal.fire({

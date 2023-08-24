@@ -12,19 +12,6 @@ const ChartComponent = ({}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  //토큰 방식
-  const access_token = localStorage.getItem("access-token");
-
-  const cookieString = document.cookie
-    .match("(^|;)\\s*" + "X-REFRESH-TOKEN" + "\\s*=\\s*([^;]+)")
-    .pop();
-  const prefix = "X-REFRESH-TOKEN=";
-  const extractedValue = cookieString.substring(
-    cookieString.indexOf(prefix) + prefix.length
-  );
-  const endIndex = extractedValue.indexOf("%");
-  const refresh_token = extractedValue.slice(0, endIndex);
-
   // 차트 데이터
   const [chartData, setChartData] = useState([]);
 
@@ -240,10 +227,8 @@ const ChartComponent = ({}) => {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/careers`,
         {
-          headers: {
-            "X-ACCESS-TOKEN": access_token,
-            "X-REFRESH-TOKEN": refresh_token,
-          },
+          crossDomain: true,
+          withCredentials: true
         }
       );
 
@@ -270,15 +255,13 @@ const ChartComponent = ({}) => {
       // 이전에 데이터가 없고, 새로 넣을때
       try {
         const response = await axios.post(
-          "http://13.125.16.222:8080/v1/careers",
+          `${process.env.REACT_APP_API_URL}careers`,
           {
             arr: chartData,
           },
           {
-            headers: {
-              "X-ACCESS-TOKEN": access_token,
-              "X-REFRESH-TOKEN": refresh_token,
-            },
+            crossDomain: true,
+            withCredentials: true
           }
         );
 
@@ -290,15 +273,13 @@ const ChartComponent = ({}) => {
       // 이전에 데이터가 없고, 새로 추가할때
       try {
         const response = await axios.patch(
-          "http://13.125.16.222:8080/v1/careers",
+          `${process.env.REACT_APP_API_URL}/careers`,
           {
             arr: chartData,
           },
           {
-            headers: {
-              "X-ACCESS-TOKEN": access_token,
-              "X-REFRESH-TOKEN": refresh_token,
-            },
+            crossDomain: true,
+            withCredentials: true
           }
         );
         if (response.status === 200) {

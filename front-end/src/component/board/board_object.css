@@ -364,6 +364,7 @@
 
     }
     .board_view_review_container_list_3_btn_container{
+        /* background-color: #433264f5; */
         display: flex;
     }
     .board_view_review_container_list_3_btn_container_no_owner{
@@ -401,6 +402,65 @@
 
         white-space: pre-wrap;
         word-break: break-word;
+    }
+    .board_view_review_container_list_4_edit_container{
+        /* background-color: red; */
+        margin-top: 20px;
+    }
+    .board_view_review_container_list_4_edit{
+        width: 100%; /* 부모 요소의 넓이에 맞게 조절 */
+        resize: none; /* 사용자가 크기 조절하지 못하도록 비활성화 */
+        outline: none;
+
+        overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+        min-height: 10px; /* 최소 높이 설정 */
+        box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        border: 2px solid #262752; /* 테두리 색상을 여기에 지정합니다 */
+        background-color: rgb(255, 255, 255);
+
+        padding: 10px;
+    }
+    .board_view_review_container_list_4_edit_btn_container{
+        /* background-color: aqua; */
+        width: 92px;
+        height: 30px;
+        display : flex;
+        justify-content: space-between;
+        margin-left: 825px;
+    }
+    .board_view_review_container_list_4_edit_btn_container div{
+        background-color: #a5a5a5;
+        width: 45px;
+        height: 100%;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 4px;
+        color: white;
+
+        font-size: 13px;
+
+        cursor: pointer;
+    }
+    .board_view_review_container_list_4_edit_btn_container button{
+        background-color: #262752;
+        width: 45px;
+        height: 100%;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 4px;
+        color: white;
+
+        font-size: 12px;
+
+        cursor: pointer;
     }
     .board_object_footer{
         position: relative;

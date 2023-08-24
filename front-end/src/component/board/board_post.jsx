@@ -9,12 +9,12 @@ const Board_post = () => {
     const navigate = useNavigate();
 
     //토큰 받기
-    const access_token = localStorage.getItem('access-token');
-    const cookieString  = document.cookie.match('(^|;)\\s*' + 'X-REFRESH-TOKEN' + '\\s*=\\s*([^;]+)').pop();
-    const prefix = 'X-REFRESH-TOKEN=';
-    const extractedValue = cookieString.substring(cookieString.indexOf(prefix) + prefix.length);
-    const endIndex = extractedValue.indexOf("%");
-    const refresh_token = extractedValue.slice(0, endIndex);
+    // const access_token = localStorage.getItem('access-token');
+    // const cookieString  = document.cookie.match('(^|;)\\s*' + 'X-REFRESH-TOKEN' + '\\s*=\\s*([^;]+)').pop();
+    // const prefix = 'X-REFRESH-TOKEN=';
+    // const extractedValue = cookieString.substring(cookieString.indexOf(prefix) + prefix.length);
+    // const endIndex = extractedValue.indexOf("%");
+    // const refresh_token = extractedValue.slice(0, endIndex);
 
     //게시물 종류(참고글 or 질문글)
     const [posttype, setPosttype] = useState(0);
@@ -75,15 +75,12 @@ const Board_post = () => {
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/boards`, {
                 title : title,
-                showGraph : "y",
                 hashtags : allTags,
                 content : content,
             }, 
             {
-                headers: {
-                    'X-ACCESS-TOKEN': access_token,
-                    'X-REFRESH-TOKEN': refresh_token
-                }
+                crossDomain: true,
+                withCredentials: true
             });
 
             //요청 성공
