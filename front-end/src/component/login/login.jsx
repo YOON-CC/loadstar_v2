@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import store from "../../store";
 import Swal from 'sweetalert2';
 import axios from 'axios';
-// import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 import "./login.css";
 import Home_header from '../header/home_header';
 import { Link, useNavigate} from 'react-router-dom';
-import {Cookies} from 'react-cookie';
+// import {Cookies} from 'react-cookie';
 
 
 
@@ -27,7 +27,8 @@ const Login = () => {
     //API 호출
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        console.log(id)
+        console.log(password)
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {
                 username: id,
@@ -41,9 +42,8 @@ const Login = () => {
             });
             console.log()
             if (response.status === 200) {
-
-                console.log(response.headers['Set-Cookie'])
-                console.log(response.headers['set-cookie'])
+                
+                // console.logCookies.get('SESSION');
 
                 const user_Id = response.data.userId
                 localStorage.setItem('user_Id', user_Id)
@@ -68,11 +68,11 @@ const Login = () => {
                 <div className='login_img'><img src= {require ("../image/logo.png")}></img></div>
                 <form onSubmit={handleSubmit}>
                     <div className="login_id_container">
-                        <input type="text" value={id} onChange={handleidChange} maxLength={10} placeholder="아이디를 입력하세요."></input>
+                        <input type="text" value={id} onChange={handleidChange} maxLength={15} placeholder="아이디를 입력하세요."></input>
                     </div>
 
                     <div className="login_pwd_container">
-                        <input type="password" value={password} onChange={handlePasswordChange} maxLength={10} placeholder="비밀번호를 입력하세요."></input> 
+                        <input type="password" value={password} onChange={handlePasswordChange} maxLength={20} placeholder="비밀번호를 입력하세요."></input> 
                     </div>
 
                     <div className="login_send_container">

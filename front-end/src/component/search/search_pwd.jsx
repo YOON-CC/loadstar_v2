@@ -10,16 +10,16 @@ const Search_pwd = () => {
     const navigate = useNavigate();
 
     //새 비밀번호
-    const [newpassword, setnewPassword] = useState(''); //비밀번호
-    const [newpassword_again, setnewPassword_again] = useState(''); //비밀번호확인
+    const [user_Id, setUser_Id] = useState(''); //비밀번호
+    const [user_Email, setUser_Email] = useState(''); //비밀번호확인
 
 
     //비밀번호 동작 관리 함수
-    const handlenewpasswordChange = (event) => { //비밀번호
-        setnewPassword(event.target.value)
+    const handleIdChange = (event) => { //비밀번호
+        setUser_Id(event.target.value)
     };
-    const handlenewpassword_againgChange = (event) => {//비밀번호확인
-        setnewPassword_again(event.target.value)
+    const handleEmailChange = (event) => {//비밀번호확인
+        setUser_Email(event.target.value)
     };
 
     //API 호출
@@ -28,8 +28,8 @@ const Search_pwd = () => {
 
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/emails/find-password`, {
-                email: newpassword,
-                username: newpassword_again
+                email: user_Email,
+                username:  user_Id   
             }, {
                 headers: {
                 "Content-Type": "application/json"
@@ -55,17 +55,17 @@ const Search_pwd = () => {
         }
     };
 
-    console.log(newpassword.length);
+    console.log(user_Id.length);
     return (
         <div className="change_container">
             <div className="change_pwd_container_title">비밀번호 찾기</div>
             <form onSubmit={handleChangeSubmit}>
                 <div className="change_pwd_container_1">
-                    <input type="text" value={newpassword} onChange={handlenewpasswordChange} placeholder="아이디를 입력하세요."></input>
+                    <input type="text" value={user_Id} onChange={handleIdChange} placeholder="아이디를 입력하세요."></input>
                 </div>
 
                 <div className="change_pwd_container_2">
-                    <input type="text" value={newpassword_again} onChange={handlenewpassword_againgChange} placeholder="이메일을 입력하세요."></input>
+                    <input type="text" value={user_Email} onChange={handleEmailChange} placeholder="이메일을 입력하세요."></input>
                 </div>
 
                 <div className="change_button_container">
@@ -73,19 +73,12 @@ const Search_pwd = () => {
                         store.dispatch({type:'HOME'});
                     }.bind(this)}>취소</div>
 
-                    {newpassword.length > 0 && newpassword_again.length > 0? 
+                    {user_Id.length > 0 && user_Email.length > 0? 
                     (<button type="submit" className="change_button_container_login_1">찾기</button>) : 
                     (<div type="submit" className="change_button_container_login_2">찾기</div>)}
                 </div>
 
             </form>
-
-            {/* css스타일 */}
-            {/* <style>
-                {`
-
-                `}
-            </style> */}
         </div>
     )
 }
