@@ -60,7 +60,7 @@
     cursor:pointer;
     margin: auto;
     text-align:center;
-    margin-top: 6%;
+    margin-top: 50px;
     
 }
 
@@ -331,13 +331,29 @@
     border:none;
     border-radius: 5px;
     font-family: 'IBM Plex Sans KR', sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
     background-color: #262752;
-    
+}
+.send_container_change div{
+    position: absolute;
+    height:30px;
+    width:80px;
+    margin-top:28%;
+    border:none;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background-color: #d2d2d2;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

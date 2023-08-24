@@ -26,7 +26,7 @@ const Mypage = () => {
         <div className="mypage_container_1">
           <div className="left_container">
             <div className="left_container_1">
-              <div className="user_name">강서연 님</div>
+              <div className="user_name"></div>
 
               <div className="change_data" onClick={() => setMypagenum(0)}>
                 회원정보 변경
