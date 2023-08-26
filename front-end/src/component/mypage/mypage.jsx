@@ -9,6 +9,8 @@ import Mypage_6 from "./mypage_6";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./mypage.css";
+import Chart from "react-apexcharts";
+
 
 const Mypage = () => {
   //마이페이지 페이지 상태관리
@@ -18,6 +20,7 @@ const Mypage = () => {
       "https://www.notion.so/6fe66bc44fa2491cbd8c94675bd17cef?v=c1de34f3715c462e926079e0b9fb7b97&pvs=4"
     );
   };
+
 
   return (
     <div>

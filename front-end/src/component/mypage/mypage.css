@@ -395,28 +395,32 @@
 }
 
 .mypage_2_container{
+    /* background-color: purple; */
     padding-left: 5%;
     width:90%;
-    height: 80%;
+    height: 370px;
     overflow: auto; /* 스크롤을 표시하도록 설정 */
     overflow-x: hidden;
 }
 .mypage_2_container::-webkit-scrollbar {
-    display: none;
+    overflow: auto;
 }
 .mypage_2_content{
+    background-color: white;
     font-family: 'IBM Plex Sans KR', sans-serif;
     width:100%;
     height:25px;
     justify-content: space-between;
     display: flex;
     margin-top: 10px;
+    border-bottom: 1px solid rgb(224, 224, 224);
 }
 .mypage_2_content:hover{
     cursor: pointer;
-    border-bottom:1px solid #aba9a9;
+    filter: brightness(90%);
 }
 .mypage_2_content_title{
+    /* background-color: aqua; */
     font-family: 'IBM Plex Sans KR', sans-serif;
     width:40%;
     height: 100%;
@@ -427,7 +431,8 @@
 
 }
 .mypage_2_content_info{
-    width:40%;
+    /* background-color: green; */
+    width:50%;
     height: 100%;
     justify-content: space-between;
     display: flex;
@@ -435,18 +440,25 @@
 
 }
 .mypage_2_content_date{
-    width:130px;
+    /* background-color: blue; */
+    width:120px;
     height: 100%;
     font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a7a7a7;
    
 }
 .mypage_2_content_bookview{
+    /* background-color: red; */
     width:80px;
     height: 100%;
     justify-content: space-between;
     display: flex;
     margin-right: 10px;
-    margin-top: 2px;
 
 }
 .mypage_2_content_bookmark{
