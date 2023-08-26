@@ -93,6 +93,7 @@ const Board_object = () => {
     const [boardview_comment, setBoardview_comment] = useState([]);
     const [boardview_createAt, setBoardview_createAt] = useState('');
     const [boardview_modifiedAt, setBoardview_modifiedAt] = useState('');
+    const [boardview, setBoardview] = useState(0);
 
     //댓글 작성
     const [boardview_comment_content_change, setBoardview_comment_content_change] = useState('');
@@ -133,7 +134,8 @@ const Board_object = () => {
                 setBoardview_comment(response.data.comments);
                 setBoardview_createAt(response.data.createdAt.split("T")[0]);
                 setBoardview_modifiedAt(response.data.modifiedAt.split("T")[0]);
-                
+                setBoardview(response.data.view);
+
                 setChartData(response.data.arr);
 
                 setBoardview_commentwrite(0);
@@ -515,136 +517,129 @@ const Board_object = () => {
         <div className="board_object_body">
             {/* 헤더*/}
             <Home_header></Home_header>
-
-            <div className="board_info_title_hashtag_container">
-
-                {/* 편집 및 수정 */}
-                <div className="edit_and_delete_container">
-                    <div className="board_object_tool_c1">
-                        {user_Id == boardview_userId && <button className = "board_object_tool_c1_btn" onClick={handleEditmode}>수정</button>} 
-                        {user_Id != boardview_userId && <div className = "no_board_object_tool_c1_btn">수정</div>} 
-                    </div>
-                    <div className="board_object_tool_c2">
-                        {user_Id == boardview_userId && <button className = "board_object_tool_c2_btn" onClick={handleBoarddelete}>삭제</button>}
-                        {user_Id != boardview_userId && <div className = "no_board_object_tool_c2_btn">삭제</div>} 
-                    </div>
-                </div>
-
-                {/* 제목*/}
-                {boardedit_mode === false && (
-                    <div className="board_object_title">
-                        {boardview_title}
-                    </div>
-                )}
-                {boardedit_mode === true && (
-                    <div className="board_object_title">
-                        <input className="board_object_title_edit" placeholder={boardview_title} onChange={handleboardedit_titleChange}></input>
-                    </div>
-                )}
-
-                {/* 해시테그*/}
-                {boardedit_mode === false && (
-                    <div className="board_object_hashtag">
-                        {hashtagElements}
-                    </div>
-                )}
-                {boardedit_mode === true && (
-                    <div className="board_object_hashtag_edit_mode">
-                        {edit_hashtags.map((hashtag, index) => (
-                        <div key={index} style={{ backgroundColor: hashtag.selected ? 'white' : '#0000000e' }} onClick={() => handleClick(index)}>
-                            {hashtag.text}
+            {boardedit_mode === false && (
+            <div>
+                <div className="board_info_title_hashtag_container">
+                    {/* 편집 및 수정 */}
+                    <div className="edit_and_delete_container">
+                        <div className="board_object_tool_c1">
+                            {user_Id == boardview_userId && <button className = "board_object_tool_c1_btn" onClick={handleEditmode}>수정</button>} 
+                            {user_Id != boardview_userId && <div className = "no_board_object_tool_c1_btn">수정</div>} 
                         </div>
-                        ))}
+                        <div className="board_object_tool_c2">
+                            {user_Id == boardview_userId && <button className = "board_object_tool_c2_btn" onClick={handleBoarddelete}>삭제</button>}
+                            {user_Id != boardview_userId && <div className = "no_board_object_tool_c2_btn">삭제</div>} 
+                        </div>
                     </div>
-                )}
 
-                {/* 글쓴이 아이디, 게시일 */}
-                <div className="board_object_info">
-                    <div className="board_object_info_owner">{boardview_username}</div>
-                    <div className="board_object_info_edit_container">
-                        {/* <div>작성일 : {boardview_createAt}</div> */}
-                        <div>{boardview_modifiedAt} 작성 | {boardview_modifiedAt} 수정 | 조회수 99+</div>
+                    {/* 제목*/}
+                        <div className="board_object_title">
+                            {boardview_title}
+                        </div>
+
+
+                    {/* 해시테그*/}
+                        <div className="board_object_hashtag">
+                            {hashtagElements}
+                        </div>
+
+
+                    {/* 글쓴이 아이디, 게시일 */}
+                    <div className="board_object_info">
+                        <div className="board_object_info_owner">{boardview_username}</div>
+                        <div className="board_object_info_edit_container">
+                            {/* <div>작성일 : {boardview_createAt}</div> */}
+                            <div>{boardview_createAt} 작성 | {boardview_modifiedAt} 수정 | 조회수 {boardview}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* 그래프*/}
-            <div className="board_object_chart_container">
-                <div id="chart" />
-            </div>
-
-            {/* 내용*/}
-            {boardedit_mode === false && (
-                <div className="board_object_content">
-                    {boardview_content}
+                {/* 그래프*/}
+                <div className="board_object_chart_container">
+                    <div id="chart" />
                 </div>
-                )}
-            {boardedit_mode === true && (
-                <div className="board_object_content">
-                    <textarea className="board_object_content_edit" placeholder={boardview_content} onChange={handleboardedit_contentChange}></textarea>
-                </div>
-            )}
-            
-            {/*구분라인*/}
-            <div className="board_object_line"></div>
 
-            {/*댓글작성란*/}
-            <div className="board_object_commentwrite">
+                {/* 내용*/}
+
+                    <div className="board_object_content">
+                        {boardview_content}
+                    </div>
+
+                
+                {/*구분라인*/}
+                <div className="board_object_line"></div>
+
+                {/*댓글작성란*/}
+                <div className="board_object_commentwrite">
+                    <form onSubmit={handleBoardComment}>
+                        <textarea type="text" className="board_object_commentwrite_input" onChange={handleBoardComment_content_change} placeholder="댓글을 작성해주세요!"></textarea>
+                    </form>   
+                </div>
+
+                {/*댓글보내기*/}
                 <form onSubmit={handleBoardComment}>
-                    <textarea type="text" className="board_object_commentwrite_input" onChange={handleBoardComment_content_change} placeholder="댓글을 작성해주세요!"></textarea>
-                </form>   
-            </div>
-
-            {/*댓글보내기*/}
-            <form onSubmit={handleBoardComment}>
-                <button type="submit" className="board_object_commentwrite_btn" onClick={handleBoardComment_state_change}>댓글 작성</button>
-            </form>
-            
-            {/*댓글리스트*/}
-            <div className="board_view_review_container">
-                {CommentList}
-            </div>
-
-            {/*푸터*/}
-            <div className="board_object_footer">
-                <img className="board_object_footer_c3" src={require("../image/logo.png")}></img>
-                <div className="board_object_footer_c1">2023</div>
-                <div className="board_object_footer_c2">당신의 길라잡이</div>  
-            </div>
-
-            {/*즐겨찾기, 게시글 삭제 및 수정*/}
-            {boardedit_mode === false && (
-            <div className="board_object_tool">
-                <div className = "board_object_tool_c3">
-                    {bookmark === false && <img className="star1" src={require("../image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
-                    {bookmark === true && <img className="star2" src={require("../image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
+                    <button type="submit" className="board_object_commentwrite_btn" onClick={handleBoardComment_state_change}>댓글 작성</button>
+                </form>
+                
+                {/*댓글리스트*/}
+                <div className="board_view_review_container">
+                    {CommentList}
                 </div>
-                <div className="board_object_tool_watch">99+</div>              
+
+                {/*푸터*/}
+                <div className="board_object_footer">
+                    <img className="board_object_footer_c3" src={require("../image/logo.png")}></img>
+                    <div className="board_object_footer_c1">2023</div>
+                    <div className="board_object_footer_c2">당신의 길라잡이</div>  
+                </div>
+
+                {/*즐겨찾기, 게시글 삭제 및 수정*/}
+
+                <div className="board_object_tool">
+                    <div className = "board_object_tool_c3">
+                        {bookmark === false && <img className="star1" src={require("../image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
+                        {bookmark === true && <img className="star2" src={require("../image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
+                    </div>
+                    <div className="board_object_tool_watch">99+</div>              
+                </div>
             </div>
             )}
+
             {boardedit_mode === true && (
-                <div className="board_object_tool">
+            <div className="board_object_edit_container">
+                <div className="board_object_edit_container_tip">✏️EDIT MODE</div>
+
+                <input className="board_object_title_edit" placeholder={boardview_title} onChange={handleboardedit_titleChange}></input>
+
+                <div className="board_object_hashtag_edit_mode">
+                    {edit_hashtags.map((hashtag, index) => (
+                    <div key={index} style={{ backgroundColor: hashtag.selected ? '#262752' : '#ffffff' }} onClick={() => handleClick(index)}>
+                        {hashtag.text}
+                    </div>
+                    ))}
+                </div>
+
+                <textarea className="board_object_content_edit" placeholder={boardview_content} onChange={handleboardedit_contentChange}></textarea>
+
+
+                <div className="board_edit_btn_container">
+                    <div onClick={handleEditmode}>
+                        취소
+                    </div>           
                     <form onSubmit={handleBoardEditSubmit}>
-                        <button className="board_object_tool_edit_1">
+                        <button >
                             저장
                         </button>
                     </form>
-                    <div className="board_object_tool_edit_2" onClick={handleEditmode}>
-                        취소
-                    </div>           
                 </div>
+
+                <div className="board_edit_chart_container">
+                    <div id="chart" />
+                </div>
+
+            </div>
+
             )}
-            {boardedit_mode === true && (
-                <div className="boardedit_mode_background"></div>
-            )}
-
-
-            {/* css스타일 */}
-            {/* <style>
-                {`
-
-                `}
-            </style> */}
         </div>
     )
     

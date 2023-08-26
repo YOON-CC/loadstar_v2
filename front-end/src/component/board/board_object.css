@@ -32,80 +32,9 @@
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-weight: bold;
         color: #262752;
-    }
-    .board_object_title_edit{
-        outline: none;
-        border: none;
-        width: 300px;
-        height: 30px;
-        font-size: 20px;
-        border-radius: 10px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        padding: 5px;
-        box-shadow: 0px 0px 30px 0px rgba(255, 0, 242, 0.987), 0px 0px 30px 0px rgba(255, 0, 195, 0.987);
-    }
-    .board_object_content_edit{
-        height: 200px;
-        width: 96.5%;
-        border: none;
-        resize: none; 
-        outline: none;
-        padding: 10px;
-        font-size: 15px;
-        font-weight: bold;
-        border-radius: 10px;
-        box-shadow: 0px 0px 30px 0px rgba(255, 0, 242, 0.987), 0px 0px 30px 0px rgba(255, 0, 195, 0.987);
-
-    }
-    .board_object_tool_edit_1{
-        background-color: #ffffff0e;
-        height: 77px;
-        width: 50px;
-        font-size: 16px;
-        border-radius: 50px 50px 0px 0px;
-        border: none;
-
-        margin-left: 10px;
-        cursor: pointer;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 10px;
-        font-weight: bold;
-        color: #fff;
-        margin-top: 10px;
-        
-    }
-    .board_object_tool_edit_1:hover{
-        background-color: #82828246;
-    }
-    .board_object_tool_edit_2{
-        background-color: #ffffff0e;
-        height: 77px;
-        width: 50px;
-        font-size: 16px;
-        border-radius: 0px 0px 50px 50px ;
-        border: none;
-
-        margin-left: 10px;
-        cursor: pointer;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 10px;
-        font-weight: bold;
-        color: #fff;
         margin-top: 10px;
     }
-    .board_object_tool_edit_2:hover{
-        background-color: #82828246;
-    }
+
     .board_object_hashtag{
         position: relative;
         /* background-color: rgb(124, 124, 124); */
@@ -135,32 +64,7 @@
         margin-left: 10px;
         
     }
-    /*편집모드*/
-    .board_object_hashtag_edit_mode{
-        position: relative;
-        /* background-color: rgb(124, 124, 124); */
-        width: 600px;
-        left: 50%;
-        transform: translate(-50%);
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .board_object_hashtag_edit_mode div{
-        height: 30px;
-        width: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
-        margin-top: 10px;
-        
-        font-size: 12px;
-        font-weight: bold;
-        color: #5f5f5f;
-        margin-left: 9px;
-        cursor: pointer;
-    }
+    
 
     /*게시글 정보*/
     .board_object_info{
@@ -182,9 +86,7 @@
 
         margin-top: 13px;
     }
-    .board_object_info_edit_container{
-        /* background-color: rgb(175, 255, 255); */
-    }
+
     .board_object_info_edit_container div{
         /* background-color: #171521; */
         /* width: 100px; */
@@ -225,22 +127,7 @@
         margin-top: 10px;
         /* box-shadow: 0px 0px 4px rgb(57, 57, 57); */
     }
-    /* .board_object_graph{
-        position: relative;
-        background-color: rgb(170, 48, 48);
-        height: 300px;
-        width: 600px;
-        
-        margin-top: 20px;
-        left: 50%;
-        transform: translate(-50%);   
-        box-shadow: 0px 0px 1px 0px rgb(0, 0, 0), 0px 0px 1px 0px rgb(0, 0, 0);
-
-    }
-    .board_object_graph img{
-        width: 100%;
-        height: 100%;
-    } */
+ 
     /*내용*/
     .board_object_content{
         position: relative;
@@ -533,22 +420,7 @@
         color: #676767;
     }
     .no_board_object_tool_c1_btn{
-        background-color: #e10f0f;
-        height: 20px;
-        width: 50px;
-        font-size: 16px;
-        border-radius: 50px;
-        border: none;
-
-        margin-left: 10px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 10px;
-        font-weight: bold;
-        color: #959595;
+        display: none;
     }
     .board_object_tool_c2_btn{
         background: #f5f5f5;
@@ -572,23 +444,7 @@
         color: #676767;
     }
     .no_board_object_tool_c2_btn{
-        background-color: #00000019;
-        height: 50px;
-        width: 50px;
-        font-size: 16px;
-        border-radius: 50px;
-        border: none;
-
-        margin-left: 10px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 10px;
-        font-weight: bold;
-        color: #959595;
-        margin-top: 10px;
+        display: none;
     }
     .star1{
         width: 40px;
@@ -623,16 +479,778 @@
         margin-top: 10px;
 
     }
-    .boardedit_mode_background{
-        position: fixed;
-        background-color: #000000c3;
-        height: 100vh;
-        width: 100%;
 
-        top : 50%;
+    /*편집*/
+    .board_object_edit_container{
+        /* background-color: red; */
+        position: absolute;
+        top:50%;
+        left: 50%;
+        width: 700px;
+        transform: translate(-50%, -50%);
+    }
+    .board_object_edit_container_tip{
+        background-color: #262752;
+        width: 100%;
+        height: 40px;
+
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    .board_object_title_edit{
+        height: 40px;
+        width: 685px;
+    
+        /* margin-top: 10px; */
+        font-size: 16px;
+    
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    
+        border : 2px solid #b9b9b9;
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+    .board_object_hashtag_edit_mode{
+        /* background-color: beige; */
+        height: 310px;
+        width: 700px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .board_object_hashtag_edit_mode div{
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        width: 130px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #b6b6c5;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer; 
+        
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+    }
+
+    .board_object_content_edit{
+        height: 100px;
+        width: 677px;
+
+        /* background-color: rgb(58, 48, 114); */
+        border-radius: 5px;
+        border : 2px solid #989898;
+        
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        /* margin-top: 10px; */
+
+        resize: none; /* 사용자가 크기 조절하지 못하도록 비활성화 */
+        outline: none;
+        padding: 10px;
+    }
+    .board_edit_btn_container{
+        /* background-color: red; */
+        display: flex;
+        width: 150px;
+        height: 40px;
+        justify-content: space-between;
+        margin-left: 550px;
+        margin-top: 5px;
+    }
+    .board_edit_btn_container button{
+        background-color: rgb(136, 136, 136);
+        height: 100%;
+        width: 70px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        outline: none;
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .board_edit_btn_container button:hover{
+        background-color: #262752;
+    }
+    .board_edit_btn_container div{
+        background-color: rgb(136, 136, 136);
+        height: 100%;
+        width: 70px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .board_edit_btn_container div:hover{
+        background-color: #262752;
+    }
+    .board_edit_chart_container{
+        display: none;
+    }
+
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 901px) { /*175 이전*/
+    /*게시글 정보, 제목, 해시테그 컨테이너*/
+    .board_info_title_hashtag_container{
+        /* background-color: red; */
+        position: relative;
+        width: 270px;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 20px;
+        z-index: 1;
+    }
+    /*제목*/
+    .board_object_title{
+        position: relative;
+        /* background-color: aqua; */
+        /* height: 100px; */
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%);
+
+        white-space: normal;
+        word-wrap: break-word;
+
+        font-size: 13px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-weight: bold;
+        color: #262752;
+        margin-top: 10px;
+    }
+
+    .board_object_hashtag{
+        position: relative;
+        /* background-color: rgb(124, 124, 124); */
+        width: 280px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        /* justify-content: space-between; */
+    }
+    .board_object_hashtag div{
+        background-color: #262752;
+        height: 35px;
+        width: 86.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #ffffff;
+
+        margin-top: 10px;
+        margin-left: 5px;
+        
+    }
+    
+
+    /*게시글 정보*/
+    .board_object_info{
+        position: relative;
+        /* background-color: red; */
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+    }
+    .board_object_info_owner{
+        /* background-color: #251666; */
+        /* width: 200px; */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        color: #262752;
+        font-size: 10px;
+        font-weight: bold;
+
+        margin-top: 7px;
+    }
+
+    .board_object_info_edit_container div{
+        /* background-color: #171521; */
+        /* width: 100px; */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-weight: bold;
+        color: #969696;
+        font-size: 10px;
+
+        margin-top: 5px;
+    }
+    .edit_and_delete_container{
+        /* background-color: rgb(71, 156, 156); */
+        display: flex;
+        justify-content: end;
+    }
+    
+    /*구분라인*/
+    .board_object_line{
+        position: relative;
+        background-color: rgb(124, 124, 124);
+        height: 1px;
+        width: 270px;        
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 10px;
+    }
+    /*그래프*/
+    .board_object_chart_container{
+        position: relative;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        width: 270px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 10px;
+        margin-top: 10px;
+        /* box-shadow: 0px 0px 4px rgb(57, 57, 57); */
+    }
+ 
+    /*내용*/
+    .board_object_content{
+        position: relative;
+        /* background-color: rgb(114, 42, 42); */
+        width: 265px;
+        
+        margin-top: 20px;
+        left: 50%;
+        transform: translate(-50%);   
+
+        border-left: 5px solid #262752; /* 왼쪽 경계선의 굵기와 색상을 설정합니다. */
+        padding-left: 5px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-weight: bold;
+        font-size: 10px;
+        z-index: 1;
+    }
+    /*댓글 작성*/
+    .board_object_commentwrite{
+        position: relative;
+        /* background-color: rgb(170, 48, 48); */
+        height: 60px;
+        width: 270px;
+        padding: 10px;
+        
+        left: 50%;
+        transform: translate(-50%);   
+    }
+    .board_object_commentwrite_input{
+        width: 100%; /* 부모 요소의 넓이에 맞게 조절 */
+        resize: none; /* 사용자가 크기 조절하지 못하도록 비활성화 */
+        outline: none;
+
+        overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+        min-height: 10px; /* 최소 높이 설정 */
+        box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        border: 2px solid #262752; /* 테두리 색상을 여기에 지정합니다 */
+        background-color: rgb(255, 255, 255);
+
+        padding: 10px;
+        margin-top: 10px;
+    }
+    /*댓글 작성 버튼*/
+    .board_object_commentwrite_btn{
+        position: relative;
+        height: 30px;
+        width: 80px;
+        margin-left: 95px;
+        left: 50%;
+        transform: translate(-50%);   
+        cursor: pointer;
+
+
+        background: #262752;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .board_object_commentwrite_btn:hover{
+        background: linear-gradient(135deg, #05001a, #0d0042, #05001a);
+    }
+    /*댓글 리스트*/
+    .board_view_review_container{
+        position: relative;
+        /* background-color: rgb(170, 48, 48); */
+
+        width: 270px;
+        
+        margin-top: 10px;
+        left: 50%;
+        transform: translate(-50%); 
+    }
+    .board_view_review_container_list{
+        /* background-color: #15004011; */
+        /* background-color: aquamarine; */
+        border-bottom: 2px solid #c5c5c5; /* 왼쪽 경계선의 굵기와 색상을 설정합니다. */
+        /* height:65px; */
+        width: 100%;
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .board_view_review_container_list_container{
+        /* background-color: aqua; */
+        width: 100%;
+        /* display: flex; */
+        /* justify-content: space-evenly; */
+    }
+    .board_view_review_container_first_line{
+        display: flex;
+        justify-content: space-between;
+    }
+    .board_view_review_container_list_1{
+        /* background-color: #240b55f5; */
+        height:20px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+
+        font-size: 13px;
+        font-weight: bold;
+        color: #050505;
+
+    }
+    .board_view_review_container_list_3{
+        /* background-color: #433264f5; */
+        /* width: 200px; */
+
+        font-size: 10px;
+        color: #848484;
+        margin-top: 10px;
+        font-weight: bold;
+
+    }
+    .board_view_review_container_list_3_btn_container{
+        /* background-color: #433264f5; */
+        display: flex;
+    }
+    .board_view_review_container_list_3_btn_container_no_owner{
+        display: none;
+    }
+
+    .board_view_review_container_list_container_btn{
+        /* background-color: #240b55f5; */
+        /* width: 100px; */
+        background: none;
+        height:20px;     
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: #000000;
+    }
+    .board_view_review_container_list_container_btn:hover{
+        color: #a7a3d3;
+
+        cursor: pointer;
+    }
+    .board_view_review_container_list_4{
+        position: relative;
+
+        /* background-color: #07c3f2; */
+        width: 270px;
+        /* height:40px; */        
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 10px;
+
+
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+    .board_view_review_container_list_4_edit_container{
+        /* background-color: red; */
+        margin-top: 20px;
+    }
+    .board_view_review_container_list_4_edit{
+        width: 100%; /* 부모 요소의 넓이에 맞게 조절 */
+        resize: none; /* 사용자가 크기 조절하지 못하도록 비활성화 */
+        outline: none;
+
+        overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+        min-height: 10px; /* 최소 높이 설정 */
+        box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        border: 2px solid #262752; /* 테두리 색상을 여기에 지정합니다 */
+        background-color: rgb(255, 255, 255);
+
+        padding: 10px;
+    }
+    .board_view_review_container_list_4_edit_btn_container{
+        /* background-color: aqua; */
+        width: 92px;
+        height: 30px;
+        display : flex;
+        justify-content: space-between;
+        margin-left: 179px;
+    }
+    .board_view_review_container_list_4_edit_btn_container div{
+        background-color: #a5a5a5;
+        width: 45px;
+        height: 100%;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 4px;
+        color: white;
+
+        font-size: 10px;
+
+        cursor: pointer;
+    }
+    .board_view_review_container_list_4_edit_btn_container button{
+        background-color: #262752;
+        width: 45px;
+        height: 100%;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 4px;
+        color: white;
+
+        font-size: 10px;
+
+        cursor: pointer;
+        border: none;
+    }
+    .board_object_footer{
+        position: relative;
+        /* background-color: #372978; */
+        height: 300px;
+        width: 270px;
+        margin-top: 100px;
+        left: 50%;
+        transform: translate(-50%);   
+    }
+    /*푸터*/
+    .board_object_footer_c1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .board_object_footer_c2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 13px;
+        font-weight: bold;
+        color: #2d2d2d;
+    }
+    .board_object_footer_c3{
+        background-color: #262752;
+        height: 20px;
+        width: 110px;
+
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 80px;
+    }
+    /*고정 컨테이너*/
+    .board_object_tool{
+        position: fixed;
+        width: 55px;
+        height: 55px;
+
+
+        border : 1px solid #d0d0d0;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 50px;
+        z-index: 1;
+    }
+    .board_object_tool_c1_btn{
+        background: #f5f5f5;
+        font-size: 20px;
+        border: none;
+        border-radius: 1px;
 
-        z-index: 0;
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #383838;
+    }
+    .board_object_tool_c1_btn:hover{
+        color: #676767;
+    }
+    .no_board_object_tool_c1_btn{
+        display: none;
+    }
+    .board_object_tool_c2_btn{
+        background: #f5f5f5;
+        font-size: 20px;
+        border: none;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #383838;
+
+        margin-left: 2px;
+    }
+    .board_object_tool_c2_btn:hover{
+        color: #676767;
+    }
+    .no_board_object_tool_c2_btn{
+        display: none;
+    }
+    .star1{
+        width: 40px;
+        height: 40px;
+        margin-left: 7.7px;
+        margin-top: 7.5px;
+        cursor: pointer;
+
+        filter: brightness(92%);
+    }
+    .star2{
+        width: 40px;
+        height: 40px;
+        margin-left: 7.7px;
+        margin-top: 7.5px;
+        cursor: pointer;
+    }
+
+
+    .board_object_tool_watch{
+            /* background-color: red; */
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #5f5f5f;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+
+        margin-top: 10px;
+
+    }
+
+    /*편집*/
+    .board_object_edit_container{
+        /* background-color: red; */
+        position: absolute;
+        top:50%;
+        left: 50%;
+        width: 270px;
+        transform: translate(-50%, -50%);
+    }
+    .board_object_edit_container_tip{
+        background-color: #262752;
+        width: 100%;
+        height: 25px;
+
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    .board_object_title_edit{
+        height: 30px;
+        width: 255px;
+    
+        /* margin-top: 10px; */
+        font-size: 16px;
+    
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    
+        border : 2px solid #b9b9b9;
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        padding-left: 10px;
+        padding-top: 5px;
+        margin-top: 10px;
+    }
+    .board_object_hashtag_edit_mode{
+        /* background-color: beige; */
+        height: 330px;
+        width: 270px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .board_object_hashtag_edit_mode div{
+        background-color: rgb(255, 255, 255);
+        height: 30px;
+        width: 85px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #b6b6c5;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer; 
+        
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+    }
+
+    .board_object_content_edit{
+        height: 80px;
+        width: 247px;
+
+        /* background-color: rgb(58, 48, 114); */
+        border-radius: 5px;
+        border : 2px solid #989898;
+        
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        /* margin-top: 10px; */
+
+        resize: none; /* 사용자가 크기 조절하지 못하도록 비활성화 */
+        outline: none;
+        padding: 10px;
+    }
+    .board_edit_btn_container{
+        /* background-color: red; */
+        display: flex;
+        width: 150px;
+        height: 40px;
+        justify-content: space-between;
+        margin-left: 120px;
+        margin-top: 5px;
+    }
+    .board_edit_btn_container button{
+        background-color: rgb(136, 136, 136);
+        height: 100%;
+        width: 70px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        outline: none;
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .board_edit_btn_container button:hover{
+        background-color: #262752;
+    }
+    .board_edit_btn_container div{
+        background-color: rgb(136, 136, 136);
+        height: 100%;
+        width: 70px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .board_edit_btn_container div:hover{
+        background-color: #262752;
+    }
+    .board_edit_chart_container{
+        display: none;
     }
 }
