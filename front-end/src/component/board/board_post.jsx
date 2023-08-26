@@ -104,7 +104,7 @@ const Board_post = () => {
         <div>
             <Home_header></Home_header>
             <div className="board_post_container">
-                <div className="board_post_container_tip">🙌 해시태그가 포함된 게시글은 사용자들과 더 원활한 소통이 가능합니다!</div>
+                <div className="board_post_container_tip">🙌 해시태그가 포함된 게시글은 더 원활한 소통이 가능합니다!</div>
                 <form onSubmit={handlepostSubmit}>
                     <div className="board_post_container_title">
                         <input type="text" onChange={handletitleChange} maxLength={20} placeholder="제목을 요약해주세요!"></input>

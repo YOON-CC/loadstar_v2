@@ -175,3 +175,181 @@
         cursor: pointer;
     }
 }
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 901px) { /*175 이전*/
+    .board_post_container{
+        /* background-color: aqua; */
+        position: absolute;
+        top:50%;
+        left: 50%;
+        width: 270px;
+        transform: translate(-50%, -50%);
+    }
+
+    .board_post_container_tip{
+        background-color: #262752;
+        width: 100%;
+        height: 40px;
+
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+
+
+    /*제목*/
+    .board_post_container_title input {
+        height: 40px;
+        width: 255px;
+
+        margin-top: 10px;
+        font-size: 16px;
+
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+
+        border : 2px solid #989898;
+        border-radius: 5px;
+        outline: none;
+        background: transparent;
+        padding-left: 10px;
+    }
+
+    /*체크 컨테이너*/
+    .board_post_container_check{
+        /* background-color: beige; */
+        height: 200px;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .board_post_container_check_2{
+        /* background-color: rgb(131, 131, 46); */
+        height: 60px;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .none_click_tag{
+        /* background-color: rgb(255, 255, 255); */
+        height: 20px;
+        width: 80px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #9c9c9c;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer; 
+        
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+        /* margin-top: 5px; */
+    }
+    .click_tag{
+        background-color: #262752;
+        height: 20px;
+        width: 80px;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        cursor: pointer; 
+        
+        border: 1.5px solid #9c9c9c;
+        border-radius: 8px;
+    }
+
+    /*내용*/
+    .board_post_container_detail textarea {
+        height: 100px;
+        width: 247px;
+
+        /* background-color: rgb(58, 48, 114); */
+        border-radius: 5px;
+        border : 2px solid #989898;
+        
+        color: #000000;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+        margin-top: 2px;
+
+        resize: none; /* 사용자가 크기 조절하지 못하도록 비활성화 */
+        outline: none;
+        padding: 10px;
+    }
+
+    /*버튼 컨테이너*/
+    .board_post_container_button{
+        /* background-color: beige ; */
+        height: 30px;
+        width: 130px;
+        /* margin-top: px; */
+        display: flex;
+        justify-content: space-between;
+
+        margin-left: 140px;
+    }
+    .board_post_container_button_cancel{
+        height: 30px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #262752;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+
+        border : 1px solid #262752;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .board_post_container_button_post{
+        background-color: #262752;
+        height: 100%;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif; 
+
+        border : 1px solid #262752;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

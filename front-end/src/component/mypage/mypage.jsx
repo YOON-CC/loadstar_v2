@@ -25,6 +25,7 @@ const Mypage = () => {
   return (
     <div>
       <Home_header></Home_header>
+      <div className="response_web_alert">지원하지 않는 화면비율 입니다!</div>
       <div className="mypage_background">
         <div className="mypage_container_1">
           <div className="left_container">

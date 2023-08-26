@@ -1,74 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
-.home_header_container{
-    /* background-color: aqua; */
-    width: 100%;
-    height : 40px;
-}
-.home_header_container_1{
-    position: fixed;
-    background-color: #ffffff;
-    width: 100%;
-    height : 40px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
-}
-.home_header_container_1_logo{
-    position: relative;
-    background-color: rgb(42, 69, 44);
-    width: 120px;
-    height : 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.home_header_container_1_logo img{
-    width: 100%;
-    height: 100%;
-}
-.home_header_body_1_login_form{
-    /* background-color: rgb(133, 67, 67); */
-    height:100%;
-    width: 145px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px; 
-}
-.home_header_body_1_c1{
-    width: 60px;
-    color : #262752;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    margin-top: 9px;
-    cursor: pointer;
-}
-.home_header_body_1_c1_login{
-    /* background-color: aqua; */
-    width: 60px;
-    color : #262752;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    margin-top: 9px;
-    cursor: pointer;
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (min-width: 901px) { /*175 이전*/
+    .home_header_container{
+        /* background-color: aqua; */
+        width: 100%;
+        height : 40px;
+    }
+    .home_header_container_1{
+        position: fixed;
+        background-color: #ffffff;
+        width: 100%;
+        height : 40px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .home_header_container_1_logo{
+        position: relative;
+        background-color: rgb(42, 69, 44);
+        width: 120px;
+        height : 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .home_header_container_1_logo img{
+        width: 100%;
+        height: 100%;
+    }
+    .home_header_body_1_login_form{
+        /* background-color: rgb(133, 67, 67); */
+        height:100%;
+        width: 160px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px; 
+    }
+    .home_header_body_1_c1{
+        background: none;
+        width: 68px;
+        color : #262752;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        margin-top: 9px;
+        cursor: pointer;   
+        border: none; 
+    }
+    .home_header_body_1_c1_login{
+        /* background-color: aqua; */
+        width: 60px;
+        color : #262752;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        margin-top: 9px;
+        cursor: pointer;
+        margin-left: 10px;
 
-    display: flex;
-    justify-content: center;
-}
-.home_header_body_1_c2{
-    background-color: #262752;
-    height : 25px;
-    width: 85px;
-    border-radius: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    .home_header_body_1_c2{
+        background-color: #262752;
+        height : 25px;
+        width: 85px;
+        border-radius: 5px;
 
-    display : flex;
-    align-items: center;
-    justify-content: center;
-    
-    color : #fefefe;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    margin-top: 7px;
-    padding-top: 1px;
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        
+        color : #fefefe;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        margin-top: 7px;
+        padding-top: 1px;
+    }
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 901px) { /*175 이전*/
+    .home_header_container{
+        /* background-color: aqua; */
+        width: 100%;
+        height : 40px;
+    }
+    .home_header_container_1{
+        position: fixed;
+        background-color: #ffffff;
+        width: 100%;
+        height : 40px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .home_header_container_1_logo{
+        position: relative;
+        /* background-color: rgb(42, 69, 44); */
+        width: 90px;
+        height : 15px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    .home_header_container_1_logo img{
+        width: 100%;
+        height: 100%;
+    }
+    .home_header_body_1_login_form{
+        /* background-color: rgb(133, 67, 67); */
+        height:100%;
+        width: 120px;
+        display: flex;
+        /* justify-content: space-between; */
+        margin-right: 5px; 
+    }
+    .home_header_body_1_c1{
+        background: none;
+        /* background-color: aqua; */
+
+        width: 50px;
+        color : #262752;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        margin-top: 12px;
+        cursor: pointer;   
+        border: none; 
+        margin-left: 20px;
+    }
+    .home_header_body_1_c1_login{
+        /* background-color: aqua; */
+        width: 40px;
+        color : #262752;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        margin-top: 13px;
+        cursor: pointer;
+        margin-left: 30px;
+
+        display: flex;
+        justify-content: center;
+    }
+    .home_header_body_1_c2{
+        background-color: #262752;
+        height : 20px;
+        width: 50px;
+        border-radius: 5px;
+
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        
+        color : #fefefe;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        margin-top: 10px;
+        padding-top: 1px;
+    }
 }

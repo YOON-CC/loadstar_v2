@@ -142,3 +142,146 @@
 
     }
 }
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 901px) { /*175 이전*/
+    .login_container {
+        /* background-color: #4630a8; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 270px;
+    }
+    .login_img img{
+        position: relative;
+        height: 37px;
+        width: 225px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .login_id_container input{
+        position: relative;
+        height: 40px;
+        width: 250px;
+
+        left: 50%;
+        transform: translate(-50%);
+
+        outline: none;
+        border: 2px solid #cdcdcd;
+        border-radius: 5px;
+
+        margin-top: 15px;
+        padding-left: 10px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .login_pwd_container input{
+        position: relative;
+        height: 40px;
+        width: 250px;
+
+        left: 50%;
+        transform: translate(-50%);
+
+        outline: none;
+        border: 2px solid #cdcdcd;
+        border-radius: 5px;
+
+        margin-top: 10px;
+        padding-left: 10px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #262752;
+    }
+    .login_send_container{
+        position: relative;
+        /* background-color: aqua; */
+
+        height: 40px;
+        width: 270px;
+
+        margin-top: 20px;
+
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .login_send_container button{
+        height:100%;
+        width: 100%;
+
+        border:none;
+        border-radius: 5px;
+
+        background-color: #262752;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+    }
+    .login_search_container{
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+
+        margin-top: 15px;
+    }
+    .login_search_id{
+        height: 100%;
+        width: 99px;
+        /* background-color: antiquewhite; */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #434343;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 6px;
+
+        cursor: pointer;
+    }
+    .login_search_line{
+        background-color: #434343;
+        position: relative;
+
+        height: 22px;
+        width: 1.6px;
+        margin-left: 5px;
+    }
+    .login_search_pwd{
+        height: 100%;
+        width: 99px;
+        /* background-color: antiquewhite; */
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #434343;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 12px;
+        cursor: pointer;
+
+    }
+}

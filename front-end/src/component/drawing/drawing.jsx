@@ -298,6 +298,7 @@ const ChartComponent = ({}) => {
   return (
     <div>
       <Home_header></Home_header>
+      <div className="response_web_alert">지원하지 않는 화면비율 입니다!</div>
       <div className="chart_body">
 
         {/*차트관련 상위 컨테이너*/}

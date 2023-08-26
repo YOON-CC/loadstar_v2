@@ -1,227 +1,255 @@
-.top_level_container{
-    position: absolute;
-    /* background-color: brown; */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Jua&family=Roboto&family=Single+Day&display=swap');
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (min-width: 901px) { /*175 이전*/
+    .response_web_alert{
+        display: none;
+    }
 
-    width: 1200px;
-    height: fit-content;
-    top : 50%;
-    left : 50%;
+    .top_level_container{
+        position: absolute;
+        /* background-color: brown; */
 
-    transform: translate(-50%, -50%);
+        width: 1200px;
+        height: fit-content;
+        top : 50%;
+        left : 50%;
+
+        transform: translate(-50%, -50%);
+    }
+    .chart_question{
+        /* background-color: rgb(110, 110, 172); */
+        width: 100%;
+        height: 153px;
+        border-top: 2px solid #eaeaea; /* 상단에 5px 두께의 흰색 경계선 추가 */
+    }
+    .chart_question_container{
+        margin-top: 5px;
+        /* background-color: blue; */
+    }
+    .chart_question_container_c1{
+        /* background-color: aqua; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 20px;
+        font-weight: bold;
+        color : #262752;
+    }
+    .chart_question_container_c2{
+        position: relative;
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        width: 700px;
+        height: 115px;
+
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .chart_question_container_c2_container_yes_no{
+        position: relative;
+        /* background-color: bisque; */
+        width: 270px;
+
+        display: flex;
+        justify-content: space-between;
+        left: 50%;
+        transform: translate(-50%);
+
+        margin-top: 10px;
+    }
+    .chart_question_container_c2_container_b1_default{
+        background-color: #262752;
+        border-radius: 5px;
+        width: 115px;
+        height: 35px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 17px;
+        font-weight: bold;
+        color : #ffffff;
+
+        cursor: pointer;
+    }
+    .chart_question_container_c2_container_b1{
+        background-color: #262752;
+        border-radius: 5px;
+        width: 115px;
+        height: 35px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 17px;
+        font-weight: bold;
+        color : #ffffff;
+
+        cursor: pointer;   
+    }
+    .chart_question_container_c2_container_b2_default{
+        background-color: #262752;
+        border-radius: 5px;
+        width: 115px;
+        height: 35px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 17px;
+        font-weight: bold;
+        color : #ffffff;
+
+        cursor: pointer;   
+    }
+    .chart_question_container_c2_container_b2{
+        background-color: #262752;
+        border-radius: 5px;
+        width: 115px;
+        height: 35px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 17px;
+        font-weight: bold;
+        color : #ffffff;
+
+        cursor: pointer;  
+    }
+    .chart_question_container_c2_b1{
+        /* background-color: aquamarine; */
+        font-size: 50px;
+        cursor: pointer;
+        color: #262752;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chart_question_container_c2_select{
+        position: absolute;
+        /* background-color: aqua; */
+        width: 450px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .chart_question_container_c2_b2{
+        /* background-color: aquamarine; */
+        font-size: 50px;
+        cursor: pointer;
+        color: #262752;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chart_question_container_c2_container_period_title_1{
+        /* background-color: azure; */
+
+        font-size: 15px;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 10px;
+    }
+    .chart_question_container_c2_container_period_input{
+        /* background-color: rgb(20, 89, 178); */
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 60px;
+        margin-top: 5px;
+    }
+    .chart_question_container_c2_container_period_input input{
+        border-radius: 5px;
+        outline: none;
+        width: 150px;
+        height: 30px;
+
+        text-align: center;
+
+        font-weight: bold;
+        color: #262752;
+    }
+    .chart_question_container_c2_container_period_input div{
+        background-color: rgb(201, 201, 201);
+        border-radius: 5px;
+        outline: none;
+        width: 60px;
+        height: 28px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 14px;
+        font-weight: bold;
+        color: #262752;
+
+        margin-top: 4px;
+
+        cursor: pointer;
+    }
+    .chart_question_container_c2_container_period_title_2{
+        /* background-color: beige; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 17px;
+        font-weight: bold;
+        color: #a0a0a0;
+
+        margin-top: 20px;
+    }
+
+    .save{
+        position: relative;
+        background-color: #262752;
+        width: 400px;
+        height: 100px;
+        outline: none;
+        
+        border-radius: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+
+        left: 50%;
+        transform: translate(-50%);
+
+        cursor: pointer;
+    }
 }
-.chart_question{
-    /* background-color: rgb(110, 110, 172); */
-    width: 100%;
-    height: 153px;
-    border-top: 2px solid #eaeaea; /* 상단에 5px 두께의 흰색 경계선 추가 */
-}
-.chart_question_container{
-    margin-top: 5px;
-    /* background-color: blue; */
-}
-.chart_question_container_c1{
-    /* background-color: aqua; */
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 901px) { /*175 이전*/
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    font-size: 20px;
-    font-weight: bold;
-    color : #262752;
-}
-.chart_question_container_c2{
-    position: relative;
-    /* background-color: red; */
-    display: flex;
-    justify-content: space-between;
-    width: 700px;
-    height: 115px;
-
-    left: 50%;
-    transform: translate(-50%);
-}
-.chart_question_container_c2_container_yes_no{
-    position: relative;
-    /* background-color: bisque; */
-    width: 270px;
-
-    display: flex;
-    justify-content: space-between;
-    left: 50%;
-    transform: translate(-50%);
-
-    margin-top: 10px;
-}
-.chart_question_container_c2_container_b1_default{
-    background-color: #262752;
-    border-radius: 5px;
-    width: 115px;
-    height: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 17px;
-    font-weight: bold;
-    color : #ffffff;
-
-    cursor: pointer;
-}
-.chart_question_container_c2_container_b1{
-    background-color: #262752;
-    border-radius: 5px;
-    width: 115px;
-    height: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 17px;
-    font-weight: bold;
-    color : #ffffff;
-
-    cursor: pointer;   
-}
-.chart_question_container_c2_container_b2_default{
-    background-color: #262752;
-    border-radius: 5px;
-    width: 115px;
-    height: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 17px;
-    font-weight: bold;
-    color : #ffffff;
-
-    cursor: pointer;   
-}
-.chart_question_container_c2_container_b2{
-    background-color: #262752;
-    border-radius: 5px;
-    width: 115px;
-    height: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 17px;
-    font-weight: bold;
-    color : #ffffff;
-
-    cursor: pointer;  
-}
-.chart_question_container_c2_b1{
-    /* background-color: aquamarine; */
-    font-size: 50px;
-    cursor: pointer;
-    color: #262752;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.chart_question_container_c2_select{
-    position: absolute;
-    /* background-color: aqua; */
-    width: 450px;
-    left: 50%;
-    transform: translate(-50%);
-}
-.chart_question_container_c2_b2{
-    /* background-color: aquamarine; */
-    font-size: 50px;
-    cursor: pointer;
-    color: #262752;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.chart_question_container_c2_container_period_title_1{
-    /* background-color: azure; */
-
-    font-size: 15px;
-    font-weight: bold;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 10px;
-}
-.chart_question_container_c2_container_period_input{
-    /* background-color: rgb(20, 89, 178); */
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-top: 5px;
-}
-.chart_question_container_c2_container_period_input input{
-    border-radius: 5px;
-    outline: none;
-    width: 150px;
-    height: 30px;
-
-    text-align: center;
-
-    font-weight: bold;
-    color: #262752;
-}
-.chart_question_container_c2_container_period_input div{
-    background-color: rgb(201, 201, 201);
-    border-radius: 5px;
-    outline: none;
-    width: 60px;
-    height: 28px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 14px;
-    font-weight: bold;
-    color: #262752;
-
-    margin-top: 4px;
-
-    cursor: pointer;
-}
-.chart_question_container_c2_container_period_title_2{
-    /* background-color: beige; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 17px;
-    font-weight: bold;
-    color: #a0a0a0;
-
-    margin-top: 20px;
-}
-
-.save{
-    position: relative;
-    background-color: #262752;
-    width: 400px;
-    height: 100px;
-    outline: none;
-    
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffffff;
-
-    left: 50%;
-    transform: translate(-50%);
-
-    cursor: pointer;
+    .top_level_container{
+        display: none;
+    }
 }
