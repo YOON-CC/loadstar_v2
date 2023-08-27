@@ -94,6 +94,7 @@ const Board_object = () => {
     const [boardview_createAt, setBoardview_createAt] = useState('');
     const [boardview_modifiedAt, setBoardview_modifiedAt] = useState('');
     const [boardview, setBoardview] = useState(0);
+    const [boardbookmarkcount, setBoardbookmarkcount] = useState(0);
 
     //댓글 작성
     const [boardview_comment_content_change, setBoardview_comment_content_change] = useState('');
@@ -135,6 +136,7 @@ const Board_object = () => {
                 setBoardview_createAt(response.data.createdAt.split("T")[0]);
                 setBoardview_modifiedAt(response.data.modifiedAt.split("T")[0]);
                 setBoardview(response.data.view);
+                setBoardbookmarkcount(response.data.bookmarkCount)
 
                 setChartData(response.data.arr);
 
@@ -600,7 +602,7 @@ const Board_object = () => {
                         {bookmark === false && <img className="star1" src={require("../image/star_1.png")} onClick={handleBoardBookmark_1}></img>} 
                         {bookmark === true && <img className="star2" src={require("../image/star_2.png")} onClick={handleBoardBookmark_2}></img>} 
                     </div>
-                    <div className="board_object_tool_watch">99+</div>              
+                    <div className="board_object_tool_watch">{boardbookmarkcount}</div>              
                 </div>
             </div>
             )}

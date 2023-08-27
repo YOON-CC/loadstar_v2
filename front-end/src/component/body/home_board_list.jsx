@@ -310,7 +310,7 @@ const Home_board_list = () => {
 
               <div className="board-list_c1_tag"></div>
             </div>
-            <div className="board-list_c2">{title}</div>
+            <div className="board-list_c2">{title.length >= 15 ? `${title.slice(0, 15)} ...` : title}</div>
             <div className="board-list_c3">
               안녕하세요! 저는 프론트엔드 최강자~~ 입니다. 오늘은 저의
               지금까지의 과정을 보여드리기 위해서 글을 적습니다.
@@ -614,12 +614,24 @@ const Home_board_list = () => {
             {tag_p_1 === 0 && (
               <div
                 className="none_click_list_tag"
-                onClick={() => setTag_p_1("html")}>
+                onClick={() => {
+                  setTag_p_1('html');
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
+                }}>
                 html
               </div>
             )}
             {tag_p_1 !== 0 && (
-              <div className="click_list_tag" onClick={() => setTag_p_1(0)}>
+              <div 
+                className="click_list_tag" 
+                onClick={() => {
+                  setTag_p_1(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
+                }}>
                 #html
               </div>
             )}
@@ -627,12 +639,12 @@ const Home_board_list = () => {
             {tag_p_2 === 0 && (
               <div
                 className="none_click_list_tag"
-                onClick={() => setTag_p_2("css")}>
+                onClick={() => {setTag_p_2("css"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                 css
               </div>
             )}
             {tag_p_2 !== 0 && (
-              <div className="click_list_tag" onClick={() => setTag_p_2(0)}>
+              <div className="click_list_tag" onClick={() => {setTag_p_2(0); setBoard_type(!board_type); setPage(0); setBoard_data([]); }}>
                 #css
               </div>
             )}
@@ -640,12 +652,12 @@ const Home_board_list = () => {
             {tag_p_3 === 0 && (
               <div
                 className="none_click_list_tag"
-                onClick={() => setTag_p_3("javascript")}>
+                onClick={() => {setTag_p_3("javascript"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                 javascript
               </div>
             )}
             {tag_p_3 !== 0 && (
-              <div className="click_list_tag" onClick={() => setTag_p_3(0)}>
+              <div className="click_list_tag" onClick={() => {setTag_p_3(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                 #javascript
               </div>
             )}
@@ -667,12 +679,12 @@ const Home_board_list = () => {
               {tag_p_4 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_4("typescript")}>
+                  onClick={() => {setTag_p_4("typescript"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   typescript
                 </div>
               )}
               {tag_p_4 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_4(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_4(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #typescript
                 </div>
               )}
@@ -680,12 +692,12 @@ const Home_board_list = () => {
               {tag_p_5 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_5("react")}>
+                  onClick={() => {setTag_p_5("react"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   react
                 </div>
               )}
               {tag_p_5 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_5(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_5(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #react
                 </div>
               )}
@@ -693,12 +705,12 @@ const Home_board_list = () => {
               {tag_p_6 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_6("java")}>
+                  onClick={() => {setTag_p_6("java"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   java
                 </div>
               )}
               {tag_p_6 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_6(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_6(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #java
                 </div>
               )}
@@ -706,12 +718,12 @@ const Home_board_list = () => {
               {tag_p_7 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_7("python")}>
+                  onClick={() => {setTag_p_7("python"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   python
                 </div>
               )}
               {tag_p_7 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_7(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_7(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #python
                 </div>
               )}
@@ -719,12 +731,12 @@ const Home_board_list = () => {
               {tag_p_8 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_8("spring")}>
+                  onClick={() => {setTag_p_8("spring"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   spring
                 </div>
               )}
               {tag_p_8 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_8(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_8(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #spring
                 </div>
               )}
@@ -732,12 +744,12 @@ const Home_board_list = () => {
               {tag_p_9 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_9("springboot")}>
+                  onClick={() => {setTag_p_9("springboot"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   springboot
                 </div>
               )}
               {tag_p_9 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_9(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_9(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #springboot
                 </div>
               )}
@@ -745,12 +757,12 @@ const Home_board_list = () => {
               {tag_p_10 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_p_10("node.js")}>
+                  onClick={() => {setTag_p_10("node.js"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   node.js
                 </div>
               )}
               {tag_p_10 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_p_10(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_p_10(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #node.js
                 </div>
               )}
@@ -758,12 +770,12 @@ const Home_board_list = () => {
               {tag_cs_1 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_1("운영체제")}>
+                  onClick={() => {setTag_cs_1("운영체제"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   운영체제
                 </div>
               )}
               {tag_cs_1 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_1(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_1(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #운영체제
                 </div>
               )}
@@ -771,12 +783,12 @@ const Home_board_list = () => {
               {tag_cs_2 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_2("네트워크")}>
+                  onClick={() => {setTag_cs_2("네트워크"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   네트워크
                 </div>
               )}
               {tag_cs_2 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_2(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_2(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #네트워크
                 </div>
               )}
@@ -784,12 +796,12 @@ const Home_board_list = () => {
               {tag_cs_3 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_3("자료구조")}>
+                  onClick={() => {setTag_cs_3("자료구조"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   자료구조
                 </div>
               )}
               {tag_cs_3 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_3(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_3(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #자료구조
                 </div>
               )}
@@ -798,12 +810,12 @@ const Home_board_list = () => {
               {tag_cs_4 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_4("컴퓨터구조")}>
+                  onClick={() => {setTag_cs_4("컴퓨터구조"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   컴퓨터구조
                 </div>
               )}
               {tag_cs_4 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_4(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_4(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #컴퓨터구조
                 </div>
               )}
@@ -811,12 +823,12 @@ const Home_board_list = () => {
               {tag_cs_5 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_5("컴파일러")}>
+                  onClick={() => {setTag_cs_5("컴파일러"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   컴파일러
                 </div>
               )}
               {tag_cs_5 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_5(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_5(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #컴파일러
                 </div>
               )}
@@ -824,12 +836,12 @@ const Home_board_list = () => {
               {tag_cs_6 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_6("알고리즘")}>
+                  onClick={() => {setTag_cs_6("알고리즘"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   알고리즘
                 </div>
               )}
               {tag_cs_6 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_6(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_6(0); setBoard_type(!board_type); setPage(0); setBoard_data([])}}>
                   #알고리즘
                 </div>
               )}
@@ -837,12 +849,12 @@ const Home_board_list = () => {
               {tag_cs_7 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_cs_7("데이터베이스")}>
+                  onClick={() => {setTag_cs_7("데이터베이스"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   데이터베이스
                 </div>
               )}
               {tag_cs_7 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_cs_7(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_cs_7(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #데이터베이스
                 </div>
               )}
@@ -850,12 +862,12 @@ const Home_board_list = () => {
               {tag_etc_1 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_etc_1("부트캠프")}>
+                  onClick={() => {setTag_etc_1("부트캠프"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   부트캠프
                 </div>
               )}
               {tag_etc_1 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_etc_1(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_etc_1(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #부트캠프
                 </div>
               )}
@@ -863,12 +875,12 @@ const Home_board_list = () => {
               {tag_etc_2 === 0 && (
                 <div
                   className="none_click_list_tag"
-                  onClick={() => setTag_etc_2("개발외주")}>
+                  onClick={() => {setTag_etc_2("개발외주"); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   개발외주
                 </div>
               )}
               {tag_etc_2 !== 0 && (
-                <div className="click_list_tag" onClick={() => setTag_etc_2(0)}>
+                <div className="click_list_tag" onClick={() => {setTag_etc_2(0); setBoard_type(!board_type); setPage(0); setBoard_data([]);}}>
                   #개발외주
                 </div>
               )}

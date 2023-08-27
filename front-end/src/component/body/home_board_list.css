@@ -345,6 +345,7 @@
     }
     .board-list_c3{
         width: 285px;
+        height: 40px;
         /* background-color: rgb(139, 33, 137);  */
         margin-left: 15px;
 
@@ -461,6 +462,373 @@
         height: 100%;
         display: flex;
         margin-left: 90px;
+    }
+    .board-list_c5_c2 img{
+        height: 15px;
+        width: 15px;
+        margin-top: 1px;
+    }
+    .board-list_c5_c2 div{
+        margin-top: 1px;
+        margin-left: 2px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #454545;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .board-list_c5_c3{
+        width: 40px;
+        /* background-color: #b9ac33; */
+        height: 100%;
+        display: flex;
+    }
+    .board-list_c5_c3 img{
+        height: 15px;
+        width: 15px;
+        margin-top: 2px;
+    }
+    .board-list_c5_c3 div{
+        margin-top: 1px;
+        margin-left: 2px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #454545;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---------반응형---------@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 901px) { /*175 이전*/
+    .home_main_container{
+        position: absolute;
+        /* background-color: aquamarine; */
+        height: 200px;
+        width: 270px;
+    
+        left:50%;
+        transform: translate(-50%);
+    
+        display: flex;
+    }
+    .home_main_container_c1{
+        /* background-color: #8687ab; */
+        height: 60%;
+        width: 270px;
+        margin-top: 20px;
+    }
+    .home_main_container_c1_logo{
+        width: 270px;
+        height: 40px;
+    }
+    .home_main_container_c1_logo img{
+        height: 100%;
+        width: 100%;
+    }
+    .home_main_container_c1_contents_1{
+        color: #262752;
+        margin-top: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    .home_main_container_c1_contents_2{
+        color: #262752;
+        margin-top: 6px;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    .home_main_container_c1_btn_container{
+        /* background-color: #3d26a7; */
+        height: 40px;
+        width: 270px;
+        margin-top: 14px;
+    
+        display: flex;
+        justify-content: space-between;
+    }
+    .home_main_container_c1_btn_container div{
+        background-color: #262752;
+        height: 100%;
+        width: 130px;
+    
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    
+        border-radius: 5px;
+    
+    }
+    .home_main_container_c2{
+        display: none;
+    }
+
+    /*리스트*/
+    .home_board_list_body{  
+        position: absolute;
+        background-color: #f9f9f9;
+        /* background-color: red; */
+        height: 1500px;
+        width: 100%;
+        margin-top: 200px;
+        flex-wrap: wrap;    
+    }
+    .home_board_search{
+        display: none;
+    }
+    .home_board_search_c1{
+        display: none;
+    }
+    .home_board_search_c1_btn_on{
+        display: none;
+
+    }
+    .home_board_search_c1_btn_off{
+        display: none;
+
+    }
+    .home_board_search_c2{
+        display: none;
+
+    }
+    .home_board_search_c2 input{
+        display: none;
+
+    }
+    .home_board_search_c2 button{
+        display: none;
+ 
+    }
+    /*헤시테그*/
+    .home_board_hashtag{
+        display: none;
+
+    }
+    .list_1{
+        display: none;
+
+    }
+    .none_click_list_tag{
+        display: none;
+
+    }
+    .click_list_tag{
+        display: none;
+
+    }
+    .select_more_hastag{
+        display: none;
+
+    }
+    .list_2{
+        display: none;
+    }
+    .list_3{
+        display: none;
+    }
+    /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@2222*/
+
+    /*게시물 리스트*/
+    .board-list-container{
+        position: relative;
+        /* background-color: #e32323; */
+        width:270px;
+
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        left: 50%;
+        transform: translate(-50%);
+        
+    }
+
+    .board-list{
+        position: relative;
+        background-color: #ffffff;
+        width: 270px;
+        height: 290px;
+        margin-top: 17px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        /* color: rgb(255, 255, 255); */
+
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+
+        box-shadow: 5px 5px 10px 0 rgb(196, 196, 196);
+    }
+    .board-list:hover{
+        filter: brightness(80%);
+    }
+    .board-list_c1{
+        /* background-color: aquamarine; */
+        height: 130px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .chanchan{
+        margin-left: -20px;
+    }
+
+    .board-list_c2{
+        width: 260px;
+        /* background-color: rgb(0, 30, 255);  */
+        margin-left: 6px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 12px;
+        font-weight: bolder;
+        color: #262752;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .board-list_c3{
+        width: 260px;
+        height: 30px;
+        /* background-color: rgb(139, 33, 137);  */
+        margin-left: 6px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #454545;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+
+    }
+    .board-list_c4{
+        position: absolute;
+        height: 25px;
+        width: 80px;
+        /* background-color: rgb(94, 227, 125); */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left:7px;
+    }
+    .board-list_c4_2{
+        position: absolute;
+        height: 25px;
+        width: 158px;
+        /* background-color: rgb(43, 130, 64); */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 7px;
+    }
+    .board-list_c4_3{
+        /* background-color: red; */
+        position: absolute;
+        height: 25px;
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 6px;       
+    }
+    .board-list_c4_4{
+        position: absolute;
+        height: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    .board-list_c4_tag{
+        background-color: #262752;
+        height: 25px;
+        width: 75px;
+        border-radius: 5px;
+
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #ffffff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .board-list_c4_tag_end{
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #454545;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .board-list_c5{
+        position: absolute;
+        /* background-color: #454545; */
+        width: 100%;
+        height: 17px;
+        margin-top: 55px;
+
+        display : flex;
+    }
+    .board-list_c5_c1{
+        width: 120px;
+        /* background-color: #b9ac33; */
+        height: 100%;
+        display: flex;
+        margin-left: 13px;
+    }
+    .board-list_c5_c1 img{
+        height: 15px;
+        width: 16px;
+        margin-top: 1px;  
+    }
+    .board-list_c5_c1 div{
+        margin-left: 3px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #454545;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .board-list_c5_c2{
+        width: 40px;
+        /* background-color: #b9ac33; */
+        height: 100%;
+        display: flex;
+        margin-left: 50px;
     }
     .board-list_c5_c2 img{
         height: 15px;
