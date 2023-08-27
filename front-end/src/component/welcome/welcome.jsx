@@ -31,7 +31,7 @@ const Welcome = () => {
             @media (min-width: 901px) {
                 .welcome_container {
                     position: absolute;
-                    background-color: rgba(0, 0, 0, 0.678);
+                    background-color: #ffffff;
                     height: 100%;
                     width: 100%;
                     z-index: 4;
@@ -49,7 +49,7 @@ const Welcome = () => {
                     align-items: center;
                     font-size: 100px;
                     font-weight: bold;
-                    color: white;
+                    color: #262752;
                     opacity: 0;
                     animation: text_animation 0.3s;
                 }
@@ -66,7 +66,7 @@ const Welcome = () => {
                     align-items: center;
                     font-size: 100px;
                     font-weight: bold;
-                    color: white;
+                    color: #262752;
                     opacity: 0;
                     animation: text_animation 0.3s;
                     animation-delay: 0.3s;
@@ -84,7 +84,7 @@ const Welcome = () => {
                     align-items: center;
                     font-size: 100px;
                     font-weight: bold;
-                    color: white;
+                    color: #262752;
                     opacity: 0;
                     animation: text_animation 1s;
                     animation-delay: 0.6s;
@@ -92,8 +92,8 @@ const Welcome = () => {
 
                 .welcome_img {
                     position: absolute;
-                    height: 350px;
-                    width: 380px;
+                    height: 100px;
+                    width: 600px;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -107,7 +107,7 @@ const Welcome = () => {
             @media (max-width: 900px) {
                 .welcome_container {
                     position: absolute;
-                    background-color: rgba(0, 0, 0, 0.678);
+                    background-color: #ffffff;
                     height: 100%;
                     width: 100%;
                     z-index: 4;
@@ -125,7 +125,7 @@ const Welcome = () => {
                     align-items: center;
                     font-size: 30px;
                     font-weight: bold;
-                    color: white;
+                    color: #262752;
                     opacity: 0;
                     animation: text_animation 0.3s;
                 }
@@ -142,7 +142,7 @@ const Welcome = () => {
                     align-items: center;
                     font-size: 30px;
                     font-weight: bold;
-                    color: white;
+                    color: #262752;
                     opacity: 0;
                     animation: text_animation 0.3s;
                     animation-delay: 0.3s;
@@ -160,7 +160,7 @@ const Welcome = () => {
                     align-items: center;
                     font-size: 30px;
                     font-weight: bold;
-                    color: white;
+                    color: #262752;
                     opacity: 0;
                     animation: text_animation 1s;
                     animation-delay: 0.6s;
@@ -168,7 +168,7 @@ const Welcome = () => {
 
                 .welcome_img {
                     position: absolute;
-                    height: 150px;
+                    height: 30px;
                     width: 170px;
                     top: 50%;
                     left: 50%;

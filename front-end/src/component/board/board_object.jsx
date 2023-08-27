@@ -479,18 +479,6 @@ const Board_object = () => {
             const updatedHashtags = prevHashtags.map((hashtag, i) => {
                 if (i === index) {
                     return { ...hashtag, selected: !hashtag.selected };
-                } else if (hashtag.text === '비현직자' && prevHashtags[index].text === '현직자') {
-                    return { ...hashtag, selected: false };
-                } else if (hashtag.text === '현직자' && prevHashtags[index].text === '비현직자') {
-                    return { ...hashtag, selected: false };
-                } else if (hashtag.text === '전공자' && prevHashtags[index].text === '비전공자') {
-                    return { ...hashtag, selected: false };
-                } else if (hashtag.text === '비전공자' && prevHashtags[index].text === '전공자') {
-                    return { ...hashtag, selected: false };
-                } else if (hashtag.text === 'front' && prevHashtags[index].text === 'back') {
-                    return { ...hashtag, selected: false };
-                } else if (hashtag.text === 'back' && prevHashtags[index].text === 'front') {
-                    return { ...hashtag, selected: false };
                 } else {
                     return hashtag;
                 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Home_header from "../header/home_header";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useActionData } from "react-router-dom";
 import Chart from "react-apexcharts";
 import "./home_board_list.css";
 
@@ -114,51 +114,39 @@ const Home_board_list = () => {
       allTags.splice(index, 1);
     }
   }
-  //적용하기
-  const handlehashtagboard = () => {
-    setBoard_type(!board_type);
-    setShow(!show);
-    setPage(0);
-    setBoard_data([]);
+
+  //검색
+  const [search, setSearch] = useState('');
+  const handleSearchContent = (event) => {
+    setSearch(event.target.value)
   };
+  const handleSearchContentSend = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/boards/search`, {
+          params: {
+              keywords: search
+          },
+          headers: {
+              "Content-Type": "application/json"
+          }
+      });
 
-  //초기화
-  const handledefaultboard = () => {
-    setBoard_type(!board_type);
-    setShow(!show);
-    setPage(0);
-    setBoard_data([]);
+      console.log(response.status);
 
-    setTag_type_1(0);
-    setTag_user_1(0);
-    setTag_user_2(0);
-    setTag_user_3(0);
-    setTag_user_4(0);
-    setTag_user_5(0);
-    setTag_user_6(0);
+      if (response.status === 200){
+        setBoard_type(!board_type); 
+        setPage(0); 
+        setBoard_data([]);
+      }
+    }
+    catch (error) {
 
-    setTag_p_1(0);
-    setTag_p_2(0);
-    setTag_p_3(0);
-    setTag_p_4(0);
-    setTag_p_5(0);
-    setTag_p_6(0);
-    setTag_p_7(0);
-    setTag_p_8(0);
-    setTag_p_9(0);
-    setTag_p_10(0);
+    }
+  }
 
-    setTag_cs_1(0);
-    setTag_cs_2(0);
-    setTag_cs_3(0);
-    setTag_cs_4(0);
-    setTag_cs_5(0);
-    setTag_cs_6(0);
-    setTag_cs_7(0);
 
-    setTag_etc_1(0);
-    setTag_etc_2(0);
-  };
+
 
   //페이지 받기작업
   const [page, setPage] = useState(0);
@@ -192,15 +180,20 @@ const Home_board_list = () => {
             },
           }
         );
-
+        
         if (response.status === 200) {
           //튜플로 합치기 (boardId, 그래프 보여주기, Q&A여부 ,제목, 해시테그)
           const combinedArray = response.data.map((item) => [
             item.boardId,
-            item.careerImage,
             item.title,
             item.hashtags,
             item.arr,
+            item.username,
+            item.bookmarkCount,
+            item.view,
+            item.createdAt,
+            item.modifiedAt,
+            
           ]);
 
           setBoard_data((prevTitle) => {
@@ -240,10 +233,15 @@ const Home_board_list = () => {
   useEffect(() => {
     const updatedDivElements = [];
     for (let i = 0; i < board_data.length; i++) {
-      const title = board_data[i][2];
-      const hash_tag = board_data[i][3];
       const board_Id = board_data[i][0];
-      const chartData = board_data[i][4];
+      const title = board_data[i][1];
+      const hash_tag = board_data[i][2];
+      const chartData = board_data[i][3];
+      const username = board_data[i][4];
+      const bookmarkCount = board_data[i][5];
+      const view = board_data[i][6];
+      const createdAt = board_data[i][7];
+      const modifiedAt = board_data[i][8];
 
       //빈 데이터의 경우 continue
       if (chartData.length === 0) {
@@ -344,15 +342,15 @@ const Home_board_list = () => {
             <div className="board-list_c5">
               <div className="board-list_c5_c1">
                 <img src={require("../image/user.png")}></img>
-                <div>아이디아이디아이디</div>
+                <div>{username}</div>
               </div>
               <div className="board-list_c5_c2">
                 <img src={require("../image/star.png")}></img>
-                <div>99+</div>
+                <div>{bookmarkCount}</div>
               </div>
               <div className="board-list_c5_c3">
                 <img src={require("../image/check.png")}></img>
-                <div>99+</div>
+                <div>{view}</div>
               </div>
             </div>
           </div>
@@ -455,8 +453,10 @@ const Home_board_list = () => {
             )}
           </div>
           <div className="home_board_search_c2">
-            <input></input>
-            <button>검색</button>
+            <input onChange={handleSearchContent}></input>
+            <form onSubmit={handleSearchContentSend}>
+              <button>검색</button>
+            </form>
           </div>
         </div>
         <div className="home_board_hashtag">
@@ -466,21 +466,21 @@ const Home_board_list = () => {
                 className="none_click_list_tag"
                 onClick={() => {
                   setTag_user_1("전공자");
-                  setTag_user_2(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 전공자
               </div>
             )}
             {tag_user_1 !== 0 && (
-              <div
-                className="click_list_tag"
+              <div 
+                className="click_list_tag" 
                 onClick={() => {
-                  if (tag_user_1 === "전공자") {
-                    setTag_user_1(0);
-                  } else {
-                    setTag_user_1("전공자");
-                    setTag_user_2(0);
-                  }
+                  setTag_user_1(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 #전공자
               </div>
@@ -491,21 +491,21 @@ const Home_board_list = () => {
                 className="none_click_list_tag"
                 onClick={() => {
                   setTag_user_2("비전공자");
-                  setTag_user_1(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 비전공자
               </div>
             )}
             {tag_user_2 !== 0 && (
-              <div
-                className="click_list_tag"
+              <div 
+                className="click_list_tag" 
                 onClick={() => {
-                  if (tag_user_2 === "비전공자") {
-                    setTag_user_2(0);
-                  } else {
-                    setTag_user_2("비전공자");
-                    setTag_user_1(0);
-                  }
+                  setTag_user_2(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 #비전공자
               </div>
@@ -516,46 +516,47 @@ const Home_board_list = () => {
                 className="none_click_list_tag"
                 onClick={() => {
                   setTag_user_3("현직자");
-                  setTag_user_4(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 현직자
               </div>
             )}
             {tag_user_3 !== 0 && (
-              <div
-                className="click_list_tag"
+              <div 
+                className="click_list_tag" 
                 onClick={() => {
-                  if (tag_user_3 === "현직자") {
-                    setTag_user_3(0);
-                  } else {
-                    setTag_user_3("현직자");
-                    setTag_user_4(0);
-                  }
+                  setTag_user_3(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 #현직자
               </div>
             )}
+
 
             {tag_user_4 === 0 && (
               <div
                 className="none_click_list_tag"
                 onClick={() => {
                   setTag_user_4("비현직자");
-                  setTag_user_3(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 비현직자
               </div>
             )}
             {tag_user_4 !== 0 && (
-              <div
-                className="click_list_tag"
+              <div 
+                className="click_list_tag" 
                 onClick={() => {
-                  if (tag_user_4 === "비현직자") {
-                    setTag_user_4(0);
-                  } else {
-                    setTag_user_4("비현직자");
-                    setTag_user_3(0);
-                  }
+                  setTag_user_4(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 #비현직자
               </div>
@@ -565,22 +566,22 @@ const Home_board_list = () => {
               <div
                 className="none_click_list_tag"
                 onClick={() => {
-                  setTag_user_5("프론트엔드");
-                  setTag_user_6(0);
+                  setTag_user_5("front");
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 프론트엔드
               </div>
             )}
             {tag_user_5 !== 0 && (
-              <div
-                className="click_list_tag"
+              <div 
+                className="click_list_tag" 
                 onClick={() => {
-                  if (tag_user_5 === "프론트엔드") {
-                    setTag_user_5(0);
-                  } else {
-                    setTag_user_5("프론트엔드");
-                    setTag_user_6(0);
-                  }
+                  setTag_user_5(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 #프론트엔드
               </div>
@@ -590,26 +591,29 @@ const Home_board_list = () => {
               <div
                 className="none_click_list_tag"
                 onClick={() => {
-                  setTag_user_6("백엔드");
-                  setTag_user_5(0);
+                  setTag_user_6("back");
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 백엔드
               </div>
             )}
             {tag_user_6 !== 0 && (
-              <div
-                className="click_list_tag"
+              <div 
+                className="click_list_tag" 
                 onClick={() => {
-                  if (tag_user_6 === "백엔드") {
-                    setTag_user_6(0);
-                  } else {
-                    setTag_user_6("백엔드");
-                    setTag_user_5(0);
-                  }
+                  setTag_user_6(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
                 }}>
                 #백엔드
               </div>
             )}
+
+
+
 
             {tag_p_1 === 0 && (
               <div

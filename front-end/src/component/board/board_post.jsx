@@ -115,22 +115,22 @@ const Board_post = () => {
                         {posttype === 0 && <div className ="none_click_tag" onClick={() => setPosttype("질문글")}>질문글</div>}
                         {posttype !== 0 && <div className ="click_tag" onClick={() => setPosttype(0)}>#질문글</div>}
 
-                        {d1 === 0 && <div className="none_click_tag" onClick={() => {setD1("비현직자"); setD2(0)}}>비현직자</div>}
+                        {d1 === 0 && <div className="none_click_tag" onClick={() => setD1("비현직자")}>비현직자</div>}
                         {d1 !== 0 && <div className="click_tag" onClick={() => setD1(0)}>#비현직자</div>}
 
-                        {d2 === 0 && <div className="none_click_tag" onClick={() => {setD2("현직자"); setD1(0)}}>현직자</div>}
+                        {d2 === 0 && <div className="none_click_tag" onClick={() => setD2("현직자")}>현직자</div>}
                         {d2 !== 0 && <div className="click_tag" onClick={() => setD2(0)}>#현직자</div>}
 
-                        {d3 === 0 && <div className="none_click_tag" onClick={() => {setD3("비전공자"); setD4(0);}}>비전공자</div>}
+                        {d3 === 0 && <div className="none_click_tag" onClick={() => setD3("비전공자")}>비전공자</div>}
                         {d3 !== 0 && <div className="click_tag" onClick={() => setD3(0)}>#비전공자</div>}
 
-                        {d4 === 0 && <div className="none_click_tag" onClick={() => {setD4("전공자"); setD3(0);}}>전공자</div>}
+                        {d4 === 0 && <div className="none_click_tag" onClick={() => setD4("전공자")}>전공자</div>}
                         {d4 !== 0 && <div className="click_tag" onClick={() => setD4(0)}>#전공자</div>}
 
-                        {d5 === 0 && <div className="none_click_tag" onClick={() => {setD5("front"); setD6(0);}}>front</div>}
+                        {d5 === 0 && <div className="none_click_tag" onClick={() => setD5("front")}>front</div>}
                         {d5 !== 0 && <div className="click_tag" onClick={() => setD5(0)}>#front</div>}
 
-                        {d6 === 0 && <div className="none_click_tag" onClick={() => {setD6("back"); setD5(0);}}>back</div>}
+                        {d6 === 0 && <div className="none_click_tag" onClick={() => setD6("back")}>back</div>}
                         {d6 !== 0 && <div className="click_tag" onClick={() => setD6(0)}>#back</div>}
 
                         {/* 언어 */}
