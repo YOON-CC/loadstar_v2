@@ -69,9 +69,9 @@ const Search_pwd = () => {
                 </div>
 
                 <div className="change_button_container">
-                    <div className="change_button_container_cancel" onClick={function(){
-                        store.dispatch({type:'HOME'});
-                    }.bind(this)}>취소</div>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <div className="change_button_container_cancel">취소</div>
+                    </Link>
 
                     {user_Id.length > 0 && user_Email.length > 0? 
                     (<button type="submit" className="change_button_container_login_1">찾기</button>) : 
