@@ -117,36 +117,6 @@ const Home_board_list = () => {
 
   //검색
   const [search, setSearch] = useState('');
-  const handleSearchContent = (event) => {
-    setSearch(event.target.value)
-  };
-  const handleSearchContentSend = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/boards/search`, {
-          params: {
-              keywords: search
-          },
-          headers: {
-              "Content-Type": "application/json"
-          }
-      });
-
-      console.log(response.status);
-
-      if (response.status === 200){
-        setBoard_type(!board_type); 
-        setPage(0); 
-        setBoard_data([]);
-      }
-    }
-    catch (error) {
-
-    }
-  }
-
-
-
 
   //페이지 받기작업
   const [page, setPage] = useState(0);
@@ -160,11 +130,61 @@ const Home_board_list = () => {
   const hashtag_Show = () => {
     setShow(!show);
   };
+
+  const handleSearchContent = (event) => {
+    setSearch(event.target.value)
+    console.log(search)
+  };
+
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--차트 받아옴--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
   useEffect(() => {
+
+    //검색으로 불러오기
+    const handleSearchContentSend = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/boards/search`,
+          {
+            params: {
+              keywords: search,
+            },
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        
+        if (response.status === 200) {
+          //튜플로 합치기 (boardId, 그래프 보여주기, Q&A여부 ,제목, 해시테그)
+          const combinedArray = response.data.map((item) => [
+            item.boardId,
+            item.title,
+            item.hashtags,
+            item.arr,
+            item.username,
+            item.bookmarkCount,
+            item.view,
+            item.createdAt,
+            item.modifiedAt,
+            
+          ]);
+          setBoard_data((prevTitle) => {
+            const existingIds = prevTitle.map((item) => item[0]);
+            const newItems = combinedArray.filter(
+              (item) => !existingIds.includes(item[0])
+            );
+            return [...prevTitle, ...newItems];
+          });
+        }
+      } catch (error) {
+        // 에러 처리
+      }
+    }
+
+    //해시테그로 불러오기
     const handleBoardInfo = async () => {
       const hashtagsQuery = allTags.join(",");
       try {
@@ -209,7 +229,14 @@ const Home_board_list = () => {
       }
     };
 
-    handleBoardInfo();
+    if (search.length > 0){
+      console.log("1")
+      handleSearchContentSend();
+    }
+    else{
+      console.log("2")
+      handleBoardInfo();
+    }
   }, [board_type, page]);
 
   useEffect(() => {
@@ -454,9 +481,11 @@ const Home_board_list = () => {
           </div>
           <div className="home_board_search_c2">
             <input onChange={handleSearchContent}></input>
-            <form onSubmit={handleSearchContentSend}>
-              <button>검색</button>
-            </form>
+              <button onClick={()=>{
+                setBoard_type(!board_type);
+                setPage(0);
+                setBoard_data([]);
+              }}>검색</button>
           </div>
         </div>
         <div className="home_board_hashtag">
