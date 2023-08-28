@@ -12,15 +12,13 @@ const Home_board_list = () => {
   const [show_3, setShow_3] = useState(false);
   const [show_4, setShow_4] = useState(false);
 
+
+  //메인페이지 카테고리
+  const [sort, setSort] = useState('')
+
   const handleShow_1 = () => {
     setShow_1(true);
     setShow_2(false);
-    setShow_3(false);
-    setShow_4(false);
-  };
-  const handleShow_2 = () => {
-    setShow_1(false);
-    setShow_2(true);
     setShow_3(false);
     setShow_4(false);
   };
@@ -194,6 +192,7 @@ const Home_board_list = () => {
             params: {
               page: page,
               hashtags: hashtagsQuery,
+              sort : sort,
             },
             headers: {
               "Content-Type": "application/json",
@@ -215,6 +214,7 @@ const Home_board_list = () => {
             item.modifiedAt,
             
           ]);
+          console.log(combinedArray)
 
           setBoard_data((prevTitle) => {
             const existingIds = prevTitle.map((item) => item[0]);
@@ -235,6 +235,8 @@ const Home_board_list = () => {
     }
     else{
       console.log("2")
+      console.log(sort)
+
       handleBoardInfo();
     }
   }, [board_type, page]);
@@ -421,60 +423,90 @@ const Home_board_list = () => {
           <div className="home_board_search_c1">
             {show_1 === true && (
               <div
-                className="home_board_search_c1_btn_on"
-                onClick={handleShow_1}>
+                className="home_board_search_c1_btn_on">
                 전체글
               </div>
             )}
             {show_1 === false && (
               <div
                 className="home_board_search_c1_btn_off"
-                onClick={handleShow_1}>
+                onClick={()=>{
+                  setSort('')
+                  setShow_1(true)
+                  setTag_type_1(0);
+                  setShow_3(false);
+                  setShow_4(false);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
+                }}>
                 전체글
               </div>
             )}
 
-            {show_2 === true && (
+            {tag_type_1 === '질문글' && (
               <div
-                className="home_board_search_c1_btn_on"
-                onClick={handleShow_2}>
+                className="home_board_search_c1_btn_on">
                 질문글
               </div>
             )}
-            {show_2 === false && (
+            {tag_type_1 === 0 && (
               <div
                 className="home_board_search_c1_btn_off"
-                onClick={handleShow_2}>
+                onClick={() => {
+                  setShow_1(false);
+                  setShow_3(false);
+                  setShow_4(false);
+                  setTag_type_1("질문글");           
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);}}>
                 질문글
               </div>
             )}
 
             {show_3 === true && (
               <div
-                className="home_board_search_c1_btn_on"
-                onClick={handleShow_3}>
+                className="home_board_search_c1_btn_on">
                 조회순
               </div>
             )}
             {show_3 === false && (
               <div
                 className="home_board_search_c1_btn_off"
-                onClick={handleShow_3}>
+                onClick={()=> {
+                  setShow_1(false);
+                  setShow_3(true);
+                  setShow_4(false);
+                  setSort('view')
+                  setTag_type_1(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
+                }}>
                 조회순
               </div>
             )}
 
             {show_4 === true && (
               <div
-                className="home_board_search_c1_btn_on"
-                onClick={handleShow_4}>
+                className="home_board_search_c1_btn_on">
                 관심순
               </div>
             )}
             {show_4 === false && (
               <div
                 className="home_board_search_c1_btn_off"
-                onClick={handleShow_4}>
+                onClick={()=> {
+                  setShow_1(false);
+                  setShow_3(false);
+                  setShow_4(true);
+                  setSort('bookmarkCount')
+                  setTag_type_1(0);
+                  setBoard_type(!board_type);
+                  setPage(0);
+                  setBoard_data([]);
+                }}>
                 관심순
               </div>
             )}
