@@ -478,7 +478,7 @@ const Home_board_list = () => {
                   setShow_1(false);
                   setShow_3(true);
                   setShow_4(false);
-                  setSort('view')
+                  setSort('view,desc')
                   setTag_type_1(0);
                   setBoard_type(!board_type);
                   setPage(0);
@@ -501,7 +501,7 @@ const Home_board_list = () => {
                   setShow_1(false);
                   setShow_3(false);
                   setShow_4(true);
-                  setSort('bookmarkCount')
+                  setSort('bookmarkCount,desc')
                   setTag_type_1(0);
                   setBoard_type(!board_type);
                   setPage(0);
