@@ -283,7 +283,7 @@ const Board_object = () => {
                 crossDomain: true,
                 withCredentials: true
             });
-            if (response.status === 200) {
+            if (response.status === 201) {
                 Swal.fire({
                     title: '댓글작성',
                     text: '댓글작성을 완료했습니다!',

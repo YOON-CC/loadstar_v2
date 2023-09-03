@@ -212,7 +212,7 @@ const Home_board_list = () => {
             item.view,
             item.createdAt,
             item.modifiedAt,
-            
+            item.content,
           ]);
           console.log(combinedArray)
 
@@ -271,6 +271,7 @@ const Home_board_list = () => {
       const view = board_data[i][6];
       const createdAt = board_data[i][7];
       const modifiedAt = board_data[i][8];
+      const content = board_data[i][9];
 
       //빈 데이터의 경우 continue
       if (chartData.length === 0) {
@@ -339,8 +340,7 @@ const Home_board_list = () => {
             </div>
             <div className="board-list_c2">{title.length >= 15 ? `${title.slice(0, 15)} ...` : title}</div>
             <div className="board-list_c3">
-              안녕하세요! 저는 프론트엔드 최강자~~ 입니다. 오늘은 저의
-              지금까지의 과정을 보여드리기 위해서 글을 적습니다.
+              {content.length >= 30 ? `${content.slice(0, 30)} ...` : content}
             </div>
             {hash_tag && hash_tag.length === 1 && (
               <div className="board-list_c4">

@@ -84,7 +84,7 @@ const Board_post = () => {
             });
 
             //요청 성공
-            if (response.status === 200) {
+            if (response.status === 201) {
                 // store.dispatch({type:"AFTER_LOGIN"});
                 Swal.fire({
                     title: 'Post',
