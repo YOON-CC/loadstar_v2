@@ -1,7 +1,7 @@
 <div align="center" >
 
-# ⭐LoadStar_v1⭐
-![image](https://github.com/YOON-CC/loadstar/assets/87313979/ec4aa70c-059b-40c4-abd4-f46f4c18dd29)
+# 🌠LoadStar_v2🌠
+![image](https://github.com/YOON-CC/loadstar_v2/assets/87313979/74c5649d-c779-44aa-81d6-d668a53df03d)
 
 </div>
 
@@ -14,9 +14,9 @@ LoadStar는 개발자가 꿈인 사람들이 자신의 진로 방향을 찾기�
 </br>
 
 
-[로드스타 바로가기](https://lodestar.shop/loadstar_v2)
+[로드스타 바로가기](https://loadstar.site/loadstar_v2)
 
-`2023/05/26 ~ 2023/07/21`
+`2023/07/22 ~ 2023/09/04`
 </div>
 
 </br>
