@@ -21,16 +21,18 @@ LoadStar는 개발자가 꿈인 사람들이 자신의 진로 방향을 찾기�
 
 </br>
 
+
+
 ## 🔗Service
 <div align="center" >
 
-| 로그인, 회원가입 기능들 | 게시글 리스트 |
+| 로그인, 회원가입 기능들 | 필터링 기능 |
 |:--------------:|:---------------:|
-| ![로그인](https://github.com/YOON-CC/loadstar/assets/87313979/7f2aeaf1-a94e-40ce-9bf6-cac30e55ce83) | ![리스트](https://github.com/YOON-CC/loadstar/assets/87313979/a0cb16f9-5163-4e52-bf04-fb7df294a56f) |
+| ![로그인](https://github.com/YOON-CC/loadstar_v2/assets/87313979/857be4b6-385a-40fa-996e-06511223b591) | ![필터기능](https://github.com/YOON-CC/loadstar_v2/assets/87313979/6cdd2693-84df-4251-a54a-c8b004aa4fbe) |
 
-| 게시글 보기 | 그래프 그리기|
+| 게시판 기능 | 그래프 그리기 기능|
 |:---------------:|:---------------:|
-| ![게시글 보기](https://github.com/YOON-CC/loadstar/assets/87313979/3bc994a8-531a-4b1b-ba3f-202e8f0c6155) | ![그래프그리기](https://github.com/YOON-CC/loadstar/assets/87313979/27c01030-5c3e-43a6-94ac-9a93fed88502) |
+| ![게시판 기능](https://github.com/YOON-CC/loadstar_v2/assets/87313979/f83aa3a0-b689-4c4b-90a7-b1a3687ea8e2) | ![그래프그리기 기능](https://github.com/YOON-CC/loadstar_v2/assets/87313979/3ac19545-ebe4-42f8-8d83-d368dfe549ac) |
 
 </div>
 
