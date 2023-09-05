@@ -1,6 +1,6 @@
 <div align="center" >
 
-# 🌠LoadStar_v2🌠
+# 🔗LoadStar_v2🔗
 ![image](https://github.com/YOON-CC/loadstar_v2/assets/87313979/74c5649d-c779-44aa-81d6-d668a53df03d)
 
 </div>
@@ -76,27 +76,15 @@ LoadStar는 개발자가 꿈인 사람들이 자신의 진로 방향을 찾기�
 
 </br>
 
-## 🔗아키텍쳐
-<div align="center" >
+## 🔗v1과 달라진점
 
-![image](https://github.com/YOON-CC/loadstar/assets/87313979/6f59e0cc-5ecb-4582-aa84-3db7e4a752e4)
-
- 
-</div>
-
-</br>
-
-## 🔗개발문서관련
-<div align="center" >
-
-|화면설계서|기능명세서|API 명세서|
-|:---:|:---:|:---:|
-|<img width="300px" src="https://github.com/YOON-CC/loadstar/assets/87313979/92dcc27f-9d91-47d7-8490-48e1692d3cff" /> |<img width="300px" src="https://github.com/YOON-CC/loadstar/assets/87313979/9d4c9b9b-36b0-401f-80a6-b976c02da789"/>|<img width="300px" src="https://github.com/preferrrr/LOADSTAR_SERVER/assets/99793526/700fa76a-99a6-4bda-988f-3f56d091c183"/>
-| [GO TO SEE](https://www.figma.com/file/Q8286Co1YssF3PWtL2c9ea/Untitled?type=design&node-id=0%3A1&mode=design&t=sJ68uCRnwB5SCJ8O-1)| [GO TO SEE](https://www.figma.com/file/Q8286Co1YssF3PWtL2c9ea/Untitled?type=design&node-id=148%3A2&mode=design&t=sJ68uCRnwB5SCJ8O-1)|[GO TO SEE](https://docs.google.com/spreadsheets/d/1zNMbE5-97dbYUMXMaAt4ehp7-XVktkDqHnT658MP_u4/edit?pli=1#gid=0)|
-
- 
-</div>
-
+```bash
+- 디자이너 피드백을 통한 디자인 변경
+- 이후 추가될 알림 기능을 고려한, 토큰방식에서 세션방식으로 변경
+- 게시글 필터링 기능
+- v1보다 편해진 그래프 그리기 기능
+```
+[v1 보러가기](https://github.com/YOON-CC/loadstar)
 
 </br>
 
@@ -127,8 +115,19 @@ npm start
 |:---:|:---:|:---:|
 |<img width="230px" src="https://avatars.githubusercontent.com/u/87313979?v=4"/>|<img width="230px" src="https://avatars.githubusercontent.com/u/99793526?v=4" /> |<img width="230px" src="https://avatars.githubusercontent.com/u/101854418?v=4"/>|
 |[@YOON-CC](https://github.com/YOON-CC)|[@preferrrr](https://github.com/preferrrr)|[@ddogong](https://github.com/ddogong)|
-|Project Leader, Frontend Develop| Backend developer | Project Manager |
+|Project Leader, Frontend Develop| Backend Developer | Frontend Develop |
 
 </div>
 
 </br>
+
+## 🔗이후 계획
+### 성능 최적화 <br>
+
+<div align="center" >
+ 
+```bash
+현재 version2는 최적화가 되어있지 않은 코드로 인해 로딩, 렌더링 성능이 느린편입니다.
+version3에서는 최적화를 통하여 성능을 개선할 계획입니다.
+```
+</div>
